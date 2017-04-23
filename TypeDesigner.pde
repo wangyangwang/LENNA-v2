@@ -1,0 +1,4 @@
+class TypeDesigner extends Designer {
+
+  
+}

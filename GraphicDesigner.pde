@@ -1,0 +1,3 @@
+class GraphicDesigner extends Designer {
+  
+}

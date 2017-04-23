@@ -1,0 +1,3 @@
+class PatternGraphic extends Graphic {
+  
+}
