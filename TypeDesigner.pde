@@ -1,5 +1,5 @@
-class TypeDesigner extends Observable {
-  PGraphics result;
+class TypeDesigner extends Observable { //<>// //<>//
+
   ArrayList<PassabilityObject> columnWidthPassabilities;
 
   TypeDesigner () {
@@ -7,8 +7,12 @@ class TypeDesigner extends Observable {
   }
 
 
-  PGraphics design() {
-
+  PGraphics design(Poster poster) {
+    PGraphics designResult;
+    designResult = createGraphics(poster.w, poster.h);
+    designTypography(designResult, poster);
+    applyGraphicToPoster(designResult, poster);
+    return designResult;
 
     //decide if headline exists
     //decide headline width, font, position
@@ -16,17 +20,31 @@ class TypeDesigner extends Observable {
     //decide paragraph font
     //decide paragraph column number
     //decide paragraph position
-    
-    
-    
+
+
+
     //draw Headline and Paragraph(s)
-    //return result in PGraphic object 
-    
-    
-    return 
-   
+    //return result in PGraphic object
   }
 
+  private void designTypography(PGraphics pg, Poster poster) {
+    pg.beginDraw();
+    PFont helvetica;
+    helvetica = createFont("helvetica", 100);
+    pg.textFont(helvetica);
+    pg.fill(255);
+    pg.noStroke();
+    pg.textSize(400);
+    pg.textAlign(CENTER, CENTER);
+    pg.text("LENNA", poster.w/2, poster.h/2);
+    pg.endDraw();
+  }
+
+  void applyGraphicToPoster(PGraphics pg, Poster poster) {
+    poster.content.beginDraw();
+    poster.content.image(pg, 0, 0);
+    poster.content.endDraw();
+  }
 
 
   void setupColumnWidthAndPassability() {

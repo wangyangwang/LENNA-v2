@@ -13,8 +13,8 @@ GraphicDesigner graphicDesigner;
 Inspector inspector;
 
 
-int posterWidth = 2480;
-int posterHeight = 3508;
+int posterWidth = 3508;
+int posterHeight = 4961;
 
 
 //We will use this one object and rewrite it for every poster
@@ -25,7 +25,7 @@ void settings () {
 }
 
 void setup () {
-  
+
   //Create our design crew
   typeDesigner = new TypeDesigner();
   graphicDesigner = new GraphicDesigner();
@@ -35,50 +35,57 @@ void setup () {
 
   //init
   STAGE = Stage.CREATION;
-
 }
 
 
 void draw() {
+  background(0);
 
   switch (STAGE) {
   case CREATION:
     poster = new Poster(posterWidth, posterHeight);
     progressManager.updateTo(STAGE);
-    STAGE.next();
-    break;
-
-  case TYPEDESIGN:
-    typeDesigner.design(poster);
-    progressManager.updateTo(STAGE);
-    STAGE.next();
+    STAGE = STAGE.next();
+    delay(progressManager.stageDelay);
     break;
 
   case GRAPHICDESIGN:
     graphicDesigner.design(poster);
     progressManager.updateTo(STAGE);
-    STAGE.next();
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
+    break;
+
+  case TYPEDESIGN:
+    typeDesigner.design(poster);
+    progressManager.updateTo(STAGE);
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
     break;
 
   case INSPECTION:
-    inspector.inspect(poster);
+    inspector.inspect(poster, progressManager.posterCount);
     progressManager.updateTo(STAGE);
-    STAGE.next();
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
     break;
 
   case PRINT:
-    printerManager.print(poster);
+    printerManager.print(poster, progressManager.posterCount);
     progressManager.updateTo(STAGE);
-    STAGE.next();
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
     break;
 
 
   case FINISH:
     progressManager.updateTo(STAGE);
-    STAGE.next();
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
     break;
   }
 
+  progressManager.display();
 }
 
 
@@ -98,7 +105,7 @@ public class PassabilityObject {
 
 /* Stage control */
 public enum Stage {
-  CREATION, TYPEDESIGN, GRAPHICDESIGN, INSPECTION, PRINT, FINISH {
+  CREATION, GRAPHICDESIGN, TYPEDESIGN, INSPECTION, PRINT, FINISH {
     @Override
       public Stage next() {
       return values()[0];

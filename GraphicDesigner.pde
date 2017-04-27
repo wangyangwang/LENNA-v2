@@ -1,32 +1,33 @@
 class GraphicDesigner extends Observable {
 
-  Graphic graphic;
-  
-  
   GraphicDesigner() {
-    this.addObserver(progressManager.progressWatcher);
+    //this.addObserver(progressManager.progressWatcher);
   }
-  
 
-  PGraphics createGrphic(Poster poster) {
-    
-    PGraphics result;
-    
-    if (random(0, 1) > 0.5) {
-      graphic = new OffsetGraphic();
-    } else {
-      graphic = new PatternGraphic();
-    }
-    
-    setChanged();
-    notifyObservers();
-    
-    return poster;
+  /* main */
+  public PGraphics design(Poster poster) {
+
+    /* create a PGraphics */
+    PGraphics designResult;
+    designResult = createGraphics(poster.w, poster.h);
+    /* make graphics */
+    makeGraphics(designResult, poster); 
+    applyGraphicToPoster(designResult, poster);
+    return designResult;
   }
-  
-  
-  
-  
-  
-  
+
+  private void makeGraphics(PGraphics pg, Poster poster) {
+    pg.beginDraw();
+    pg.noStroke();
+    pg.rectMode(CORNER);
+    pg.fill(255,0,0);
+    pg.rect(0, 0, poster.w, poster.h);
+    pg.endDraw();
+  }
+
+  void applyGraphicToPoster(PGraphics pg, Poster poster) {
+    poster.content.beginDraw();
+    poster.content.image(pg, 0, 0);
+    poster.content.endDraw();
+  }
 }
