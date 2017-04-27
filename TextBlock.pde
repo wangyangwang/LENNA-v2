@@ -1,4 +1,4 @@
-class Type {
+class TextBlock {
   
   String text;
   int horizontalAlign;
@@ -8,7 +8,7 @@ class Type {
   float[] rect;
   
   
-  Type (String _text) {
+  TextBlock (String _text) {
     text = _text;
     rect = new float[4];
     horizontalAlign = LEFT;
@@ -18,7 +18,7 @@ class Type {
   
   
   void draw() {
-    textAlign(horizontalAlign, verticalAlign);
+    
     
   }
   

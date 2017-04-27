@@ -1,8 +1,0 @@
-class Designer {
- 
-  Designer () {
-    
-  }
-  
-  
-}

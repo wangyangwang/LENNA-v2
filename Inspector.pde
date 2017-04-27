@@ -1,6 +1,5 @@
-class Inspector {
- 
+class Inspector extends Observable{
   
-  
+
   
 }
