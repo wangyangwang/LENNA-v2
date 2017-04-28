@@ -5,7 +5,7 @@ class ProgressManager {
 
   ProgressManager () {
     posterCount = 0;
-    stageDelay = 300;
+    stageDelay = 50;
   }
 
 

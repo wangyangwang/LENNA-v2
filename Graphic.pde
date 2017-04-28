@@ -1,3 +1,4 @@
+/* Parent Class */
 class Graphic extends Observable {
   
   PGraphics finalGraphic;
@@ -10,3 +11,27 @@ class Graphic extends Observable {
   
   
 }
+
+
+/* Children Classes */
+////////////////////////////////////////////////////
+
+
+class FullScreenTypeGraphic extends Graphic {
+  
+}
+
+////////////////////////////////////////////////////
+
+class PatternGraphic extends Graphic {
+  
+}
+
+
+////////////////////////////////////////////////////
+
+class OffsetGraphic extends Graphic {
+  
+}
+
+////////////////////////////////////////////////////

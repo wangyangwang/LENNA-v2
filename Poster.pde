@@ -5,6 +5,7 @@ class Poster {
 
   ArrayList<Section> sections; //usually one poster can only have two sections, divided by golden ratio/silver ratio or 5/5
   float rotation;
+  ColorScheme colorScheme;
 
   PGraphics content;
 
@@ -37,4 +38,14 @@ class Poster {
     //TESTING
     rotation = 0;
   }
+}
+
+
+//////////////////////////////////////////////////
+
+
+class Section {
+  boolean occupied;
+  float h, w;
+  color background;
 }

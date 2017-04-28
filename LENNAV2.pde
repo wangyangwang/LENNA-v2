@@ -5,7 +5,7 @@ import java.util.Observer;
 
 Stage STAGE;
 
-
+ColorDesigner colorDesigner;
 ProgressManager progressManager;
 PrinterManager printerManager;
 TypeDesigner typeDesigner;
@@ -20,13 +20,15 @@ int posterHeight = 4961;
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
+
 void settings () {
-  size(1440, 900);
+  size(1200, 600);
 }
 
 void setup () {
-
+  pixelDensity(2);
   //Create our design crew
+  colorDesigner = new ColorDesigner("colorSchemes.txt");
   typeDesigner = new TypeDesigner();
   graphicDesigner = new GraphicDesigner();
   progressManager = new ProgressManager();
@@ -39,7 +41,7 @@ void setup () {
 
 
 void draw() {
-  background(0);
+  background(20);
 
   switch (STAGE) {
   case CREATION:
@@ -49,14 +51,22 @@ void draw() {
     delay(progressManager.stageDelay);
     break;
 
-  case GRAPHICDESIGN:
+  case COLOR_DESIGN:
+    colorDesigner.design(poster);
+    progressManager.updateTo(STAGE);
+    delay(progressManager.stageDelay);
+    STAGE=STAGE.next();
+    break;
+
+
+  case GRAPHIC_DESIGN:
     graphicDesigner.design(poster);
     progressManager.updateTo(STAGE);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
-  case TYPEDESIGN:
+  case TYPE_DESIGN:
     typeDesigner.design(poster);
     progressManager.updateTo(STAGE);
     delay(progressManager.stageDelay);
@@ -102,10 +112,11 @@ public class PassabilityObject {
   }
 }
 
+//////////////////////////////////
 
 /* Stage control */
 public enum Stage {
-  CREATION, GRAPHICDESIGN, TYPEDESIGN, INSPECTION, PRINT, FINISH {
+  CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
     @Override
       public Stage next() {
       return values()[0];

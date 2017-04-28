@@ -1,3 +1,0 @@
-class FullScreenTypeGraphic extends Graphic {
-  
-}

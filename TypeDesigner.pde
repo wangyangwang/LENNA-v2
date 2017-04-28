@@ -32,7 +32,12 @@ class TypeDesigner extends Observable { //<>// //<>//
     PFont helvetica;
     helvetica = createFont("helvetica", 100);
     pg.textFont(helvetica);
-    pg.fill(255);
+
+
+    println("Graphic Designer picked background color: " + hex(poster.colorScheme.colors[1]));
+    pg.fill(poster.colorScheme.colors[1]);
+
+
     pg.noStroke();
     pg.textSize(400);
     pg.textAlign(CENTER, CENTER);

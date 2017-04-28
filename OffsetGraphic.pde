@@ -1,3 +1,0 @@
-class OffsetGraphic extends Graphic {
-  
-}

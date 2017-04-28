@@ -20,7 +20,8 @@ class GraphicDesigner extends Observable {
     pg.beginDraw();
     pg.noStroke();
     pg.rectMode(CORNER);
-    pg.fill(255,0,0);
+    println("Graphic Designer picked background color: " + hex(poster.colorScheme.colors[0]));
+    pg.fill(poster.colorScheme.colors[0]);
     pg.rect(0, 0, poster.w, poster.h);
     pg.endDraw();
   }
