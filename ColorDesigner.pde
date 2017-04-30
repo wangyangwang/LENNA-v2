@@ -2,20 +2,36 @@ class ColorDesigner {
 
 
   ArrayList<ColorScheme> allColorSchemes;
-
+  PVector prewviewColorRectSize = new PVector(400, 400);
 
   ColorDesigner(String colorSchemeFileName) {
     allColorSchemes = new ArrayList<ColorScheme>();
     loadColorSchemes(colorSchemeFileName);
   }
 
-  void design(Poster poster) {
+  PGraphics design(Poster poster) {
+    PGraphics colorPalette;
+    colorPalette = createGraphics(posterWidth, posterHeight);
+
     if (allColorSchemes.size()!=0) {
       poster.colorScheme = allColorSchemes.get(floor(random(0, allColorSchemes.size())));
+
+      for (int i = 0; i < poster.colorScheme.colors.length; i++) {
+        colorPalette.beginDraw();
+        colorPalette.fill(poster.colorScheme.colors[i]);
+        colorPalette.rect(0, (posterHeight/4) * i, posterWidth/2, posterHeight/4);
+        colorPalette.fill(0);
+        colorPalette.textSize(150);
+        colorPalette.text(hex(poster.colorScheme.colors[i]), posterWidth/2, (posterHeight/4) * (i+1));
+        colorPalette.endDraw();
+      }
+
       println("Color Designer picked color scheme: " + poster.colorScheme.colors);
     } else {
       println("Err: no color scheme saved in ColorDesigner");
     }
+
+    return colorPalette;
   }
 
   ///////////////

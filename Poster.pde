@@ -8,9 +8,7 @@ class Poster {
   ColorScheme colorScheme;
 
   PGraphics content;
-
-
-
+  
   Poster(int _posterW, int _posterH) {
     w = _posterW;
     h = _posterH;

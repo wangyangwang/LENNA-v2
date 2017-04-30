@@ -1,4 +1,4 @@
-class GraphicDesigner extends Observable {
+class GraphicDesigner{
 
   GraphicDesigner() {
     //this.addObserver(progressManager.progressWatcher);
@@ -9,7 +9,7 @@ class GraphicDesigner extends Observable {
 
     /* create a PGraphics */
     PGraphics designResult;
-    designResult = createGraphics(poster.w, poster.h);
+    designResult = createGraphics(posterWidth, posterHeight);
     /* make graphics */
     makeGraphics(designResult, poster); 
     applyGraphicToPoster(designResult, poster);
@@ -20,9 +20,8 @@ class GraphicDesigner extends Observable {
     pg.beginDraw();
     pg.noStroke();
     pg.rectMode(CORNER);
-    println("Graphic Designer picked background color: " + hex(poster.colorScheme.colors[0]));
     pg.fill(poster.colorScheme.colors[0]);
-    pg.rect(0, 0, poster.w, poster.h);
+    pg.rect(0, 0, posterWidth, posterHeight);
     pg.endDraw();
   }
 
@@ -31,4 +30,5 @@ class GraphicDesigner extends Observable {
     poster.content.image(pg, 0, 0);
     poster.content.endDraw();
   }
+  
 }

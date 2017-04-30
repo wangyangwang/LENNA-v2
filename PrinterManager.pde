@@ -7,6 +7,6 @@ class PrinterManager extends Observable{
   }
   
   void print(Poster poster, int poster_count) {
-    poster.content.save("poster #" + poster_count+".jpg");
+    poster.content.save("posters/poster #" + poster_count+".jpg");
   }
 }

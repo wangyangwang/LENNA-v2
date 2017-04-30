@@ -1,4 +1,4 @@
-class TypeDesigner extends Observable { //<>// //<>//
+class TypeDesigner {  //<>//
 
   ArrayList<PassabilityObject> columnWidthPassabilities;
 

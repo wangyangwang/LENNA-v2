@@ -2,8 +2,14 @@ import controlP5.*;
 import java.util.Observable;
 import java.util.Observer;
 
-
+/* TODO: APR 30
+ 
+ 1. Add graphics to progressManager, display them correctly.
+ 2. .....
+ 
+ */
 Stage STAGE;
+int stageNumber = STAGE.values().length;
 
 ColorDesigner colorDesigner;
 ProgressManager progressManager;
@@ -20,13 +26,9 @@ int posterHeight = 4961;
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
-
-void settings () {
-  size(1200, 600);
-}
-
 void setup () {
-  pixelDensity(2);
+  size(1440, 900);
+
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
   typeDesigner = new TypeDesigner();
@@ -35,61 +37,67 @@ void setup () {
   printerManager = new PrinterManager();
   inspector = new Inspector();
 
-  //init
+
+  //init, happen first
   STAGE = Stage.CREATION;
 }
 
 
 void draw() {
-  background(20);
+  background(100);
+
+  /* for each stage the thumbnail will be updated */
+  PGraphics thumbnail;
 
   switch (STAGE) {
   case CREATION:
     poster = new Poster(posterWidth, posterHeight);
-    progressManager.updateTo(STAGE);
+    progressManager.update(STAGE);
     STAGE = STAGE.next();
     delay(progressManager.stageDelay);
     break;
 
   case COLOR_DESIGN:
-    colorDesigner.design(poster);
-    progressManager.updateTo(STAGE);
+    thumbnail = colorDesigner.design(poster);
+    progressManager.update(STAGE, thumbnail);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
-
   case GRAPHIC_DESIGN:
     graphicDesigner.design(poster);
-    progressManager.updateTo(STAGE);
+    thumbnail = graphicDesigner.design(poster);
+    progressManager.update(STAGE, thumbnail);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
   case TYPE_DESIGN:
     typeDesigner.design(poster);
-    progressManager.updateTo(STAGE);
+    thumbnail = typeDesigner.design(poster);
+    progressManager.update(STAGE, thumbnail);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
   case INSPECTION:
     inspector.inspect(poster, progressManager.posterCount);
-    progressManager.updateTo(STAGE);
+    progressManager.update(STAGE);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
   case PRINT:
     printerManager.print(poster, progressManager.posterCount);
-    progressManager.updateTo(STAGE);
+    progressManager.update(STAGE);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
 
 
   case FINISH:
-    progressManager.updateTo(STAGE);
+    progressManager.update(STAGE);
+    progressManager.reset();
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
