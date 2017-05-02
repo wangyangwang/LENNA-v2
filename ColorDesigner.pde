@@ -9,8 +9,10 @@ class ColorDesigner {
     loadColorSchemes(colorSchemeFileName);
   }
 
-  PGraphics design(Poster poster) {
+  StageInfo design(Poster poster) {
+    StageInfo thisStageInfo;
     PGraphics colorPalette;
+    String colorInfo = "";
     colorPalette = createGraphics(posterWidth, posterHeight);
 
     if (allColorSchemes.size()!=0) {
@@ -19,19 +21,17 @@ class ColorDesigner {
       for (int i = 0; i < poster.colorScheme.colors.length; i++) {
         colorPalette.beginDraw();
         colorPalette.fill(poster.colorScheme.colors[i]);
-        colorPalette.rect(0, (posterHeight/4) * i, posterWidth/2, posterHeight/4);
-        colorPalette.fill(0);
-        colorPalette.textSize(150);
-        colorPalette.text(hex(poster.colorScheme.colors[i]), posterWidth/2, (posterHeight/4) * (i+1));
+        colorPalette.rect(0, (posterHeight/4) * i, posterWidth/2, posterHeight/4);        
         colorPalette.endDraw();
-      }
 
-      println("Color Designer picked color scheme: " + poster.colorScheme.colors);
+        colorInfo += hex(poster.colorScheme.colors[i]).toString() + "\n";
+      }
     } else {
       println("Err: no color scheme saved in ColorDesigner");
     }
 
-    return colorPalette;
+    thisStageInfo = new StageInfo(colorInfo, colorPalette);
+    return thisStageInfo;
   }
 
   ///////////////

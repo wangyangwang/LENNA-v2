@@ -7,12 +7,18 @@ class TypeDesigner {  //<>//
   }
 
 
-  PGraphics design(Poster poster) {
+  StageInfo design(Poster poster) {
+
+
     PGraphics designResult;
     designResult = createGraphics(poster.w, poster.h);
     designTypography(designResult, poster);
     applyGraphicToPoster(designResult, poster);
-    return designResult;
+
+    String details = "Chose font: Helvetica\nHeadline: 1\nParagraph:0";
+    //stageInfo.thumbnail = designResult;
+    //stageInfo.details = details;
+
 
     //decide if headline exists
     //decide headline width, font, position
@@ -21,10 +27,10 @@ class TypeDesigner {  //<>//
     //decide paragraph column number
     //decide paragraph position
 
-
-
     //draw Headline and Paragraph(s)
     //return result in PGraphic object
+    StageInfo stageInfo = new StageInfo(details, designResult);
+    return stageInfo;
   }
 
   private void designTypography(PGraphics pg, Poster poster) {
@@ -32,12 +38,7 @@ class TypeDesigner {  //<>//
     PFont helvetica;
     helvetica = createFont("helvetica", 100);
     pg.textFont(helvetica);
-
-
-    println("Graphic Designer picked background color: " + hex(poster.colorScheme.colors[1]));
     pg.fill(poster.colorScheme.colors[1]);
-
-
     pg.noStroke();
     pg.textSize(400);
     pg.textAlign(CENTER, CENTER);

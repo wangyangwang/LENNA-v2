@@ -1,4 +1,4 @@
-class Text extends Observable {
+class Text {
 }
 ////////////////////////////////////////////////////
 class Headline extends Text {

@@ -1,19 +1,22 @@
-class GraphicDesigner{
+class GraphicDesigner {
 
   GraphicDesigner() {
     //this.addObserver(progressManager.progressWatcher);
   }
 
   /* main */
-  public PGraphics design(Poster poster) {
-
+  public StageInfo design(Poster poster) {
     /* create a PGraphics */
     PGraphics designResult;
     designResult = createGraphics(posterWidth, posterHeight);
     /* make graphics */
     makeGraphics(designResult, poster); 
     applyGraphicToPoster(designResult, poster);
-    return designResult;
+
+    /* Apply data to StageInfo */
+    String details = "[placeholder] Type: Pattern Graphics\nGraphics: Type A";
+    StageInfo stageInfo = new StageInfo(details, designResult);
+    return stageInfo;
   }
 
   private void makeGraphics(PGraphics pg, Poster poster) {
@@ -30,5 +33,4 @@ class GraphicDesigner{
     poster.content.image(pg, 0, 0);
     poster.content.endDraw();
   }
-  
 }

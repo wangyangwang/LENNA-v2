@@ -1,5 +1,5 @@
 /* Parent Class */
-class Graphic extends Observable {
+class Graphic {
   
   PGraphics finalGraphic;
   

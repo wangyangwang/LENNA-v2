@@ -8,13 +8,16 @@ class Poster {
   ColorScheme colorScheme;
 
   PGraphics content;
-  
+
+  String posterDetails;
+
   Poster(int _posterW, int _posterH) {
     w = _posterW;
     h = _posterH;
     initSections();
     setupRotation();
     content = createGraphics(w, h);
+    posterDetails = "[Placeholder] Partition: plan A \n Rotation: angle(30degree) \n";
   }
 
 
