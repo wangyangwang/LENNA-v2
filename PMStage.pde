@@ -10,8 +10,8 @@ class ProgressManagerStage {
 
   /* hard coded variables */
   int textSize = 15;
-  color textColor = color(255);
-  color inProgressTextColor = color(0, 255, 0);
+  color textColor = color(0);
+  color inProgressTextColor = color(255);
   int inProgressTextSize = 15;
   int previewWidth = 200;
   int previewHeight = (posterHeight * previewWidth) / posterWidth;

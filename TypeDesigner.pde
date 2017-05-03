@@ -1,9 +1,9 @@
-class TypeDesigner {  //<>//
+class TypeDesigner {  //<>// //<>//
 
-  ArrayList<PassabilityObject> columnWidthPassabilities;
+  ArrayList<ProbabilityObject> columnWidthProbabilities;
 
   TypeDesigner () {
-    setupColumnWidthAndPassability();
+    setupColumnWidthAndProbability();
   }
 
 
@@ -16,8 +16,6 @@ class TypeDesigner {  //<>//
     applyGraphicToPoster(designResult, poster);
 
     String details = "Chose font: Helvetica\nHeadline: 1\nParagraph:0";
-    //stageInfo.thumbnail = designResult;
-    //stageInfo.details = details;
 
 
     //decide if headline exists
@@ -53,18 +51,18 @@ class TypeDesigner {  //<>//
   }
 
 
-  void setupColumnWidthAndPassability() {
+  void setupColumnWidthAndProbability() {
 
     float[] widths = {1/2, 1/3, 1/4};
-    float[] passabilities = {1/3, 1/3, 1/3};
+    float[] probabilities = {33, 33, 34};
 
-    columnWidthPassabilities = new ArrayList<PassabilityObject>();
-    if (widths.length == passabilities.length) {
+    columnWidthProbabilities = new ArrayList<ProbabilityObject>();
+    if (widths.length == probabilities.length) {
       for (int i=0; i<widths.length; i++) {
-        columnWidthPassabilities.add(new PassabilityObject(widths[i], passabilities[i]));
+        columnWidthProbabilities.add(new ProbabilityObject(widths[i], probabilities[i]));
       }
     } else {
-      System.err.println("TypeDesigner - setup column width passability failed!");
+      System.err.println("TypeDesigner - setup column width probability failed!");
     }
   }
 }

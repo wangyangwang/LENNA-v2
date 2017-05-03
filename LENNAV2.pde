@@ -1,6 +1,5 @@
 import controlP5.*;
 
-
 /*
 
  TODO: graphic design
@@ -23,12 +22,28 @@ Inspector inspector;
 int posterWidth = 3508;
 int posterHeight = 4961;
 
+/*
+TODO:
+May 2:
+  Finish Poster class
+May 3:
+  Graphic Design Class
+May 4:
+  Type Desig Class
+May 5:
+  Inspect class and catch up
+May 6:
+  Printer Class
+May 7:
+  Wrap Up
+*/
+
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
 void setup () {
-  size(1440, 900);
+  size(1680, 1050);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
@@ -45,7 +60,7 @@ void setup () {
 
 
 void draw() {
-  background(100);
+  background(126);
 
   /* for each stage the stageInfo will be updated */
   StageInfo stageInfo;
@@ -109,13 +124,13 @@ void draw() {
 //////////////////////////////////
 //////////////////////////////////
 
-/* Object with a passability*/
-public class PassabilityObject {
+/* Object with a probability*/
+public class ProbabilityObject {
   public Object value;
-  public float passability;
-  public PassabilityObject(Object _value, float _passability) {
+  public int probability;
+  public ProbabilityObject(Object _value, int _probability) {
     value = _value;
-    passability = _passability;
+    probability = _probability;
   }
 }
 

@@ -1,12 +1,14 @@
 class ProgressManager {
   Stage STAGE;
   int posterCount;
-  int stageDelay = 2000;
+  int stageDelay = 300;
+  PFont spaceMono;
+  int titleSize = 29;
 
   ArrayList<ProgressManagerStage> progressManagerStages;
 
-
   ProgressManager () {
+    spaceMono = createFont("Courier", 100);
     posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 
@@ -64,9 +66,9 @@ class ProgressManager {
       }
       pms.display((width/stageNumber)/2 + pms.stageIndex * (width/stageNumber), 200);
     }
+    textFont(spaceMono);
     textAlign(LEFT);
-    textSize(50);
-    fill(0);
+    textSize(titleSize);
     text("Making Poster #" + posterCount + "...", 100, 100);
   }
 }
