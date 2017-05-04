@@ -7,7 +7,6 @@ class Poster {
   float rotation;
 
   ArrayList<Grid> grids = new ArrayList<Grid>();
-  int gridNumber = 2;
   ArrayList<ProbabilityObject> partitionProbabilityDataSet;
   HashMap<String, Float> partitionDataSet = new HashMap();
   ArrayList<ProbabilityObject> rotationProbabilityDataSet;
@@ -72,10 +71,8 @@ class Poster {
       }
     }
 
-    for (int i = 0; i < gridNumber; i++) {
-      grids.add(new Grid(posterWidth, posterHeight * partitionValue));
-      grids.add(new Grid(posterWidth, posterHeight * (1-partitionValue)));
-    }
+    grids.add(new Grid(posterWidth, posterHeight * partitionValue, 0));
+    grids.add(new Grid(posterWidth, posterHeight * (1-partitionValue), 1));
   }
 
   void getRotation() {
@@ -86,17 +83,17 @@ class Poster {
 //////////////////////////////////////////////////
 
 class Grid {
-
   boolean occupied; //if it has stuff on it
   float h, w;
   private color backgroundColor; 
   boolean backgroundColorSet = false;
-  boolean theBigger; //is this the bigger section or smaller section.
   boolean fullHeight; 
+  int index; //0 means this grid is on top, 1 means bottom
 
-  Grid (float _width, float _height) {
+  Grid (float _width, float _height, int i) {
     w = _width;
     h = _height;
+    index = i;
     if (h == posterHeight)fullHeight = true;
   }
   void setBackgroundColor(color c) {

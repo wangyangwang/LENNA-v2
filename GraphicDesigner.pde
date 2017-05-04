@@ -1,7 +1,6 @@
 class GraphicDesigner {
 
   GraphicDesigner() {
-    //this.addObserver(progressManager.progressWatcher);
   }
 
   /* main */

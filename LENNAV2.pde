@@ -1,6 +1,23 @@
 import controlP5.*;
 import org.apache.commons.lang3.*;
 
+
+//////////////////////////////////
+/* Stage control */
+public enum Stage {
+  CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
+    @Override
+      public Stage next() {
+      return values()[0];
+    }
+  };
+
+  public Stage next() {
+    return values()[ordinal() + 1];
+  }
+}
+//////////////////////////////////
+
 /*
 
  TODO: graphic design
@@ -148,20 +165,4 @@ ProbabilityObject getRandomByProbabilityObject(ArrayList<ProbabilityObject> list
   }
   int rando = floor(random(probabilityPool.size()));
   return list.get(probabilityPool.get(rando));
-}
-
-//////////////////////////////////
-
-/* Stage control */
-public enum Stage {
-  CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
-    @Override
-      public Stage next() {
-      return values()[0];
-    }
-  };
-
-  public Stage next() {
-    return values()[ordinal() + 1];
-  }
 }
