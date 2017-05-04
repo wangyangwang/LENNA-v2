@@ -1,5 +1,8 @@
 class GraphicDesigner {
 
+  ArrayList<ProbabilityObject> graphicProbabilityDataSet = new ArrayList<ProbabilityObject>();
+  String graphicType;
+
   GraphicDesigner() {
   }
 
@@ -8,23 +11,25 @@ class GraphicDesigner {
     /* create a PGraphics */
     PGraphics designResult;
     designResult = createGraphics(posterWidth, posterHeight);
-    /* make graphics */
-    makeGraphics(designResult, poster); 
+
+    initProbabilitySet();
+    chooseGraphicType();
+    Graphic g = new Graphic(poster, graphicType);
+    designResult = g.getResult(); 
     applyGraphicToPoster(designResult, poster);
 
     /* Apply data to StageInfo */
-    String details = "[placeholder] Type: Pattern Graphics\nGraphics: Type A";
+    String details = "-Graphic Type:\n" + graphicType;
     StageInfo stageInfo = new StageInfo(details, designResult);
     return stageInfo;
   }
+  private void initProbabilitySet() {
+    graphicProbabilityDataSet.add(new ProbabilityObject("offset", 99));
+    graphicProbabilityDataSet.add(new ProbabilityObject("pattern", 0));
+  }
 
-  private void makeGraphics(PGraphics pg, Poster poster) {
-    pg.beginDraw();
-    pg.noStroke();
-    pg.rectMode(CORNER);
-    pg.fill(poster.colorScheme.colors[0]);
-    pg.rect(0, 0, posterWidth, posterHeight);
-    pg.endDraw();
+  private void chooseGraphicType() {
+    graphicType = getRandomByProbabilityObject(graphicProbabilityDataSet).value.toString();
   }
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {

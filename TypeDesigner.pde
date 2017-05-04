@@ -36,7 +36,7 @@ class TypeDesigner {  //<>// //<>//
     PFont helvetica;
     helvetica = createFont("helvetica", 100);
     pg.textFont(helvetica);
-    pg.fill(poster.colorScheme.colors[1]);
+    pg.fill(poster.colorScheme.textColor);
     pg.noStroke();
     pg.textSize(400);
     pg.textAlign(CENTER, CENTER);

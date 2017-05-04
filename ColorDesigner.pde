@@ -61,9 +61,23 @@ class ColorDesigner {
 
 class ColorScheme {
   public color[] colors;
+  float shuffleProbability = 0.1;
+
+  color backgroundColor;
+  color[] graphicsColor = new color[2];
+  color textColor;
 
   ColorScheme(color[] colorArray) {
     this.colors = colorArray;
+
+    backgroundColor = colors[0];
+    graphicsColor[0] = colors[1];
+    graphicsColor[1] = colors[2];
+    textColor = colors[3];
+
+    //if (random(0, 1) < shuffleProbability) {
+    //  shuffle();
+    //}
   }
 
   void shuffle() {
