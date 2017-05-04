@@ -1,4 +1,5 @@
 import controlP5.*;
+import org.apache.commons.lang3.*;
 
 /*
 
@@ -24,19 +25,19 @@ int posterHeight = 4961;
 
 /*
 TODO:
-May 2:
-  Finish Poster class
-May 3:
-  Graphic Design Class
-May 4:
-  Type Desig Class
-May 5:
-  Inspect class and catch up
-May 6:
-  Printer Class
-May 7:
-  Wrap Up
-*/
+ May 2:
+ Finish Poster class
+ May 3:
+ Graphic Design Class
+ May 4:
+ Type Desig Class
+ May 5:
+ Inspect class and catch up
+ May 6:
+ Printer Class
+ May 7:
+ Wrap Up
+ */
 
 
 //We will use this one object and rewrite it for every poster
@@ -132,6 +133,21 @@ public class ProbabilityObject {
     value = _value;
     probability = _probability;
   }
+}
+
+//////////////////////////////////
+
+ProbabilityObject getRandomByProbabilityObject(ArrayList<ProbabilityObject> list) {
+  IntList probabilityPool = new IntList();
+  int listIndex = 0;
+  for (ProbabilityObject PO : list) {
+    for (int i = 0; i < PO.probability; i++) {
+      probabilityPool.append(listIndex);
+    }
+    listIndex++;
+  }
+  int rando = floor(random(probabilityPool.size()));
+  return list.get(probabilityPool.get(rando));
 }
 
 //////////////////////////////////

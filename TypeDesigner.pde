@@ -54,7 +54,7 @@ class TypeDesigner {  //<>// //<>//
   void setupColumnWidthAndProbability() {
 
     float[] widths = {1/2, 1/3, 1/4};
-    float[] probabilities = {33, 33, 34};
+    int[] probabilities = {33, 33, 34};
 
     columnWidthProbabilities = new ArrayList<ProbabilityObject>();
     if (widths.length == probabilities.length) {

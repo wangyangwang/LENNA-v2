@@ -18,7 +18,7 @@ class ProgressManagerStage {
   int previewYOffset = 100;
   int detailsYOffset = 20;
   int textOffset = textSize * 2;
-  int detailsTextSize = 11;
+  int detailsTextSize = 18;
   color detailsTextColor = color(255);
 
   //consturctor
@@ -53,12 +53,8 @@ class ProgressManagerStage {
 
     textAlign(LEFT, TOP);
     if (thumbnailAdded) {
-      rect(0 - previewWidth/2, previewYOffset, previewWidth, previewHeight); //background
+      //rect(0 - previewWidth/2, previewYOffset, previewWidth, previewHeight); //background
       image(graphicsPreview, 0 - previewWidth/2, previewYOffset, previewWidth, previewHeight);
-
-      //textSize(detailsTextSize);
-      //fill(detailsTextColor);
-      //text(details, -previewWidth/2, previewHeight + previewYOffset + detailsYOffset);
     } 
     if (detailsAdded) {
       textSize(detailsTextSize);

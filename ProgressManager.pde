@@ -8,7 +8,7 @@ class ProgressManager {
   ArrayList<ProgressManagerStage> progressManagerStages;
 
   ProgressManager () {
-    spaceMono = createFont("Courier", 100);
+    spaceMono = createFont("Helvetica", 100);
     posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 

@@ -21,7 +21,8 @@ class ColorDesigner {
       for (int i = 0; i < poster.colorScheme.colors.length; i++) {
         colorPalette.beginDraw();
         colorPalette.fill(poster.colorScheme.colors[i]);
-        colorPalette.rect(0, (posterHeight/4) * i, posterWidth/2, posterHeight/4);        
+        colorPalette.noStroke();
+        colorPalette.ellipse(posterWidth/2, (posterHeight/4) * i + posterWidth/5/2, posterWidth/5, posterWidth/5);        
         colorPalette.endDraw();
 
         colorInfo += hex(poster.colorScheme.colors[i]).toString() + "\n";
