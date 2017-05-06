@@ -36,32 +36,15 @@ TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
 
-
 int posterWidth = 3508;
 int posterHeight = 4961;
-
-/*
-TODO:
- May 2:
- Finish Poster class
- May 3:
- Graphic Design Class
- May 4:
- Type Desig Class
- May 5:
- Inspect class and catch up
- May 6:
- Printer Class
- May 7:
- Wrap Up
- */
 
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
 void setup () {
-  size(1680, 1050);
+  size(1440, 900);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
@@ -154,7 +137,7 @@ public class ProbabilityObject {
 
 //////////////////////////////////
 
-ProbabilityObject getRandomByProbabilityObject(ArrayList<ProbabilityObject> list) {
+ProbabilityObject getObjectByProbability(ArrayList<ProbabilityObject> list) {
   IntList probabilityPool = new IntList();
   int listIndex = 0;
   for (ProbabilityObject PO : list) {

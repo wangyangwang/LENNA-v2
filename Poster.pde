@@ -7,9 +7,9 @@ class Poster {
   float rotation;
 
   ArrayList<Grid> grids = new ArrayList<Grid>();
-  ArrayList<ProbabilityObject> partitionProbabilityDataSet;
-  HashMap<String, Float> partitionDataSet = new HashMap();
-  ArrayList<ProbabilityObject> rotationProbabilityDataSet;
+  ArrayList<ProbabilityObject> partitionProbabilitySet;
+  HashMap<String, Float> partitionSet = new HashMap();
+  ArrayList<ProbabilityObject> rotationProbabilitySet;
 
   ColorScheme colorScheme;
   PGraphics content;
@@ -22,8 +22,8 @@ class Poster {
   Poster(int _posterW, int _posterH) {
     w = _posterW;
     h = _posterH;
-    partitionProbabilityDataSet = new ArrayList<ProbabilityObject>();
-    rotationProbabilityDataSet = new ArrayList<ProbabilityObject>();
+    partitionProbabilitySet = new ArrayList<ProbabilityObject>();
+    rotationProbabilitySet = new ArrayList<ProbabilityObject>();
 
     initPartitions();
     initRotations();
@@ -38,32 +38,32 @@ class Poster {
 
   void initPartitions() {
     // decide the global partition of this poster
-    partitionDataSet.put("golden ratio 01", 0.618);
-    partitionDataSet.put("golden ratio 02", 1-0.618);
-    partitionDataSet.put("silver ratio 01", 0.797);
-    partitionDataSet.put("silver ratio 02", 1-0.797);
-    partitionDataSet.put("half half", 0.5);
-    partitionDataSet.put("full height", 1.0);
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("golden ratio 01"), 35/2)); //golden ratio 01
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("golden ratio 02"), 35/2)); //golden ratio 01
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("silver ratio 01"), 30/2)); //silver ratio
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("silver ratio 02"), 30/2)); //silver ratio 02
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("half half"), 25)); //5/5
-    partitionProbabilityDataSet.add(new ProbabilityObject(partitionDataSet.get("full height"), 10)); //no divide
+    partitionSet.put("golden ratio 01", 0.618);
+    partitionSet.put("golden ratio 02", 1-0.618);
+    partitionSet.put("silver ratio 01", 0.797);
+    partitionSet.put("silver ratio 02", 1-0.797);
+    partitionSet.put("half half", 0.5);
+    partitionSet.put("full height", 1.0);
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("golden ratio 01"), 35/2)); //golden ratio 01
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("golden ratio 02"), 35/2)); //golden ratio 01
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("silver ratio 01"), 30/2)); //silver ratio
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("silver ratio 02"), 30/2)); //silver ratio 02
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("half half"), 25)); //5/5
+    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("full height"), 10)); //no divide
   }
 
   void initRotations() {
     //all rotation values are in DEGREE instead of RADIANS
-    rotationProbabilityDataSet.add(new ProbabilityObject(45, 5));
-    rotationProbabilityDataSet.add(new ProbabilityObject(-45, 5));
-    rotationProbabilityDataSet.add(new ProbabilityObject(0, 90));
+    rotationProbabilitySet.add(new ProbabilityObject(45, 5));
+    rotationProbabilitySet.add(new ProbabilityObject(-45, 5));
+    rotationProbabilitySet.add(new ProbabilityObject(0, 90));
   }
 
   // Get our partition of this poster!
   void getPartition() {
-    partitionValue = (float)getRandomByProbabilityObject(partitionProbabilityDataSet).value;
+    partitionValue = (float)getObjectByProbability(partitionProbabilitySet).value;
 
-    for (HashMap.Entry<String, Float> e : partitionDataSet.entrySet()) {
+    for (HashMap.Entry<String, Float> e : partitionSet.entrySet()) {
       Object key = e.getKey();
       Object value = e.getValue();
       if ((float)value == partitionValue) {
@@ -76,7 +76,7 @@ class Poster {
   }
 
   void getRotation() {
-    rotation = (int)getRandomByProbabilityObject(rotationProbabilityDataSet).value;
+    rotation = (int)getObjectByProbability(rotationProbabilitySet).value;
   }
 }
 

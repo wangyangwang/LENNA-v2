@@ -15,11 +15,12 @@ class GraphicDesigner {
     initProbabilitySet();
     chooseGraphicType();
     Graphic g = new Graphic(poster, graphicType);
+
     designResult = g.getResult(); 
     applyGraphicToPoster(designResult, poster);
 
     /* Apply data to StageInfo */
-    String details = "-Graphic Type:\n" + graphicType;
+    String details = "-Graphic Type:\n" + graphicType + "\n" + g.details;
     StageInfo stageInfo = new StageInfo(details, designResult);
     return stageInfo;
   }
@@ -29,7 +30,7 @@ class GraphicDesigner {
   }
 
   private void chooseGraphicType() {
-    graphicType = getRandomByProbabilityObject(graphicProbabilityDataSet).value.toString();
+    graphicType = getObjectByProbability(graphicProbabilityDataSet).value.toString();
   }
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {

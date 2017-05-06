@@ -1,4 +1,4 @@
-class TypeDesigner {  //<>// //<>//
+class TypeDesigner {  //<>// //<>// //<>//
 
   ArrayList<ProbabilityObject> columnWidthProbabilities;
 
