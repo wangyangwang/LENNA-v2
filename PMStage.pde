@@ -14,7 +14,7 @@ class ProgressManagerStage {
   color inProgressTextColor = color(255);
   int inProgressTextSize = 15;
   int previewWidth = 200;
-  int previewHeight = (posterHeight * previewWidth) / posterWidth;
+  int previewHeight;
   int previewYOffset = 100;
   int detailsYOffset = 20;
   int textOffset = textSize * 2;
@@ -53,7 +53,7 @@ class ProgressManagerStage {
 
     textAlign(LEFT, TOP);
     if (thumbnailAdded) {
-      //rect(0 - previewWidth/2, previewYOffset, previewWidth, previewHeight); //background
+      previewHeight = (graphicsPreview.height * previewWidth) / graphicsPreview.width;
       image(graphicsPreview, 0 - previewWidth/2, previewYOffset, previewWidth, previewHeight);
     } 
     if (detailsAdded) {

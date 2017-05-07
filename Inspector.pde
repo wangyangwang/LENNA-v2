@@ -1,16 +1,17 @@
 class Inspector {
-
+  boolean noise = false;
   StageInfo inspect(Poster poster, int posterCount) {
     //poster.content.beginDraw();
     //poster.content.textSize(100);
     //poster.content.text("Inspected #" + posterCount, 30, 30);
     //poster.content.beginDraw();
-    addNoise(poster);
-    String details = "inspected.";
+    if (noise) {
+      addNoise(poster);
+    }
+    String details = "Inspected.";
     StageInfo stageInfo = new StageInfo(details);
     return stageInfo;
   }
-
 
   void addNoise(Poster poster) {
     float noiseOpacity = 0.1;

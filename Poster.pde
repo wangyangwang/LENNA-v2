@@ -13,12 +13,9 @@ class Poster {
 
   ColorScheme colorScheme;
   PGraphics content;
-
-
   String posterDetails;
 
-
-
+  //Constructor
   Poster(int _posterW, int _posterH) {
     w = _posterW;
     h = _posterH;
@@ -29,6 +26,7 @@ class Poster {
     initRotations();
 
     getPartition();
+    arrangePartitions();
     getRotation();
 
     content = createGraphics(w, h);
@@ -70,9 +68,37 @@ class Poster {
         partitionType = key.toString();
       }
     }
+    grids.add(new Grid(posterWidth, floor(posterHeight * partitionValue), 0));
+    grids.add(new Grid(posterWidth, posterHeight-(floor(posterHeight * partitionValue)), 1));
+  }
 
-    grids.add(new Grid(posterWidth, posterHeight * partitionValue, 0));
-    grids.add(new Grid(posterWidth, posterHeight * (1-partitionValue), 1));
+  void arrangePartitions() {
+
+    int partitionIndexForGraphics = 999;
+
+    if (partitionValue < 0.5) {
+      partitionIndexForGraphics = 1;
+    } else if (partitionValue > 0.5) {
+      partitionIndexForGraphics = 0;
+    } else if (partitionValue == 0.5) {
+      if (random(0, 1) > 0.7) { // 40% chance of draw graphics on the top partition
+        partitionIndexForGraphics = 0;
+      } else {
+        partitionIndexForGraphics = 1;
+      }
+    } else if (partitionValue == 1) {
+      partitionIndexForGraphics = 0;
+    }
+
+    if (partitionIndexForGraphics == 1) {
+      grids.get(0).contentType = "letters";
+      grids.get(1).contentType = "graphics";
+    } else if (partitionIndexForGraphics == 0) {
+      grids.get(1).contentType = "letters";
+      grids.get(0).contentType = "graphics";
+    } else {
+      println("ERR: partitionIndexForGraphics is not assigned!!!");
+    }
   }
 
   void getRotation() {
@@ -83,18 +109,22 @@ class Poster {
 //////////////////////////////////////////////////
 
 class Grid {
-  boolean occupied; //if it has stuff on it
-  float h, w;
+  String contentType;
+  int h, w;
   private color backgroundColor; 
   boolean backgroundColorSet = false;
-  boolean fullHeight; 
-  int index; //0 means this grid is on top, 1 means bottom
+  final boolean fullHeight; 
+  final int index; //0 means this grid is on top, 1 means bottom
 
-  Grid (float _width, float _height, int i) {
+  Grid (int _width, int _height, int i) {
     w = _width;
     h = _height;
     index = i;
-    if (h == posterHeight)fullHeight = true;
+    if (h == posterHeight) {
+      fullHeight = true;
+    } else {
+      fullHeight = false;
+    };
   }
   void setBackgroundColor(color c) {
     backgroundColor = c;

@@ -1,24 +1,32 @@
 class Graphic {
   String details;
-  PGraphics g = createGraphics(posterWidth, posterHeight);
+  PGraphics PGcanvas;
+  Grid myGrid;
+
   Graphic (Poster poster, String type) {
+    for (Grid g : poster.grids) {
+      if (g.contentType == "graphics") {
+        myGrid = g;
+      }
+    }
+    PGcanvas = createGraphics(myGrid.w, myGrid.h);
     switch (type) {
     case "offset":
-      g = offset(poster);
+      PGcanvas = offset(poster);
       break;
 
     case "pattern":
-      g = pattern(poster);
+      PGcanvas = pattern(poster);
       break;
 
     default:
-      g = empty(poster);
+      PGcanvas = empty();
       break;
     }
   }
 
   public PGraphics getResult() {
-    return g;
+    return PGcanvas;
   }
 
   ///////////////////////////////////
@@ -63,21 +71,32 @@ class Graphic {
 
     //drawOffsetObjects();
 
-    g.beginDraw();
-    g.background(poster.colorScheme.backgroundColor);
-    g.endDraw();
-    return g;
+    PGcanvas.beginDraw();
+    PGcanvas.background(poster.colorScheme.backgroundColor);
+    PGcanvas.endDraw();
+    return PGcanvas;
   }
 
   private PGraphics pattern(Poster poster) {
-    g.beginDraw();
-    g.endDraw();
-    return g;
-  }  
-  private PGraphics empty(Poster poster) {
-    g.beginDraw();
-    g.endDraw();
-    return g;
+    PGcanvas.beginDraw();
+    PGcanvas.stroke(poster.colorScheme.graphicsColor[0]);
+    PGcanvas.strokeWeight(30);
+    PGcanvas.noFill();
+    float rectSize =  PGcanvas.width/10;
+
+    for (int x = 0; x < PGcanvas.width - rectSize; x += PGcanvas.width/5) {
+      for (int y = 0; y < PGcanvas.height - rectSize; y += PGcanvas.height/5) {
+        PGcanvas.rect(x, y, rectSize, rectSize);
+      }
+    }
+    PGcanvas.endDraw();
+    details = "heyhey";
+    return PGcanvas;
+  }
+  private PGraphics empty() {
+    PGcanvas.beginDraw();
+    PGcanvas.endDraw();
+    return PGcanvas;
   }
 }
 

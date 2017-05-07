@@ -1,13 +1,17 @@
-class Text {
-}
-////////////////////////////////////////////////////
-class Headline extends Text {
 
-  TextBlock textBlock;
+////////////////////////////////////////////////////
+class Headline {
+  SText textBlock;
 }
 ////////////////////////////////////////////////////
-class Paragraph extends Text {
+class Paragraph {
 
   color textColor;
-  ArrayList<TextBlock> columns;
+  ArrayList<SText> columns;
+
+  Paragraph(int colNumber) {
+    for (int i = 0; i < colNumber; i++) {
+      //columns.add(new SText());
+    }
+  }
 }

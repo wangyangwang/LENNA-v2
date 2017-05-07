@@ -4,6 +4,7 @@ import java.lang.Runtime;
 class PrinterManager {
   boolean actuallyPrint = false;
 
+
   StageInfo print(Poster poster, int poster_count) {
     String posterFileName = "poster_#" + poster_count+".png";
     poster.content.save("posters/"+posterFileName);
@@ -20,7 +21,6 @@ class PrinterManager {
   }
 
   void sendToPrinter(String pathToFile) {
-    //String path = pathToFile.replace(" ");
     try {
       println(pathToFile);
       Process p = Runtime.getRuntime().exec("lp "+pathToFile);

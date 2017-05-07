@@ -1,10 +1,20 @@
 import controlP5.*;
 import org.apache.commons.lang3.*;
+import org.jsoup.*;
+import org.jsoup.examples.*;
+import org.jsoup.helper.*;
+import org.jsoup.nodes.*;
+import org.jsoup.parser.*;
+import org.jsoup.safety.*;
+import org.jsoup.select.*;
+import org.apache.commons.lang3.text.*;
+import http.requests.*;
+import java.io.IOException;
 
 
-//////////////////////////////////
+  //////////////////////////////////
 /* Stage control */
-public enum Stage {
+  public enum Stage {
   CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
     @Override
       public Stage next() {
@@ -36,8 +46,8 @@ TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
 
-int posterWidth = 3508;
-int posterHeight = 4961;
+int posterWidth = 3121;
+int posterHeight = 4413;
 
 
 //We will use this one object and rewrite it for every poster
