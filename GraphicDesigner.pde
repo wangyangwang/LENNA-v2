@@ -2,19 +2,22 @@ class GraphicDesigner {
 
   ArrayList<ProbabilityObject> graphicProbabilityDataSet = new ArrayList<ProbabilityObject>();
   String graphicType;
-
+  Grid myGrid;
 
   //Main Func
   public StageInfo design(Poster poster) {
-    PGraphics generatedPGraphics = createGraphics(posterWidth, posterHeight);
+    addBackgroundColorToPoster(poster);
+
+    for (Grid g : poster.grids) {
+      if (g.contentType == "graphics")myGrid = g;
+    }
+
+    PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
 
     initProbabilitySet();
     chooseGraphicType();
 
-    addBackgroundColorToPoster(poster);
-
-
-    Graphic g = new Graphic(poster, graphicType);
+    Graphic g = new Graphic(poster, graphicType, myGrid);
     generatedPGraphics = g.getResult(); 
 
     applyGraphicToPoster(generatedPGraphics, poster);
@@ -35,11 +38,15 @@ class GraphicDesigner {
     graphicType = getObjectByProbability(graphicProbabilityDataSet).value.toString();
   }
 
-
-
   void applyGraphicToPoster(PGraphics pg, Poster poster) {
     poster.content.beginDraw();
-    poster.content.image(pg, 0, 0);
+
+    if (myGrid.index==0) {
+      poster.content.image(pg, 0, 0);
+    } else {
+      poster.content.image(pg, 0, poster.grids.get(0).h);
+    }
+
     poster.content.endDraw();
   }
 

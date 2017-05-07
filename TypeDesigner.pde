@@ -13,6 +13,7 @@ class TypeDesigner {
 
   ArrayList<ProbabilityObject> columnWidthProbabilities;
   ArrayList<PFont> fonts;
+  Grid myGrid;
 
 
 
@@ -27,54 +28,49 @@ class TypeDesigner {
   StageInfo design(Poster poster) {
     //setup variables
     PGraphics generatedTypes;
-    generatedTypes = createGraphics(poster.w, poster.h);
+    for (Grid g : poster.grids) {
+      if (g.contentType == "letters")myGrid = g;
+    }
+    println(myGrid.w + " , " + myGrid.h);
+    generatedTypes = createGraphics(myGrid.w, myGrid.h);
 
-    //actual design
+
     getColumnNumber();
     //getHeadlineContent();
     //getParagraphContent();
 
-    designTypography(generatedTypes,  poster);
-
-    //apply design to poster
+    designTypography(generatedTypes, poster);
     applyGraphicToPoster(generatedTypes, poster);
 
     String details = "Chose font: Helvetica\nHeadline: 1\nParagraph:0";
-
-
     StageInfo stageInfo = new StageInfo(details, generatedTypes);
     return stageInfo;
   }
-  
-  
-  
-  
-  
 
   void getColumnNumber() {
   }
 
-
-
-
   private void designTypography(PGraphics pg, Poster poster) {
+    String headlineContent = getContent(1, 1);
     pg.beginDraw();
-    PFont helvetica;
-    helvetica = createFont("helvetica", 100);
-    pg.textFont(helvetica);
-    pg.fill(poster.colorScheme.brightest);
+    pg.fill(poster.colorScheme.textColor);
     pg.noStroke();
     pg.textSize(400);
-    pg.textAlign(CENTER, CENTER);
-    String headline = getContent(1, 2);
-    pg.text(headline.toUpperCase(), poster.w/2, poster.h/2);
+    int yPadding  = 500;
+    pg.textAlign(LEFT, TOP);
+    if (myGrid.index == 0) {
+      pg.text(headlineContent, 0, myGrid.h - yPadding );
+    } else {
+      pg.text(headlineContent, 0, yPadding);
+    }
     pg.endDraw();
   }
 
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {
     poster.content.beginDraw();
-    poster.content.image(pg, 0, 0);
+    int y = myGrid.index * poster.grids.get(0).h;
+    poster.content.image(pg, 0, y);
     poster.content.endDraw();
   }
 

@@ -2,13 +2,10 @@ class Graphic {
   String details;
   PGraphics PGcanvas;
   Grid myGrid;
+  
 
-  Graphic (Poster poster, String type) {
-    for (Grid g : poster.grids) {
-      if (g.contentType == "graphics") {
-        myGrid = g;
-      }
-    }
+  Graphic (Poster poster, String type, Grid _myGrid) {
+    myGrid = _myGrid;
     PGcanvas = createGraphics(myGrid.w, myGrid.h);
     switch (type) {
     case "offset":
@@ -55,8 +52,6 @@ class Graphic {
     String shape = getObjectByProbability(offsetObjectProbabilitySet).value.toString();
 
 
-
-
     //how is the offsetValue?    < 0 > is 100% overlap, < 1 > is side by side
     ArrayList<ProbabilityObject> offsetValueProbabilitySet = new ArrayList<ProbabilityObject>();
     offsetValueProbabilitySet.add(new ProbabilityObject(0.0, 25));
@@ -90,7 +85,8 @@ class Graphic {
       }
     }
     PGcanvas.endDraw();
-    details = "heyhey";
+    String loc;  
+    details = "Graphics is in:\n" + myGrid.index + "\n(0 means top, 1 means bottom)";
     return PGcanvas;
   }
   private PGraphics empty() {

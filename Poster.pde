@@ -68,8 +68,14 @@ class Poster {
         partitionType = key.toString();
       }
     }
-    grids.add(new Grid(posterWidth, floor(posterHeight * partitionValue), 0));
-    grids.add(new Grid(posterWidth, posterHeight-(floor(posterHeight * partitionValue)), 1));
+
+    if (partitionType == "full height") {
+      grids.add(new Grid(posterWidth, posterHeight, 0));
+      grids.add(new Grid(posterWidth, posterHeight, 1));
+    } else {
+      grids.add(new Grid(posterWidth, floor(posterHeight * partitionValue), 0));
+      grids.add(new Grid(posterWidth, posterHeight-(floor(posterHeight * partitionValue)), 1));
+    }
   }
 
   void arrangePartitions() {
