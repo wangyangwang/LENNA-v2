@@ -41,8 +41,8 @@ TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
 
-int posterWidth = 595;
-int posterHeight = 842;
+int posterWidth = 2480;
+int posterHeight = 3508;
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
