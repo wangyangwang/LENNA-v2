@@ -1,7 +1,7 @@
 class ProgressManager {
   Stage STAGE;
   int posterCount;
-  int stageDelay = 500;
+  int stageDelay = 300;
   PFont spaceMono;
   int titleSize = 29;
 

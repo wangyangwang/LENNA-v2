@@ -13,20 +13,23 @@ class ColorDesigner {
     StageInfo thisStageInfo;
     PGraphics colorPalette;
     String colorInfo = "";
-    colorPalette = createGraphics(posterWidth, posterHeight);
+    colorPalette = createGraphics(200, 200);
 
     if (allColorSchemes.size()!=0) {
       poster.colorScheme = allColorSchemes.get(floor(random(0, allColorSchemes.size())));
-
+      colorPalette.beginDraw();
+      // colorPalette.background(0);
+      float colorNodeSize = colorPalette.width/5;
       for (int i = 0; i < poster.colorScheme.colors.length; i++) {
-        colorPalette.beginDraw();
+       
         colorPalette.fill(poster.colorScheme.colors[i]);
         colorPalette.noStroke();
-        colorPalette.ellipse(posterWidth/2, (posterHeight/4) * i + posterWidth/5/2, posterWidth/5, posterWidth/5);        
-        colorPalette.endDraw();
-
+        colorPalette.ellipse(colorNodeSize/2, (colorPalette.height/4) * i + colorPalette.width/5/2, colorNodeSize,colorNodeSize);        
+      
         colorInfo += hex(poster.colorScheme.colors[i]).toString() + "\n";
       }
+
+        colorPalette.endDraw();
     } else {
       println("Err: no color scheme saved in ColorDesigner");
     }

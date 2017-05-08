@@ -13,8 +13,8 @@ class ProgressManagerStage {
   color textColor = color(0);
   color inProgressTextColor = color(255);
   int inProgressTextSize = 15;
-  int previewWidth = 200;
-  int previewHeight;
+  float previewWidth = 170;
+  float previewHeight;
   int previewYOffset = 100;
   int detailsYOffset = 20;
   int textOffset = textSize * 2;
@@ -50,10 +50,9 @@ class ProgressManagerStage {
     ellipse(0, 0, 15, 15);
     text(name, 0, textOffset);
 
-
     textAlign(LEFT, TOP);
     if (thumbnailAdded) {
-      previewHeight = (graphicsPreview.height * previewWidth) / graphicsPreview.width;
+      previewHeight = (Float)(previewWidth/graphicsPreview.width)  * graphicsPreview.height;
       image(graphicsPreview, 0 - previewWidth/2, previewYOffset, previewWidth, previewHeight);
     } 
     if (detailsAdded) {

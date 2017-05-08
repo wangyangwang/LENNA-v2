@@ -15,6 +15,7 @@ import processing.pdf.*;
 
 //////////////////////////////////
 /* Stage control */
+
 public enum Stage {
   CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
     @Override
@@ -27,6 +28,7 @@ public enum Stage {
     return values()[ordinal() + 1];
   }
 }
+
 //////////////////////////////////
 
 Stage STAGE;
@@ -41,7 +43,6 @@ Inspector inspector;
 
 int posterWidth = 595;
 int posterHeight = 842;
-
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
