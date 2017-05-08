@@ -6,8 +6,14 @@ class PrinterManager {
 
 
   StageInfo print(Poster poster, int poster_count) {
-    String posterFileName = "poster_#" + poster_count+".png";
-    poster.content.save("posters/"+posterFileName);
+    String posterFileName = "poster_#" + poster_count+".jpg";
+    //poster.content.
+    //poster.content.save("posters/"+posterFileName);
+    
+    //poster.content.beginDraw();
+    //poster.content.dispose();
+    //poster.content.endDraw();
+    
     String newPosterPath = sketchPath("")+"posters/"+posterFileName;
 
     if (actuallyPrint) {

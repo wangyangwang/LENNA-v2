@@ -10,11 +10,12 @@ import org.jsoup.select.*;
 import org.apache.commons.lang3.text.*;
 import http.requests.*;
 import java.io.IOException;
+import processing.pdf.*;
 
 
-  //////////////////////////////////
+//////////////////////////////////
 /* Stage control */
-  public enum Stage {
+public enum Stage {
   CREATION, COLOR_DESIGN, GRAPHIC_DESIGN, TYPE_DESIGN, INSPECTION, PRINT, FINISH {
     @Override
       public Stage next() {
@@ -28,14 +29,6 @@ import java.io.IOException;
 }
 //////////////////////////////////
 
-/*
-
- TODO: graphic design
- 1. partition
- 2. rotation
- 
- */
-
 Stage STAGE;
 int stageNumber = STAGE.values().length;
 
@@ -46,8 +39,8 @@ TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
 
-int posterWidth = 3121;
-int posterHeight = 4413;
+int posterWidth = 595;
+int posterHeight = 842;
 
 
 //We will use this one object and rewrite it for every poster

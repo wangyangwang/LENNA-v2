@@ -5,6 +5,7 @@ class Poster {
   String partitionType;
   float partitionValue;
   float rotation;
+  HashMap<String, Integer> partitionArrangement = new HashMap();
 
   ArrayList<Grid> grids = new ArrayList<Grid>();
   ArrayList<ProbabilityObject> partitionProbabilitySet;
@@ -29,7 +30,8 @@ class Poster {
     arrangePartitions();
     getRotation();
 
-    content = createGraphics(w, h);
+    //content = createGraphics(w, h, PDF, "test.pdf");
+    content = createGraphics(w,h);
     posterDetails = " - Partition Type:\n" + partitionType.toUpperCase() + "\n\n - Rotation is\n" + rotation + " degree";
   }
 
@@ -99,9 +101,13 @@ class Poster {
     if (partitionIndexForGraphics == 1) {
       grids.get(0).contentType = "letters";
       grids.get(1).contentType = "graphics";
+      partitionArrangement.put("letters", 0);
+      partitionArrangement.put("graphics", 1);
     } else if (partitionIndexForGraphics == 0) {
       grids.get(1).contentType = "letters";
       grids.get(0).contentType = "graphics";
+      partitionArrangement.put("letters", 1);
+      partitionArrangement.put("graphics", 0);
     } else {
       println("ERR: partitionIndexForGraphics is not assigned!!!");
     }

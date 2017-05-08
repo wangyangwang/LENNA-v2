@@ -5,25 +5,45 @@ class GraphicDesigner {
   Grid myGrid;
 
   //Main Func
-  public StageInfo design(Poster poster) {
+  StageInfo design(Poster poster) {
     addBackgroundColorToPoster(poster);
-
-    for (Grid g : poster.grids) {
-      if (g.contentType == "graphics")myGrid = g;
-    }
-
+    myGrid = poster.grids.get( poster.partitionArrangement.get("graphics") );
     PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
 
     initProbabilitySet();
     chooseGraphicType();
 
-    Graphic g = new Graphic(poster, graphicType, myGrid);
-    generatedPGraphics = g.getResult(); 
+    String detailsFromGraphics = "Null";
+
+    switch (graphicType) {
+    case "offset":
+      OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid.w, myGrid.h);
+      generatedPGraphics = offsetGraphics.getGraphics();
+      detailsFromGraphics = offsetGraphics.details;
+      break;
+
+    case "pattern":
+      PatternGraphics patternGraphics = new PatternGraphics(poster, myGrid.w, myGrid.h);
+      generatedPGraphics = patternGraphics.getGraphics();
+      detailsFromGraphics = patternGraphics.details;
+      break;
+
+    default:
+      generatedPGraphics = empty();
+      break;
+    }
 
     applyGraphicToPoster(generatedPGraphics, poster);
 
-    /* Apply data to StageInfo */
-    String details = "-Graphic Type:\n" + graphicType + "\n" + g.details;
+    String partitionLoc;
+    if (myGrid.index==0) {
+      partitionLoc = "Top";
+    } else if (myGrid.index==1) {
+      partitionLoc = "Bottom";
+    } else {
+      partitionLoc = null;
+    }
+    String details = "-Graphic Type:\n" + graphicType + "\n" + "Graphic Partition:\n" + partitionLoc + "\n" + detailsFromGraphics;
     StageInfo stageInfo = new StageInfo(details, generatedPGraphics);
     return stageInfo;
   }
@@ -41,7 +61,7 @@ class GraphicDesigner {
   void applyGraphicToPoster(PGraphics pg, Poster poster) {
     poster.content.beginDraw();
 
-    if (myGrid.index==0) {
+    if (myGrid.index == 0) {
       poster.content.image(pg, 0, 0);
     } else {
       poster.content.image(pg, 0, poster.grids.get(0).h);
@@ -54,5 +74,13 @@ class GraphicDesigner {
     poster.content.beginDraw();
     poster.content.background(poster.colorScheme.backgroundColor);
     poster.content.endDraw();
+  }
+
+
+  private PGraphics empty() {
+    PGraphics emptyGraphics = createGraphics(myGrid.w, myGrid.h);
+    emptyGraphics.beginDraw();
+    emptyGraphics.endDraw();
+    return emptyGraphics;
   }
 }

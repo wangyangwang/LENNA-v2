@@ -16,22 +16,20 @@ class TypeDesigner {
   Grid myGrid;
 
 
-
   TypeDesigner () {
     setupColumnWidthAndProbability();
     setupFonts();
   }
 
-
-
   //Main Function
   StageInfo design(Poster poster) {
     //setup variables
     PGraphics generatedTypes;
-    for (Grid g : poster.grids) {
-      if (g.contentType == "letters")myGrid = g;
-    }
-    println(myGrid.w + " , " + myGrid.h);
+    PFont font;
+    myGrid = poster.grids.get( poster.partitionArrangement.get("letters") );
+
+    setupFonts();
+    font = fonts.get(floor(random(fonts.size())));
     generatedTypes = createGraphics(myGrid.w, myGrid.h);
 
 
@@ -39,10 +37,10 @@ class TypeDesigner {
     //getHeadlineContent();
     //getParagraphContent();
 
-    designTypography(generatedTypes, poster);
+    designTypography(generatedTypes, poster, font);
     applyGraphicToPoster(generatedTypes, poster);
 
-    String details = "Chose font: Helvetica\nHeadline: 1\nParagraph:0";
+    String details = "Chose font:\n"+font.getName()+"\nHeadline: 1\nParagraph:0";
     StageInfo stageInfo = new StageInfo(details, generatedTypes);
     return stageInfo;
   }
@@ -50,18 +48,20 @@ class TypeDesigner {
   void getColumnNumber() {
   }
 
-  private void designTypography(PGraphics pg, Poster poster) {
-    String headlineContent = getContent(1, 1);
+  private void designTypography(PGraphics pg, Poster poster, PFont font) {
+    String headlineContent = getContent(1, 1).toUpperCase();
     pg.beginDraw();
     pg.fill(poster.colorScheme.textColor);
+    pg.textFont(font);
     pg.noStroke();
     pg.textSize(400);
-    int yPadding  = 500;
-    pg.textAlign(LEFT, TOP);
+
     if (myGrid.index == 0) {
-      pg.text(headlineContent, 0, myGrid.h - yPadding );
+      pg.textAlign(LEFT, BOTTOM);
+      pg.text(headlineContent, 0, myGrid.h );
     } else {
-      pg.text(headlineContent, 0, yPadding);
+      pg.textAlign(LEFT, TOP);
+      pg.text(headlineContent, 0, 0);
     }
     pg.endDraw();
   }
@@ -90,7 +90,13 @@ class TypeDesigner {
 
   void setupFonts() {
     fonts = new ArrayList<PFont>();
-    fonts.add(createFont("Helvetica", 500));
+    fonts.add(createFont("Helvetica-Bold", 500));
+    fonts.add(createFont("Futura", 500));
+    fonts.add(createFont("Avenir-Heavy", 500));
+    fonts.add(createFont("PT-mono", 500));
+  }
+
+  void chooseFont() {
   }
 
 

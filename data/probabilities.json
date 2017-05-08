@@ -1,0 +1,20 @@
+{
+	"graphics": {
+		"offset" : {
+			"probability": 33,
+			"shape":{
+
+			}
+		},
+		"pattern":{
+			"probability" : 33,
+			"shape":{
+
+			}
+		},
+	},
+
+	"typography": {
+
+	}
+}
