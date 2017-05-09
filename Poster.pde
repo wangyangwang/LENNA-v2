@@ -22,46 +22,25 @@ class Poster {
     h = _posterH;
     partitionProbabilitySet = new ArrayList<ProbabilityObject>();
     rotationProbabilitySet = new ArrayList<ProbabilityObject>();
-
-    initPartitions();
-    initRotations();
-
     getPartition();
     arrangePartitions();
     getRotation();
-
     //content = createGraphics(w, h, PDF, "test.pdf");
-    content = createGraphics(w,h);
-    posterDetails = " - Partition Type:\n" + partitionType.toUpperCase() + "\n\n - Rotation is\n" + rotation + " degree";
+    content = createGraphics(w, h);
+    posterDetails = " - Partition Value:\n" + partitionValue + "\n\n - Rotation is\n" + rotation + " degree";
   }
 
-
-  void initPartitions() {
-    // decide the global partition of this poster
-    partitionSet.put("golden ratio 01", 0.618);
-    partitionSet.put("golden ratio 02", 1-0.618);
-    partitionSet.put("silver ratio 01", 0.797);
-    partitionSet.put("silver ratio 02", 1-0.797);
-    partitionSet.put("half half", 0.5);
-    partitionSet.put("full height", 1.0);
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("golden ratio 01"), 35/2)); //golden ratio 01
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("golden ratio 02"), 35/2)); //golden ratio 01
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("silver ratio 01"), 30/2)); //silver ratio
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("silver ratio 02"), 30/2)); //silver ratio 02
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("half half"), 25)); //5/5
-    partitionProbabilitySet.add(new ProbabilityObject(partitionSet.get("full height"), 10)); //no divide
-  }
-
-  void initRotations() {
-    //all rotation values are in DEGREE instead of RADIANS
-    rotationProbabilitySet.add(new ProbabilityObject(45, 5));
-    rotationProbabilitySet.add(new ProbabilityObject(-45, 5));
-    rotationProbabilitySet.add(new ProbabilityObject(0, 90));
+  void getRotation() {
+    Integer[] rotationValues = new Integer[] {45, -45, 0};
+    int[] rotationProbabilities = new int[]{5, 5, 90};
+    rotation = (int)pickByProbability(rotationValues, rotationProbabilities);
   }
 
   // Get our partition of this poster!
   void getPartition() {
-    partitionValue = (float)getObjectByProbability(partitionProbabilitySet).value;
+    Float[] partitionValues = new Float[]{0.618, 1-0.618, 0.797, 1-0.797, 0.5, 1.0};
+    int[] partitionProbabilities = new int[]{20, 20, 10, 10, 25, 15};
+    partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
 
     for (HashMap.Entry<String, Float> e : partitionSet.entrySet()) {
       Object key = e.getKey();
@@ -70,8 +49,7 @@ class Poster {
         partitionType = key.toString();
       }
     }
-
-    if (partitionType == "full height") {
+    if (partitionValue == 1.0) {
       grids.add(new Grid(posterWidth, posterHeight, 0));
       grids.add(new Grid(posterWidth, posterHeight, 1));
     } else {
@@ -84,9 +62,9 @@ class Poster {
 
     int partitionIndexForGraphics = 999;
 
-    if (partitionValue < 0.5) {
+    if (partitionValue < 0.5 && partitionValue > 0) {
       partitionIndexForGraphics = 1;
-    } else if (partitionValue > 0.5) {
+    } else if (partitionValue > 0.5 && partitionValue < 1) {
       partitionIndexForGraphics = 0;
     } else if (partitionValue == 0.5) {
       if (random(0, 1) > 0.7) { // 40% chance of draw graphics on the top partition
@@ -96,8 +74,10 @@ class Poster {
       }
     } else if (partitionValue == 1) {
       partitionIndexForGraphics = 0;
+    } else {
+      System.err.println("Werid partition value.");
     }
-
+    //add lable to grids
     if (partitionIndexForGraphics == 1) {
       grids.get(0).contentType = "letters";
       grids.get(1).contentType = "graphics";
@@ -109,12 +89,8 @@ class Poster {
       partitionArrangement.put("letters", 1);
       partitionArrangement.put("graphics", 0);
     } else {
-      println("ERR: partitionIndexForGraphics is not assigned!!!");
+      System.err.println("ERR: partitionIndexForGraphics is not assigned!!!");
     }
-  }
-
-  void getRotation() {
-    rotation = (int)getObjectByProbability(rotationProbabilitySet).value;
   }
 }
 
@@ -123,9 +99,9 @@ class Poster {
 class Grid {
   String contentType;
   int h, w;
-  private color backgroundColor; 
+  private color backgroundColor;
   boolean backgroundColorSet = false;
-  final boolean fullHeight; 
+  final boolean fullHeight;
   final int index; //0 means this grid is on top, 1 means bottom
 
   Grid (int _width, int _height, int i) {

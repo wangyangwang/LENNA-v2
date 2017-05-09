@@ -8,7 +8,7 @@ class Inspector {
     if (noise) {
       addNoise(poster);
     }
-    String details = "Inspected.";
+    String details = "Inspected";
     StageInfo stageInfo = new StageInfo(details);
     return stageInfo;
   }

@@ -41,14 +41,14 @@ TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
 
-int posterWidth = 2480;
-int posterHeight = 3508;
+int posterWidth = 2480/2;
+int posterHeight = 3508/2;
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
 void setup () {
-  size(1440, 900);
+  size(1280, 800);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
@@ -139,7 +139,6 @@ public class ProbabilityObject {
   }
 }
 
-//////////////////////////////////
 
 ProbabilityObject getObjectByProbability(ArrayList<ProbabilityObject> list) {
   IntList probabilityPool = new IntList();
@@ -152,4 +151,20 @@ ProbabilityObject getObjectByProbability(ArrayList<ProbabilityObject> list) {
   }
   int rando = floor(random(probabilityPool.size()));
   return list.get(probabilityPool.get(rando));
+}
+
+//////////////////////////////////
+
+Object pickByProbability(Object[] objectList, int[] probabilityList) {
+  if (objectList.length!=probabilityList.length) {
+    System.err.println("objectList.length!=probabilityList.length, picking has to stop" + objectList[0]);
+    // exit();
+  }
+
+  ArrayList<ProbabilityObject> set = new ArrayList<ProbabilityObject>();
+  for (int i = 0; i < objectList.length; i++) {
+    set.add(new ProbabilityObject(objectList[i], probabilityList[i]));
+  }
+
+  return getObjectByProbability(set).value;
 }

@@ -8,13 +8,12 @@ public abstract class Graphics {
     w = _w;
     h = _h;
     initPGraphics();
-    initProbabilitySet();
     makeDecisions();
     design();
   }
 
-  abstract void initProbabilitySet();
   abstract void makeDecisions();
+
   abstract void design();
 
   public PGraphics getGraphics () {

@@ -1,1 +1,5 @@
-poster/
+posters/
+posters
+posters/*
+build/
+build/*
