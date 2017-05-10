@@ -48,7 +48,7 @@ int posterHeight = 3508/2;
 Poster poster;
 
 void setup () {
-  size(1280, 800);
+  size(1440, 800);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
