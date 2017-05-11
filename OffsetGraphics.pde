@@ -68,6 +68,9 @@ class OffsetGraphics extends Graphics {
             p.normalize();
         }
         int[] offsetDirectionProbabilities = new int[]{16, 16, 16, 16, 20, 16};
+        if(offsetDist == 0.0){
+            offsetDirectionProbabilities = new int[]{0,0, 0, 0, 100, 0};
+        }
         offsetDirection = (PVector)pickByProbability(offsetDirections, offsetDirectionProbabilities);
         addToDetails("\nOffsetting direction: " + degrees(offsetDirection.heading()) + " degree" );
 
@@ -77,12 +80,14 @@ class OffsetGraphics extends Graphics {
         if(shape == "letter"){
             layerBlendProbability = new int[]{100,0};
         }
+        if(offsetDist == 0.0){
+            layerBlendProbability = new int[]{100,0};
+        }
         layerBlending = (boolean)pickByProbability(ifLayerBlend,layerBlendProbability);
     }
 
     void design() {
 
-        color mainColor = poster.colorScheme.graphicsColor[1];
         int strokeWeight = 50;
 
         int shapeSize = floor(min(w, h) * 0.5);
@@ -95,11 +100,19 @@ class OffsetGraphics extends Graphics {
         w = graphics.width;
         h = graphics.height;
 
-        /////////////////////center and resize the graphics to fit in the layout
-        float hypotenuse = numberOfShape * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);//length of shape skewer
+        /////////////////////center the graphics
+        // float hypotenuse = numberOfShape * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
+        // float hypotenuse = shapeSize * (numberOfShape  * offsetDist - offsetDist);
+        float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
         float theta = offsetDirection.heading();
-        float graphicsWidth = cos(theta) * hypotenuse;
-        float graphicsHeight = sin(theta) * hypotenuse;
+
+        float offsetWidth = cos(theta) * hypotenuse;
+        float offsetHeight = sin(theta) * hypotenuse;
+
+        // float graphicsWidth = cos(theta) * hypotenuse;
+        // float graphicsHeight = sin(theta) * hypotenuse;
+
+        // addToDetails("\nHypotenuse: " + hypotenuse + "\nAngle:   " +  theta + "\nGraphics Width:  " + graphicsWidth + "\nGraphics Height:  " + graphicsHeight);
 
         // float gW,gH;
         //
@@ -114,15 +127,14 @@ class OffsetGraphics extends Graphics {
         //     gH = shapeSize;
         // }
 
-        float xAdjustment = w/2 - graphicsWidth/2 ; //+ xDirection * graphicsWidth/2;
-        float yAdjustment = h/2 - graphicsHeight/2; //+ yDirection * graphicsHeight/2;
-
+        float xAdjustment = w/2 + offsetWidth/2 ; //+ xDirection * graphicsWidth/2;
+        float yAdjustment = h/2 + offsetHeight/2; //+ yDirection * graphicsHeight/2;
 
 
         ///////////////////////start drawing
         graphics.beginDraw();
-        graphics.background(poster.colorScheme.backgroundColor);
 
+        graphics.background(poster.colorScheme.backgroundColor);
 
         graphics.pushMatrix();
         graphics.translate(xAdjustment, yAdjustment);
@@ -130,7 +142,7 @@ class OffsetGraphics extends Graphics {
 
         //layer blending
         if(layerBlending){
-            // graphics.blendMode(MULTIPLY);
+            graphics.blendMode(MULTIPLY);
         }
 
         for (int i=0; i<numberOfShape; i++) { // numberOfShape
@@ -183,11 +195,17 @@ class OffsetGraphics extends Graphics {
             }
             graphics.popMatrix();
         }
-
+        //////////////////// DEBUG draws ///////////
         graphics.fill(0,100);
         graphics.noStroke();
         graphics.rectMode(CENTER);
-        graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
+        // graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
+
+
+        graphics.ellipse(0,0,50,50);
+        graphics.strokeWeight(10);
+        graphics.stroke(0);
+        graphics.line(0,0,hypotenuse * offsetDirection.x,   hypotenuse * offsetDirection.y);
         graphics.popMatrix();
 
         ////////////////////////////end drawing
