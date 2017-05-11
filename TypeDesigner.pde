@@ -49,12 +49,13 @@ class TypeDesigner {
     }
 
     private void designTypography(PGraphics pg, Poster poster, PFont font) {
-        String headlineContent = getContent(1, 1).toUpperCase();
+        String headlineContent = getContent(1, 2).toUpperCase();
         pg.beginDraw();
         pg.fill(255);
         pg.textFont(font);
         pg.noStroke();
-        pg.textSize(200);
+        pg.strokeWeight(0);
+        pg.textSize(150);
 
         if (myGrid.index == 0) {
             pg.textAlign(LEFT, BOTTOM);

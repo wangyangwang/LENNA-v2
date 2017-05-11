@@ -63,14 +63,13 @@ class OffsetGraphics extends Graphics {
         addToDetails("\nOffset by " + offsetDist + " of the shape's size");
 
         //pick offsetDirection
-        PVector[] offsetDirections = new PVector[] {new PVector(1, 1), new PVector(0, 1), new PVector(1, 0), new PVector(-1, 0), new PVector(-1, -1), new PVector(0, -1), new PVector(0, 0), new PVector(-1, 1), new PVector(1, -1)};
+        PVector[] offsetDirections = new PVector[] {new PVector(1, -1), new PVector(0, -1), new PVector(1, 0), new PVector(-1, 0), new PVector(0, 0), new PVector(-1, -1)};
         for (PVector p : offsetDirections) {
             p.normalize();
         }
-        int[] offsetDirectionProbabilities = new int[]{7, 10, 10, 10, 7, 10, 32, 7, 7};
+        int[] offsetDirectionProbabilities = new int[]{16, 16, 16, 16, 20, 16};
         offsetDirection = (PVector)pickByProbability(offsetDirections, offsetDirectionProbabilities);
         addToDetails("\nOffsetting direction: " + degrees(offsetDirection.heading()) + " degree" );
-
 
         //layer blending or not
         Boolean[] ifLayerBlend = new Boolean[]{true, false};
@@ -82,8 +81,7 @@ class OffsetGraphics extends Graphics {
     }
 
     void design() {
-        w = graphics.width;
-        h = graphics.height;
+
         color mainColor = poster.colorScheme.graphicsColor[1];
         int strokeWeight = 50;
 
@@ -94,27 +92,45 @@ class OffsetGraphics extends Graphics {
             break;
         }
 
+        w = graphics.width;
+        h = graphics.height;
 
-        graphics.beginDraw();
+        /////////////////////center and resize the graphics to fit in the layout
+        float hypotenuse = numberOfShape * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);//length of shape skewer
+        float theta = offsetDirection.heading();
+        float graphicsWidth = cos(theta) * hypotenuse;
+        float graphicsHeight = sin(theta) * hypotenuse;
+
+        // float gW,gH;
+        //
+        // if(gWOffset!=0){
+        //     gW = gWOffset;
+        // }else{
+        //     gW = shapeSize;
+        // }
+        // if(gHOffset!=0){
+        //     gH = gHOffset;
+        // }else{
+        //     gH = shapeSize;
+        // }
+
+        float xAdjustment = w/2 - graphicsWidth/2 ; //+ xDirection * graphicsWidth/2;
+        float yAdjustment = h/2 - graphicsHeight/2; //+ yDirection * graphicsHeight/2;
+
+
+
         ///////////////////////start drawing
+        graphics.beginDraw();
         graphics.background(poster.colorScheme.backgroundColor);
+
+
         graphics.pushMatrix();
-
-
-        int xDirection = offsetDirection.x > 0 ? 1 : -1;
-        float xAdjustment =  -xDirection * (
-            (  ((numberOfShape-1) * offsetDist * shapeSize)  *  abs(cos(offsetDirection.heading() % HALF_PI))  )/2
-            );
-        int yDirection = offsetDirection.y > 0 ? 1 : -1;
-        float yAdjustment = -yDirection * (
-            (  ((numberOfShape-1) * offsetDist * shapeSize)  *  abs(tan(offsetDirection.heading() % HALF_PI))  )/2
-            );
-        graphics.translate( w/2 + xAdjustment , h/2 + yAdjustment);
-
+        graphics.translate(xAdjustment, yAdjustment);
+        // graphics.scale(0.5);
 
         //layer blending
         if(layerBlending){
-            graphics.blendMode(MULTIPLY);
+            // graphics.blendMode(MULTIPLY);
         }
 
         for (int i=0; i<numberOfShape; i++) { // numberOfShape
@@ -122,7 +138,6 @@ class OffsetGraphics extends Graphics {
             graphics.translate(i * offsetDist * shapeSize * offsetDirection.x, i * offsetDist * shapeSize * offsetDirection.y); // offsetDist + offsetDirection
             // shape
             int scaledSize = floor(shapeSize * pow(scaler, i));
-
 
             //strokeStyle
             switch(strokeStyle) {
@@ -168,10 +183,16 @@ class OffsetGraphics extends Graphics {
             }
             graphics.popMatrix();
         }
-        graphics.popMatrix();
 
+        graphics.fill(0,100);
+        graphics.noStroke();
+        graphics.rectMode(CENTER);
+        graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
+        graphics.popMatrix();
 
         ////////////////////////////end drawing
         graphics.endDraw();
     }
+
+
 }
