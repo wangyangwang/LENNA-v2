@@ -100,7 +100,7 @@ class OffsetGraphics extends Graphics {
         w = graphics.width;
         h = graphics.height;
 
-        /////////////////////center the graphics
+        /////////////////////Centering the graphics
         // float hypotenuse = numberOfShape * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
         // float hypotenuse = shapeSize * (numberOfShape  * offsetDist - offsetDist);
         float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
@@ -109,8 +109,18 @@ class OffsetGraphics extends Graphics {
         float offsetWidth = cos(theta) * hypotenuse;
         float offsetHeight = sin(theta) * hypotenuse;
 
-        // float graphicsWidth = cos(theta) * hypotenuse;
-        // float graphicsHeight = sin(theta) * hypotenuse;
+
+
+        //////////////////// Resize the graphics
+        hypotenuse = pow(numberOfShape, scaler) * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
+        float graphicsWidth = abs(cos(theta) * hypotenuse);
+        float graphicsHeight = abs(sin(theta) * hypotenuse);
+        float xScaleFactor = (w * 0.90) / graphicsWidth;
+        float yScaleFactor = (h * 0.90) / graphicsHeight;
+        float globalScaler = min(xScaleFactor, yScaleFactor);
+        addToDetails("\nGraphics scaled by: " + globalScaler);
+
+        // println((int)graphicsWidth, (int)graphicsHeight);
 
         // addToDetails("\nHypotenuse: " + hypotenuse + "\nAngle:   " +  theta + "\nGraphics Width:  " + graphicsWidth + "\nGraphics Height:  " + graphicsHeight);
 
@@ -130,7 +140,6 @@ class OffsetGraphics extends Graphics {
         float xAdjustment = w/2 + offsetWidth/2 ; //+ xDirection * graphicsWidth/2;
         float yAdjustment = h/2 + offsetHeight/2; //+ yDirection * graphicsHeight/2;
 
-
         ///////////////////////start drawing
         graphics.beginDraw();
 
@@ -138,7 +147,7 @@ class OffsetGraphics extends Graphics {
 
         graphics.pushMatrix();
         graphics.translate(xAdjustment, yAdjustment);
-        // graphics.scale(0.5);
+        graphics.scale(globalScaler);
 
         //layer blending
         if(layerBlending){
