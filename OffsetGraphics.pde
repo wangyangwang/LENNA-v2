@@ -105,11 +105,11 @@ class OffsetGraphics extends Graphics {
         // float hypotenuse = shapeSize * (numberOfShape  * offsetDist - offsetDist);
         float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
         float theta = offsetDirection.heading();
-
         float offsetWidth = cos(theta) * hypotenuse;
         float offsetHeight = sin(theta) * hypotenuse;
-
-
+        float xAdjustment = w/2 - offsetWidth/2 ; //+ xDirection * graphicsWidth/2;
+        float yAdjustment = h/2 - offsetHeight/2; //+ yDirection * graphicsHeight/2;
+        addToDetails("\nOffset Width:  "+ offsetWidth + "\nOffset Height:   " + offsetHeight);
 
         //////////////////// Resize the graphics
         hypotenuse = pow(numberOfShape, scaler) * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
@@ -120,25 +120,6 @@ class OffsetGraphics extends Graphics {
         float globalScaler = min(xScaleFactor, yScaleFactor);
         addToDetails("\nGraphics scaled by: " + globalScaler);
 
-        // println((int)graphicsWidth, (int)graphicsHeight);
-
-        // addToDetails("\nHypotenuse: " + hypotenuse + "\nAngle:   " +  theta + "\nGraphics Width:  " + graphicsWidth + "\nGraphics Height:  " + graphicsHeight);
-
-        // float gW,gH;
-        //
-        // if(gWOffset!=0){
-        //     gW = gWOffset;
-        // }else{
-        //     gW = shapeSize;
-        // }
-        // if(gHOffset!=0){
-        //     gH = gHOffset;
-        // }else{
-        //     gH = shapeSize;
-        // }
-
-        float xAdjustment = w/2 + offsetWidth/2 ; //+ xDirection * graphicsWidth/2;
-        float yAdjustment = h/2 + offsetHeight/2; //+ yDirection * graphicsHeight/2;
 
         ///////////////////////start drawing
         graphics.beginDraw();
@@ -205,17 +186,17 @@ class OffsetGraphics extends Graphics {
             graphics.popMatrix();
         }
         //////////////////// DEBUG draws ///////////
-        graphics.fill(0,100);
-        graphics.noStroke();
-        graphics.rectMode(CENTER);
-        // graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
-
-
-        graphics.ellipse(0,0,50,50);
-        graphics.strokeWeight(10);
-        graphics.stroke(0);
-        graphics.line(0,0,hypotenuse * offsetDirection.x,   hypotenuse * offsetDirection.y);
-        graphics.popMatrix();
+        // graphics.fill(0,100);
+        // graphics.noStroke();
+        // graphics.rectMode(CENTER);
+        // // graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
+        //
+        //
+        // graphics.ellipse(0,0,50,50);
+        // graphics.strokeWeight(10);
+        // graphics.stroke(0);
+        // graphics.line(0,0,hypotenuse * offsetDirection.x,   hypotenuse * offsetDirection.y);
+        // graphics.popMatrix();
 
         ////////////////////////////end drawing
         graphics.endDraw();
