@@ -4,7 +4,8 @@ class Inspector {
      //////this is a hack!
     poster.content.beginDraw();
     poster.content.textSize(20);
-    poster.content.text(progressManager.progressManagerStages.get(2).details, 100, 100);
+    poster.content.text(progressManager.progressManagerStages.get(2).details, poster.padding, poster.padding);
+    poster.content.text(typeDesigner.details, poster.padding + posterWidth/3, poster.padding);
     poster.content.beginDraw();
 
 

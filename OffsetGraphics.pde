@@ -101,22 +101,20 @@ class OffsetGraphics extends Graphics {
         h = graphics.height;
 
         /////////////////////Centering the graphics
-        // float hypotenuse = numberOfShape * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
-        // float hypotenuse = shapeSize * (numberOfShape  * offsetDist - offsetDist);
         float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
         float theta = offsetDirection.heading();
         float offsetWidth = cos(theta) * hypotenuse;
         float offsetHeight = sin(theta) * hypotenuse;
-        float xAdjustment = w/2 - offsetWidth/2 ; //+ xDirection * graphicsWidth/2;
-        float yAdjustment = h/2 - offsetHeight/2; //+ yDirection * graphicsHeight/2;
+        float xAdjustment = w/2 - offsetWidth/2;
+        float yAdjustment = h/2 - offsetHeight/2;
         addToDetails("\nOffset Width:  "+ offsetWidth + "\nOffset Height:   " + offsetHeight);
 
         //////////////////// Resize the graphics
         hypotenuse = pow(numberOfShape, scaler) * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
         float graphicsWidth = abs(cos(theta) * hypotenuse);
         float graphicsHeight = abs(sin(theta) * hypotenuse);
-        float xScaleFactor = (w * 0.90) / graphicsWidth;
-        float yScaleFactor = (h * 0.90) / graphicsHeight;
+        float xScaleFactor = (w - padding * 2) / graphicsWidth;
+        float yScaleFactor = (h - padding * 2) / graphicsHeight;
         float globalScaler = min(xScaleFactor, yScaleFactor);
         addToDetails("\nGraphics scaled by: " + globalScaler);
 

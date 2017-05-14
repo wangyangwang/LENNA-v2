@@ -10,14 +10,11 @@
 
 
 class TypeDesigner {
-
-    ArrayList<ProbabilityObject> columnWidthProbabilities;
     ArrayList<PFont> fonts;
     Grid myGrid;
-
+    String details;
 
     TypeDesigner () {
-        setupColumnWidthAndProbability();
         setupFonts();
     }
 
@@ -40,7 +37,7 @@ class TypeDesigner {
         designTypography(generatedTypes, poster, font);
         applyGraphicToPoster(generatedTypes, poster);
 
-        String details = "Chose font:\n"+font.getName()+"\nHeadline: 1\nParagraph:0";
+        details = "Chose font:   "+font.getName()+"\nHeadline:   1\nParagraph:   0\nTypography Grid Width:   " + myGrid.w + "\nTypography Grid Height:   " + myGrid.h;
         StageInfo stageInfo = new StageInfo(details, generatedTypes);
         return stageInfo;
     }
@@ -56,66 +53,67 @@ class TypeDesigner {
         pg.noStroke();
         pg.strokeWeight(0);
         pg.textSize(150);
-
-        if (myGrid.index == 0) {
+        if(myGrid.h == posterHeight) {
             pg.textAlign(LEFT, BOTTOM);
-            pg.text(headlineContent, 0, myGrid.h );
-            } else {
+            pg.text(headlineContent, 0, myGrid.h);
+        }
+        else{
+            if (myGrid.index == 0)
+            {
+                pg.textAlign(LEFT, BOTTOM);
+                pg.text(headlineContent, 0, myGrid.h );
+            }
+            else
+            {
                 pg.textAlign(LEFT, TOP);
                 pg.text(headlineContent, 0, 0);
             }
-            pg.endDraw();
         }
+        pg.endDraw();
+    }
 
 
-        void applyGraphicToPoster(PGraphics pg, Poster poster) {
-            poster.content.beginDraw();
-            int y = myGrid.index * poster.grids.get(0).h;
-            poster.content.image(pg, 0, y);
-            poster.content.endDraw();
+    void applyGraphicToPoster(PGraphics pg, Poster poster) {
+        poster.content.beginDraw();
+        int y;
+        if(myGrid.h != posterHeight){
+            y = myGrid.index * poster.grids.get(0).h;
         }
-
-
-        void setupColumnWidthAndProbability() {
-            float[] widths = {1/2, 1/3, 1/4};
-            int[] probabilities = {33, 33, 34};
-            columnWidthProbabilities = new ArrayList<ProbabilityObject>();
-            if (widths.length == probabilities.length) {
-                for (int i=0; i<widths.length; i++) {
-                    columnWidthProbabilities.add(new ProbabilityObject(widths[i], probabilities[i]));
-                }
-                } else {
-                    System.err.println("TypeDesigner - setup column width probability failed!");
-                }
-            }
-
-            void setupFonts() {
-                fonts = new ArrayList<PFont>();
-                fonts.add(createFont("Helvetica-Bold", 500));
-                fonts.add(createFont("Futura", 500));
-                fonts.add(createFont("Avenir-Heavy", 500));
-                fonts.add(createFont("PT-mono", 500));
-            }
-
-            void chooseFont() {
-            }
-
-
-            String getContent(int minWords, int maxWords) {
-                JSONObject json;
-                GetRequest get = new GetRequest("http://www.randomtext.me/api/gibberish/ul-1/"+minWords+"-"+maxWords);
-                get.send();
-                String content = get.getContent();
-                try{
-                    json = JSONObject.parse(content);
-                    String text_out = json.getString("text_out");
-                    Document doc = Jsoup.parse(text_out);
-                    Elements li = doc.getElementsByTag("li");
-                    return li.get(0).html();
-                }catch(Exception e){
-                    System.err.println(e);
-                    return "Null";
-                }
-
-            }
+        else {
+            y = 0;
         }
+        poster.content.image(pg, 0, y);
+        poster.content.endDraw();
+    }
+
+
+    void setupFonts() {
+        fonts = new ArrayList<PFont>();
+        fonts.add(createFont("Helvetica-Bold", 500));
+        fonts.add(createFont("Futura", 500));
+        fonts.add(createFont("Avenir-Heavy", 500));
+        fonts.add(createFont("PT-mono", 500));
+    }
+
+    void chooseFont() {
+    }
+
+
+    String getContent(int minWords, int maxWords) {
+        JSONObject json;
+        GetRequest get = new GetRequest("http://www.randomtext.me/api/gibberish/ul-1/"+minWords+"-"+maxWords);
+        get.send();
+        String content = get.getContent();
+        try{
+            json = JSONObject.parse(content);
+            String text_out = json.getString("text_out");
+            Document doc = Jsoup.parse(text_out);
+            Elements li = doc.getElementsByTag("li");
+            return li.get(0).html();
+            }catch(Exception e){
+                System.err.println(e);
+                return "Null";
+            }
+
+        }
+    }

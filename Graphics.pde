@@ -4,10 +4,12 @@ public abstract class Graphics {
   String details;
   int w, h;
   int myGridIndex;
+  float padding;
 
   Graphics (Poster poster, int _w, int _h, int _myGridIndex){
     w = _w;
     h = _h;
+    padding = poster.padding;
     myGridIndex = _myGridIndex;
     initPGraphics();
     makeDecisions();
