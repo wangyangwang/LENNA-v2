@@ -16,6 +16,7 @@ class ColorDesigner {
 
     if (allColorSchemes.size()!=0) {
       poster.colorScheme = allColorSchemes.get(floor(random(0, allColorSchemes.size())));
+      poster.colorScheme.addDetailsToInspector();
       colorPalette.beginDraw();
       colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;
@@ -30,7 +31,10 @@ class ColorDesigner {
       println("Err: no color scheme saved in ColorDesigner");
     }
     thisStageInfo = new StageInfo(colorInfo, colorPalette);
-    return thisStageInfo;
+
+ 
+
+      return thisStageInfo;
   }
 
   ///////////////Load colors from local text file

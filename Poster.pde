@@ -12,7 +12,7 @@ class Poster {
   HashMap<String, Float> partitionSet = new HashMap();
   ColorScheme colorScheme;
   PGraphics content;
-  String posterDetails;
+  String details;
 
   //Constructor
   Poster(int _posterW, int _posterH) {
@@ -23,13 +23,14 @@ class Poster {
     arrangePartitions();
     getRotation();
     content = createGraphics(w, h);
-    posterDetails = " - Partition Value:\n" + partitionValue + "\n\n - Rotation is\n" + rotation + " degree";
+    inspector.addToMeta(details);
   }
 
   void getRotation() {
     Integer[] rotationValues = new Integer[] {45, -45, 0};
     int[] rotationProbabilities = new int[] {5, 5, 90};
     rotation = (int)pickByProbability(rotationValues, rotationProbabilities);
+    details += "Global Rotation:   " + rotation + " Degree" + "\n";
   }
 
   // Get our partition of this poster!
@@ -52,10 +53,13 @@ class Poster {
       grids.add(new Grid(posterWidth, floor(posterHeight * partitionValue), 0));
       grids.add(new Grid(posterWidth, posterHeight-(floor(posterHeight * partitionValue)), 1));
     }
+    
+    details += "Poster divided from:   " + partitionValue + "\n";
   }
 
   void getPadding() {
     padding = floor( 0.055 * posterWidth );
+    details += "Padding:   " + padding + "\n";
   }
 
   void arrangePartitions() {
@@ -79,7 +83,6 @@ class Poster {
       System.err.println("Werid partition value.");
     }
 
-
     //add lable to grids
     if (partitionIndexForGraphics == 1) {
       grids.get(0).contentType = "letters";
@@ -94,5 +97,6 @@ class Poster {
     } else {
       System.err.println("ERR: partitionIndexForGraphics is not assigned!!!");
     }
+    details += "Grid #1 Type:   " + grids.get(0).contentType + "\nGrid #2 Type   :" + grids.get(1).contentType + "\n";
   }
 }

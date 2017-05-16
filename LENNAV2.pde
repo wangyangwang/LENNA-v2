@@ -1,4 +1,4 @@
-import controlP5.*;
+//import controlP5.*;
 import org.apache.commons.lang3.*;
 import org.jsoup.*;
 import org.jsoup.examples.*;
@@ -49,7 +49,7 @@ int posterHeight = 3508/2;
 Poster poster;
 
 void setup () {
-  size(1440, 900, P3D);
+  size(1440, 900);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
@@ -74,7 +74,7 @@ void draw() {
   switch (STAGE) {
   case CREATION:
     poster = new Poster(posterWidth, posterHeight);
-    stageInfo = new StageInfo(poster.posterDetails);
+    stageInfo = new StageInfo(poster.details);
     progressManager.update(STAGE, stageInfo);
     STAGE = STAGE.next();
     delay(progressManager.stageDelay);
@@ -118,6 +118,7 @@ void draw() {
   case FINISH:
     progressManager.update(STAGE);
     progressManager.reset();
+    inspector.reset();
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
     break;
@@ -186,7 +187,7 @@ String getContent(int minWords, int maxWords) {
   }
   catch(Exception e) {
     System.err.println(e);
-    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways. Most bugs arise from mistakes and errors made in either a program's source code or its design, or in components and operating systems used by such programs. A few are caused by compilers producing incorrect code. A program that contains a large number of bugs, and/or bugs that seriously interfere with its functionality, is said to be buggy (defective).";
+    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.";
   }
 }
 String getPomoHeadline() {
@@ -203,9 +204,13 @@ String getPomoHeadline() {
   if (result.contains("in the")) {
     result = result.substring(0, result.indexOf("in the"));
   }
-  if (result.length()>20) {
-    result = result.substring(0, min(result.indexOf(" ", 10), result.length()-1)); //TODO: BUG
+
+  if (result.length() > 20) {
+    String[] words = result.split(" ");
+    result = words[floor(random(words.length))];
+    result = result.substring(0, 1).toUpperCase() + result.substring(1);
   }
+
 
   return result;
 }

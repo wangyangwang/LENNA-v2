@@ -1,6 +1,4 @@
 class GraphicDesigner {
-
-  // ArrayList<ProbabilityObject> graphicProbabilityDataSet = new ArrayList<ProbabilityObject>();
   String graphicType;
   Grid myGrid;
 
@@ -11,7 +9,7 @@ class GraphicDesigner {
     PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
     // initProbabilitySet();
     chooseGraphicType();
-    String detailsFromGraphics = "null";
+    String detailsFromGraphics = "";
 
     switch (graphicType) {
       case "offset":
@@ -46,7 +44,7 @@ class GraphicDesigner {
       break;
     }
 
-    String details = "-Graphic Type:\n" + graphicType + "\n" + "Graphic Partition:\n" + partitionLoc + "\n" + detailsFromGraphics;
+    String details = "Graphic Type:   " + graphicType + "\n" + "Graphic Partition:   " + partitionLoc + "\n" + detailsFromGraphics;
     StageInfo stageInfo = new StageInfo(details, generatedPGraphics);
     return stageInfo;
   }

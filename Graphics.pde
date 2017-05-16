@@ -14,6 +14,7 @@ public abstract class Graphics {
     initPGraphics();
     makeDecisions();
     design();
+    inspector.addToMeta(details);
   }
 
   abstract void makeDecisions();

@@ -1,24 +1,33 @@
 class Inspector {
+
   boolean noise = false;
+  private ArrayList<String> metadata  = new ArrayList<String>();
+
+
   StageInfo inspect(Poster poster, int posterCount) {
 
     //////this is a hack!
     poster.content.beginDraw();
     poster.content.fill(poster.colorScheme.textColor);
     poster.content.textSize(12);
-    int y;
+
+    int y, textRectHeight;
 
     if (poster.grids.get(0).contentType=="letters") { 
       poster.content.textAlign(LEFT, BOTTOM);
       y = posterHeight - poster.padding;
+      textRectHeight = -1000;
     } else {
       poster.content.textAlign(LEFT, TOP);
       y = poster.padding;
+      textRectHeight = 1000;
     }
 
-    poster.content.text(progressManager.progressManagerStages.get(2).details, poster.padding, y);
-    poster.content.text(typeDesigner.details, poster.padding + posterWidth/3, y);
-    poster.content.beginDraw();
+    for (int i = 0; i < metadata.size(); i++) {
+      poster.content.text(metadata.get(i), poster.padding + i * (posterWidth/metadata.size()), y, posterWidth/metadata.size(), textRectHeight);
+    }
+
+    poster.content.endDraw();
 
     if (noise) {
       addNoise(poster);
@@ -26,6 +35,14 @@ class Inspector {
     String details = "Inspected";
     StageInfo stageInfo = new StageInfo(details);
     return stageInfo;
+  }
+
+  public void addToMeta(String s) {
+    metadata.add(s);
+  }
+
+  void reset() {
+    metadata.clear();
   }
 
   void addNoise(Poster poster) {

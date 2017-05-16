@@ -6,9 +6,8 @@ class ColorScheme {
   color backgroundColor;
   color[] graphicsColor = new color[3];
   color textColor;
+  String details;
 
-  color brightest;
-  color darkest;
 
 
   ColorScheme(color[] colorArray) {
@@ -21,7 +20,7 @@ class ColorScheme {
     backgroundColor = colors[0];
     graphicsColor[0] = colors[1];
     graphicsColor[1] = colors[2];
-    graphicsColor[1] = colors[3];
+    graphicsColor[2] = colors[3];
 
     if (brightness(backgroundColor) > (255 * 0.85) && saturation(backgroundColor) < 255 * 0.1) {
       //black-ish on light background
@@ -35,6 +34,17 @@ class ColorScheme {
       //white-ish on dark background
       textColor = color(250);
     }
+
+    details = "Background Color:   " + backgroundColor + "\n";
+    for (int i = 0; i < graphicsColor.length; i++) {
+      details+="Graphics Color " + i + ":   " + graphicsColor[i] + "\n";
+    }
+    details+="Text Color:   " + textColor + "\n";
+  }
+
+
+  void addDetailsToInspector() {
+    inspector.addToMeta(details);
   }
 
   void shuffle() {

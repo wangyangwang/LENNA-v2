@@ -6,7 +6,6 @@ class TypeDesigner {
   ArrayList<PFont> fonts;
   ArrayList<PFont> boldFonts;
   Grid myGrid;
-  String details;
   int textAlignX;
 
   TypeDesigner () {
@@ -25,6 +24,7 @@ class TypeDesigner {
 
   ///////////////////////////
   StageInfo design(Poster poster) {
+    String details = "";
 
     myGrid = poster.grids.get(poster.partitionArrangement.get("letters"));
     PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
@@ -34,13 +34,19 @@ class TypeDesigner {
     PFont font = fonts.get(randomFontIndex);
     PFont boldFont = boldFonts.get(randomFontIndex);
 
+    details+="Font:   "+font.getName() + "\n";
+
     //text vertical alignment
     textAlignX = LEFT;
+
+    details+="Global X Alignment:   "+textAlignX + "\n";
 
     // headline font size
     float minHeadlineSize = 0.025 * posterHeight;
     float maxHeadlineSize = 0.05 * posterHeight;
     int headlineFontSize = (int)random(minHeadlineSize, maxHeadlineSize);
+
+    details+="headlineFontSize:   " + headlineFontSize + "\n";
 
     // headline width
     Float[] headlineWidths = new Float[] {0.9};
@@ -51,6 +57,8 @@ class TypeDesigner {
     float minColumnFontSize = 0.010 * posterHeight;
     float maxColumnFontSize = 0.012 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
+
+    details += "Paragraph Font Size:   " + columnFontSize + "\n";
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -74,6 +82,8 @@ class TypeDesigner {
     int[] columnCountsProbabilities = new int[] {30, 60, 10};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
 
+    details += "Paragraph Count:   " + columnCount + "\n";
+
     //column width
     int columnWidth = floor(((posterWidth - poster.padding * 2) / columnCount) * random(0.7, 0.9));
 
@@ -91,6 +101,8 @@ class TypeDesigner {
 
     //column color
     color columnColor = poster.colorScheme.textColor;
+
+    details += "Text Color:   " + columnColor + "\n";
 
     // create headline objects
     Text headline = new Text("headline", headlineFontSize);
@@ -117,7 +129,6 @@ class TypeDesigner {
 
     //draw background to avoid bad quality
     generatedPGraphics.beginDraw();
-    generatedPGraphics.noSmooth();
     //generatedPGraphics.background(poster.colorScheme.backgroundColor);
     generatedPGraphics.endDraw();
 
@@ -127,12 +138,12 @@ class TypeDesigner {
       col.drawOn(generatedPGraphics);
     }
 
-
     //"print" the design on main PGraphics
     applyGraphicToPoster(generatedPGraphics, poster);
-
-    details = "Chose font:   "+font.getName()+"\nHeadline:   1\nParagraph:   0\nTypography Grid Width:   " + myGrid.w + "\nTypography Grid Height:   " + myGrid.h;
     StageInfo stageInfo = new StageInfo(details, generatedPGraphics);
+
+    inspector.addToMeta(details);
+
     return stageInfo;
   }
 
