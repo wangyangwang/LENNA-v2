@@ -1,11 +1,21 @@
 class Inspector {
   boolean noise = false;
   StageInfo inspect(Poster poster, int posterCount) {
-     //////this is a hack!
+    
+    //////this is a hack!
     poster.content.beginDraw();
-    poster.content.textSize(20);
-    poster.content.text(progressManager.progressManagerStages.get(2).details, poster.padding, poster.padding);
-    poster.content.text(typeDesigner.details, poster.padding + posterWidth/3, poster.padding);
+    poster.content.textSize(10);
+    int y;
+    
+    if(poster.grids.get(0).contentType=="letters"){ 
+      poster.content.textAlign(LEFT, BOTTOM);
+      y = posterHeight - poster.padding;
+    }else{
+      poster.content.textAlign(LEFT, TOP);
+      y = poster.padding;
+    }
+    poster.content.text(progressManager.progressManagerStages.get(2).details, poster.padding, y);
+    poster.content.text(typeDesigner.details, poster.padding + posterWidth/3, y);
     poster.content.beginDraw();
 
 

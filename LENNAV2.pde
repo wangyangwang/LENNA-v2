@@ -168,3 +168,23 @@ Object pickByProbability(Object[] objectList, int[] probabilityList) {
 
   return getObjectByProbability(set).value;
 }
+
+//////////////////////////////
+
+String getContent(int minWords, int maxWords) {
+  JSONObject json;
+  GetRequest get = new GetRequest("http://www.randomtext.me/api/gibberish/ul-1/"+minWords+"-"+maxWords);
+  get.send();
+  String content = get.getContent();
+  try {
+    json = JSONObject.parse(content);
+    String text_out = json.getString("text_out");
+    Document doc = Jsoup.parse(text_out);
+    Elements li = doc.getElementsByTag("li");
+    return li.get(0).html();
+  }
+  catch(Exception e) {
+    System.err.println(e);
+    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways. Most bugs arise from mistakes and errors made in either a program's source code or its design, or in components and operating systems used by such programs. A few are caused by compilers producing incorrect code. A program that contains a large number of bugs, and/or bugs that seriously interfere with its functionality, is said to be buggy (defective).";
+  }
+}
