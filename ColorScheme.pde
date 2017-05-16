@@ -1,19 +1,16 @@
 
 class ColorScheme {
   public color[] colors;
-  float shuffleProbability = 0.1;
-
+  float shuffleProbability = 0.25;
   color backgroundColor;
   color[] graphicsColor = new color[3];
   color textColor;
   String details;
 
-
-
   ColorScheme(color[] colorArray) {
     this.colors = colorArray;
 
-    if (random(0, 1)>0.9) {
+    if (random(0, 1) < shuffleProbability) {
       shuffle();
     }
 
@@ -39,7 +36,7 @@ class ColorScheme {
     for (int i = 0; i < graphicsColor.length; i++) {
       details+="Graphics Color " + i + ":   " + graphicsColor[i] + "\n";
     }
-    details+="Text Color:   " + textColor + "\n";
+    details+="Text Color:   " + hex(textColor) + "\n";
   }
 
 

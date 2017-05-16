@@ -35,8 +35,8 @@ class Poster {
 
   // Get our partition of this poster!
   void getPartition() {
-    Float[] partitionValues = new Float[] {0.618, 1-0.618, 0.797, 1-0.797, 0.5, 1.0};
-    int[] partitionProbabilities = new int[] {20, 20, 20, 20, 0, 20};
+    Float[] partitionValues = new Float[] {0.618, 1-0.618, 0.797, 1-0.797};
+    int[] partitionProbabilities = new int[] {20, 20, 20, 20};
     partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
 
     for (HashMap.Entry<String, Float> e : partitionSet.entrySet()) {
@@ -46,15 +46,16 @@ class Poster {
         partitionType = key.toString();
       }
     }
-    if (partitionValue == 1.0) {
-      grids.add(new Grid(posterWidth, posterHeight, 0));
-      grids.add(new Grid(posterWidth, posterHeight, 1));
-    } else {
-      grids.add(new Grid(posterWidth, floor(posterHeight * partitionValue), 0));
-      grids.add(new Grid(posterWidth, posterHeight-(floor(posterHeight * partitionValue)), 1));
-    }
-    
+
+    int topGridHeight = floor(posterHeight * partitionValue);
+    int typographyGridHeight = posterHeight-topGridHeight;
+
+    grids.add(new Grid(posterWidth, topGridHeight, 0));
+    grids.add(new Grid(posterWidth, typographyGridHeight, 1));
+
     details += "Poster divided from:   " + partitionValue + "\n";
+    details += "Grid 1 Height:   " + grids.get(0).h + "\n";
+    details += "Grid 2 Height:   " + grids.get(1).h + "\n";
   }
 
   void getPadding() {
@@ -65,19 +66,12 @@ class Poster {
   void arrangePartitions() {
 
     int partitionIndexForGraphics = 999;
+    float graphicsGridFullHeightProbability = 0.3;
 
     // always give graphics the bigger partition
     if (partitionValue < 0.5 && partitionValue > 0) {
       partitionIndexForGraphics = 1;
     } else if (partitionValue > 0.5 && partitionValue < 1) {
-      partitionIndexForGraphics = 0;
-    } else if (partitionValue == 0.5) {
-      if (random(0, 1) > 0.7) { // 40% chance of draw graphics on the top partition
-        partitionIndexForGraphics = 0;
-      } else {
-        partitionIndexForGraphics = 1;
-      }
-    } else if (partitionValue == 1) {
       partitionIndexForGraphics = 0;
     } else {
       System.err.println("Werid partition value.");
@@ -97,6 +91,12 @@ class Poster {
     } else {
       System.err.println("ERR: partitionIndexForGraphics is not assigned!!!");
     }
+
+    if (random(0, 1) < graphicsGridFullHeightProbability) {
+      grids.get( partitionArrangement.get("graphics") ).h = posterHeight;
+      grids.get( partitionArrangement.get("graphics") ).fullHeight = true;
+    }
+
     details += "Grid #1 Type:   " + grids.get(0).contentType + "\nGrid #2 Type   :" + grids.get(1).contentType + "\n";
   }
 }

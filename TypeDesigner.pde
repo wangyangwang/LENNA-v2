@@ -149,13 +149,8 @@ class TypeDesigner {
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {
     poster.content.beginDraw();
-    int y;
-    if (!myGrid.fullHeight) {
-      y = myGrid.index * poster.grids.get(0).h;
-    } else {
-      y = 0;
-    }
-    poster.content.image(pg, 0, y);
+    float y = myGrid.index * (posterHeight - myGrid.h);
+    poster.content.image(pg, 0, (int)y);
     poster.content.endDraw();
   }
 }
