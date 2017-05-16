@@ -35,7 +35,7 @@ class Poster {
   // Get our partition of this poster!
   void getPartition() {
     Float[] partitionValues = new Float[] {0.618, 1-0.618, 0.797, 1-0.797, 0.5, 1.0};
-    int[] partitionProbabilities = new int[] {20, 20, 10, 10, 25, 15};
+    int[] partitionProbabilities = new int[] {20, 20, 20, 20, 0, 20};
     partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
 
     for (HashMap.Entry<String, Float> e : partitionSet.entrySet()) {

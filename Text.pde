@@ -7,19 +7,21 @@ class Text {
   int w;
   int h;
   color c;
-  boolean boundSet, contentSet, alignSet;
-
+  boolean boundSet, contentSet, alignSet, fontSet;
+  PFont font;
 
   Text (String type, int _fontSize) {
     contentType = type;
     fontSize = _fontSize;
   }
+
   void setBound(int x, int y, int _w, int _h) {
     pos = new PVector(x, y);
     w = _w;
     h = _h;
     boundSet = true;
   }
+
   void setAlign(int xAlignment, int yAlignment) {
     xAlign = xAlignment;
     yAlign = yAlignment;
@@ -35,13 +37,19 @@ class Text {
     c = _c;
   }
 
+  void setFont(PFont f) {
+    font = f;
+    fontSet = true;
+  }
+
   void drawOn(PGraphics pg) {
-    if (boundSet && contentSet && alignSet) {
+    if (boundSet && contentSet && alignSet && fontSet ) {
       pg.beginDraw();
+      pg.textFont(font);
       pg.textAlign(xAlign, yAlign);
       pg.textSize(fontSize);
       if (contentType=="headline") {
-        pg.textLeading(fontSize * 0.9);
+        pg.textLeading(fontSize);
       }
       pg.fill(c);
       pg.text(content, pos.x, pos.y, w, h);

@@ -4,7 +4,7 @@ class ColorScheme {
   float shuffleProbability = 0.1;
 
   color backgroundColor;
-  color[] graphicsColor = new color[2];
+  color[] graphicsColor = new color[3];
   color textColor;
 
   color brightest;
@@ -13,27 +13,28 @@ class ColorScheme {
 
   ColorScheme(color[] colorArray) {
     this.colors = colorArray;
+
+    if (random(0, 1)>0.9) {
+      shuffle();
+    }
+
     backgroundColor = colors[0];
     graphicsColor[0] = colors[1];
     graphicsColor[1] = colors[2];
-    textColor = colors[3];
+    graphicsColor[1] = colors[3];
 
-    //float[] brightnesses = new float[colors.length];
-    int maxBrightnessColorIndex = 0;
-    int minBrightnessColorIndex = 0;
-
-    for (int i = 0; i < colors.length-1; i++ ) {
-      if (brightness(colors[i]) < brightness(colors[i+1])) {
-        maxBrightnessColorIndex = i+1;
+    if (brightness(backgroundColor) > (255 * 0.85) && saturation(backgroundColor) < 255 * 0.1) {
+      //black-ish on light background
+      textColor = color(30);
+      for (color c : colors) {
+        if (brightness(c)<255*0.1) {
+          textColor = c;
+        }
       }
-
-      if (brightness(colors[i]) > brightness(colors[i+1])) {
-        minBrightnessColorIndex = i+1;
-      }
+    } else {
+      //white-ish on dark background
+      textColor = color(250);
     }
-
-    brightest = colors[maxBrightnessColorIndex];
-    darkest = colors[minBrightnessColorIndex];
   }
 
   void shuffle() {

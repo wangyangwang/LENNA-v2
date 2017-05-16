@@ -1,6 +1,5 @@
 class ColorDesigner {
 
-
   ArrayList<ColorScheme> allColorSchemes;
   PVector prewviewColorRectSize = new PVector(400, 400);
 
@@ -18,6 +17,7 @@ class ColorDesigner {
     if (allColorSchemes.size()!=0) {
       poster.colorScheme = allColorSchemes.get(floor(random(0, allColorSchemes.size())));
       colorPalette.beginDraw();
+      colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;
       for (int i = 0; i < poster.colorScheme.colors.length; i++) {
         colorPalette.fill(poster.colorScheme.colors[i]);
@@ -29,7 +29,6 @@ class ColorDesigner {
     } else {
       println("Err: no color scheme saved in ColorDesigner");
     }
-
     thisStageInfo = new StageInfo(colorInfo, colorPalette);
     return thisStageInfo;
   }

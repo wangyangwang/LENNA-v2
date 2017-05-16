@@ -138,18 +138,19 @@ class OffsetGraphics extends Graphics {
       graphics.translate(i * offsetDist * shapeSize * offsetDirection.x, i * offsetDist * shapeSize * offsetDirection.y); // offsetDist + offsetDirection
       // shape
       int scaledSize = floor(shapeSize * pow(scaler, i));
-
-      //strokeStyle
+      color cc = poster.colorScheme.graphicsColor[((i)%poster.colorScheme.graphicsColor.length)];
+      
+      //strokeStyle  
       switch(strokeStyle) {
       case "fill":
       default:
-        graphics.fill(poster.colorScheme.colors[((1+i)%4)]); //color
+        graphics.fill(cc); //color
         graphics.noStroke();
         break;
 
       case "stroke":
         graphics.noFill();
-        graphics.stroke(poster.colorScheme.colors[((1+i)%4)]);
+        graphics.stroke(cc);
         graphics.strokeWeight(strokeWeight);
         break;
       }

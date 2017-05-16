@@ -40,6 +40,7 @@ PrinterManager printerManager;
 TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
+color inspectorBackground = color(180);
 
 int posterWidth = 2480/2;
 int posterHeight = 3508/2;
@@ -48,7 +49,7 @@ int posterHeight = 3508/2;
 Poster poster;
 
 void setup () {
-  size(1440, 800);
+  size(1440, 900, P3D);
 
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
@@ -65,7 +66,7 @@ void setup () {
 
 
 void draw() {
-  background(126);
+  background(inspectorBackground);
 
   /* for each stage the stageInfo will be updated */
   StageInfo stageInfo;
@@ -187,4 +188,24 @@ String getContent(int minWords, int maxWords) {
     System.err.println(e);
     return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways. Most bugs arise from mistakes and errors made in either a program's source code or its design, or in components and operating systems used by such programs. A few are caused by compilers producing incorrect code. A program that contains a large number of bugs, and/or bugs that seriously interfere with its functionality, is said to be buggy (defective).";
   }
+}
+String getPomoHeadline() {
+  GetRequest get = new GetRequest("http://www.elsewhere.org/journal/pomo/");
+  get.send();
+  String content = get.getContent();
+  Document doc = Jsoup.parse(content);
+  Elements li = doc.getElementsByTag("h1");
+  String result = li.get(0).html();
+  result = result.replaceAll("<br>", "");
+  if (result.contains(":")) {
+    result = result.substring(0, result.indexOf(":"));
+  }
+  if (result.contains("in the")) {
+    result = result.substring(0, result.indexOf("in the"));
+  }
+  if (result.length()>20) {
+    result = result.substring(0, min(result.indexOf(" ", 10), result.length()-1)); //TODO: BUG
+  }
+
+  return result;
 }
