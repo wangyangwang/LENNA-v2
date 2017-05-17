@@ -16,7 +16,7 @@ class OffsetGraphics extends Graphics {
   void makeDecisions() {
     //Pick shape
     String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse"};
-    int[] shapeProbabilities = new int[] {20, 25, 25, 30};//default
+    int[] shapeProbabilities = new int[] {20, 15, 25, 30};//default
 
     shape = pickByProbability(shapes, shapeProbabilities).toString();
     addToDetails("\nShape: " + shape);
@@ -26,7 +26,6 @@ class OffsetGraphics extends Graphics {
     int[] strokeStyleProbabilities = new int[] {90, 10};
     strokeStyle = pickByProbability(strokeStyles, strokeStyleProbabilities).toString();
     addToDetails("\nShape Style: " + strokeStyle);
-
 
     //Pick number of object
     Integer[] number = new Integer[] {2, 3, 4};
@@ -139,7 +138,7 @@ class OffsetGraphics extends Graphics {
       // shape
       int scaledSize = floor(shapeSize * pow(scaler, i));
       color cc = poster.colorScheme.graphicsColor[((i)%poster.colorScheme.graphicsColor.length)];
-      
+
       //strokeStyle  
       switch(strokeStyle) {
       case "fill":

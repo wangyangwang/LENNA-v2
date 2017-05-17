@@ -191,6 +191,7 @@ String getContent(int minWords, int maxWords) {
   }
 }
 String getPomoHeadline() {
+  
   GetRequest get = new GetRequest("http://www.elsewhere.org/journal/pomo/");
   get.send();
   String content = get.getContent();
@@ -210,7 +211,6 @@ String getPomoHeadline() {
     result = words[floor(random(words.length))];
     result = result.substring(0, 1).toUpperCase() + result.substring(1);
   }
-
 
   return result;
 }
