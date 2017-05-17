@@ -9,8 +9,8 @@ class OffsetGraphics extends Graphics {
   boolean layerBlending;
   PVector offsetDirection;
 
-  OffsetGraphics (Poster poster, int _w, int _h, int _myGridIndex) {
-    super(poster, _w, _h, _myGridIndex);
+  OffsetGraphics (Poster _poster, Grid _mygrid) {
+    super(_poster, _mygrid);
   }
 
   void makeDecisions() {
@@ -96,9 +96,6 @@ class OffsetGraphics extends Graphics {
       break;
     }
 
-    w = graphics.width;
-    h = graphics.height;
-
     /////////////////////Centering the graphics
     float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
     float theta = offsetDirection.heading();
@@ -139,7 +136,7 @@ class OffsetGraphics extends Graphics {
       int scaledSize = floor(shapeSize * pow(scaler, i));
       color cc = poster.colorScheme.graphicsColor[((i)%poster.colorScheme.graphicsColor.length)];
 
-      //strokeStyle  
+      //strokeStyle
       switch(strokeStyle) {
       case "fill":
       default:

@@ -11,6 +11,7 @@ import org.apache.commons.lang3.text.*;
 import http.requests.*;
 import java.io.IOException;
 import processing.pdf.*;
+import java.lang.Runtime;
 
 
 //////////////////////////////////
@@ -191,7 +192,7 @@ String getContent(int minWords, int maxWords) {
   }
 }
 String getPomoHeadline() {
-  
+
   GetRequest get = new GetRequest("http://www.elsewhere.org/journal/pomo/");
   get.send();
   String content = get.getContent();

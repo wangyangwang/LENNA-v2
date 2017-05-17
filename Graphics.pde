@@ -3,14 +3,14 @@ public abstract class Graphics {
   PGraphics graphics;
   String details;
   int w, h;
-  int myGridIndex;
   float padding;
+  Grid myGrid;
 
-  Graphics (Poster poster, int _w, int _h, int _myGridIndex){
-    w = _w;
-    h = _h;
+  Graphics (Poster poster, Grid _grid){
+    myGrid = _grid;
+    w = myGrid.w;
+    h = myGrid.h;
     padding = poster.padding;
-    myGridIndex = _myGridIndex;
     initPGraphics();
     makeDecisions();
     design();

@@ -11,13 +11,13 @@ class GraphicDesigner {
 
     switch (graphicType) {
     case "offset":
-      OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid.w, myGrid.h, myGrid.index);
+      OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid);
       generatedPGraphics = offsetGraphics.getGraphics();
       detailsFromGraphics = offsetGraphics.details;
       break;
 
     case "pattern":
-      PatternGraphics patternGraphics = new PatternGraphics(poster, myGrid.w, myGrid.h, myGrid.index);
+      PatternGraphics patternGraphics = new PatternGraphics(poster, myGrid);
       generatedPGraphics = patternGraphics.getGraphics();
       detailsFromGraphics = patternGraphics.details;
       break;

@@ -1,7 +1,7 @@
 class PatternGraphics extends Graphics {
 
-  PatternGraphics (Poster poster, int _w, int _h, int _myGridIndex) {
-    super(poster, _w, _h, _myGridIndex);
+  PatternGraphics (Poster poster, Grid myGrid) {
+    super(poster, myGrid);
   }
 
   void initProbabilitySet() {
