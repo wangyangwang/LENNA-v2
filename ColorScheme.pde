@@ -32,9 +32,9 @@ class ColorScheme {
       textColor = color(250);
     }
 
-    details = "Background Color:   " + backgroundColor + "\n";
+    details = "Background Color:   " + hex(backgroundColor) + "\n";
     for (int i = 0; i < graphicsColor.length; i++) {
-      details+="Graphics Color " + i + ":   " + graphicsColor[i] + "\n";
+      details+="Graphics Color " + i + ":   " + hex(graphicsColor[i]) + "\n";
     }
     details+="Text Color:   " + hex(textColor) + "\n";
   }

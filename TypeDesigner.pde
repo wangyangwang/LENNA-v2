@@ -104,11 +104,13 @@ class TypeDesigner {
 
     details += "Text Color:   " + columnColor + "\n";
 
+
+    float yoffset = myGrid.index * (posterHeight - myGrid.h); 
     // create headline objects
     Text headline = new Text("headline", headlineFontSize);
     int headlineRectHeight = 10000;
     if (headlineLocation==1) headlineRectHeight *= -1;
-    headline.setBound(headlinePosition[0], headlinePosition[1], headlineWidth, headlineRectHeight);
+    headline.setBound(headlinePosition[0], headlinePosition[1] + (int)yoffset, headlineWidth, headlineRectHeight);
     headline.setContent(getPomoHeadline());
     headline.setColor(headlineColor);
     headline.setFont(boldFont);
@@ -119,7 +121,7 @@ class TypeDesigner {
     for (int i = 0; i < columnCount; i++) {
       Text col = new Text("column", columnFontSize);
       int colY = floor((headlineFontSize + spaceingBetweenHeadlineAndColumns) * (1 - headlineLocation)  +  poster.padding);
-      col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY, columnWidth, columnMaxHeight);
+      col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY+(int)yoffset, columnWidth, columnMaxHeight);
       col.setContent(getContent(15, 25));
       col.setColor(columnColor);
       col.setFont(font);
@@ -127,30 +129,27 @@ class TypeDesigner {
       columns.add(col);
     }
 
-    //draw background to avoid bad quality
-    generatedPGraphics.beginDraw();
-    //generatedPGraphics.background(poster.colorScheme.backgroundColor);
-    generatedPGraphics.endDraw();
-
     //Draw them to the graphics
-    headline.drawOn(generatedPGraphics);
+    headline.drawOn(poster.content);
     for (Text col : columns) {
-      col.drawOn(generatedPGraphics);
+      col.drawOn(poster.content);
     }
 
     //"print" the design on main PGraphics
-    applyGraphicToPoster(generatedPGraphics, poster);
-    StageInfo stageInfo = new StageInfo(details, generatedPGraphics);
+
+    //applyGraphicToPoster(generatedPGraphics, poster);
+
+    StageInfo stageInfo = new StageInfo(details);
 
     inspector.addToMeta(details);
 
     return stageInfo;
   }
 
-  void applyGraphicToPoster(PGraphics pg, Poster poster) {
-    poster.content.beginDraw();
-    float y = myGrid.index * (posterHeight - myGrid.h);
-    poster.content.image(pg, 0, (int)y);
-    poster.content.endDraw();
-  }
+  //  void applyGraphicToPoster(PGraphics pg, Poster poster) {
+  //    poster.content.beginDraw();
+  //    float y = myGrid.index * (posterHeight - myGrid.h);
+  //    poster.content.image(pg, 0, (int)y);
+  //    poster.content.endDraw();
+  //  }
 }
