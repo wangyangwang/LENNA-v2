@@ -28,7 +28,7 @@ class Poster {
 
   void getRotation() {
     Integer[] rotationValues = new Integer[] {45, -45, 0};
-    int[] rotationProbabilities = new int[] {5, 5, 90};
+    int[] rotationProbabilities = new int[] {1, 1, 0};
     rotation = (int)pickByProbability(rotationValues, rotationProbabilities);
     details += "Global Rotation:   " + rotation + " Degree" + "\n";
   }

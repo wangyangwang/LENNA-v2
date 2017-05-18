@@ -34,6 +34,7 @@ class OffsetGraphics extends Graphics {
     if (shape=="letter") {
       numberProbability = new int[] {100, 0, 0};
     }
+
     numberOfShape = (int)pickByProbability(number, numberProbability);
     addToDetails("\nNumber of Shapes: " + numberOfShape);
 
@@ -49,9 +50,10 @@ class OffsetGraphics extends Graphics {
     //pick offsetDistance
     Float[] offsetDistances = new Float[] {0.0, 0.382, 0.5, 0.618, 1.0};
     int[] offsetDistanceProbabilities = new int[] {12, 35, 35, 15, 3}; //default
+    //int[] offsetDistanceProbabilities = new int[] {0, 0, 0, 0, 0, 5, 5}; //default
     switch(shape) {
     case "letter":
-      offsetDistanceProbabilities = new int[] {70, 20, 10, 0, 0};
+      offsetDistanceProbabilities = new int[] {30, 20, 10, 10, 10};
       break;
     }
     if (scaler != 1) {
@@ -86,10 +88,9 @@ class OffsetGraphics extends Graphics {
   }
 
   void design() {
-
     int strokeWeight = 50;
+    int shapeSize = floor(min(w, h) * random(0.4, 0.6));
 
-    int shapeSize = floor(min(w, h) * 0.5);
     switch (shape) {
     case "letter":
       shapeSize = floor(min(w, h) * 1);
@@ -106,9 +107,17 @@ class OffsetGraphics extends Graphics {
     addToDetails("\nOffset Width:  "+ offsetWidth + "\nOffset Height:   " + offsetHeight);
 
     //////////////////// Resize the graphics
-    hypotenuse = pow(numberOfShape, scaler) * shapeSize - ((numberOfShape - 1) * (1-offsetDist) * shapeSize);
-    float graphicsWidth = abs(cos(theta) * hypotenuse);
-    float graphicsHeight = abs(sin(theta) * hypotenuse);
+    hypotenuse = (numberOfShape * shapeSize) - (numberOfShape - 1) * (1-offsetDist) * shapeSize;
+    float graphicsWidth = abs(cos(theta) * hypotenuse) + (shapeSize - abs(cos(theta)*shapeSize));
+    float graphicsHeight = abs(sin(theta) * hypotenuse) + (shapeSize - abs(sin(theta)*shapeSize));
+
+    addToDetails("\nGraphics width:   "+graphicsWidth +"\nGraphics Height:   "+graphicsHeight);
+
+    if (scaler != 1 && offsetDist == 0.0) {
+      graphicsWidth = shapeSize * pow(scaler, numberOfShape);
+      graphicsHeight = graphicsWidth;
+    }
+
     float xScaleFactor = (w - padding * 2) / graphicsWidth;
     float yScaleFactor = (h - padding * 2) / graphicsHeight;
     float globalScaler = min(xScaleFactor, yScaleFactor);
@@ -122,7 +131,7 @@ class OffsetGraphics extends Graphics {
 
     poster.content.pushMatrix();
     poster.content.translate(xAdjustment, yAdjustment + yoffset);
-    //graphics.scale(globalScaler);
+    //poster.content.scale(globalScaler);
 
     //layer blending
     if (layerBlending) {

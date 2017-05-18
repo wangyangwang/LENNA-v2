@@ -44,15 +44,17 @@ class Text {
     fontSet = true;
   }
 
-  void addLine( int lineW, int lineH ){
-      lineWidth = lineW;
-      lineHeight = lineH;
-      underline = true;
+  void addLine( int lineW, int lineH ) {
+    lineWidth = lineW;
+    lineHeight = lineH;
+    underline = true;
   }
 
   void drawOn(PGraphics pg) {
     if (boundSet && contentSet && alignSet && fontSet ) {
       pg.beginDraw();
+      pg.pushMatrix();
+      pg.translate(pos.x, pos.y);
       pg.textFont(font);
       pg.textAlign(xAlign, yAlign);
       pg.textSize(fontSize);
@@ -61,14 +63,8 @@ class Text {
         pg.textLeading(fontSize);
       }
       pg.fill(c);
-      pg.text(content, pos.x, pos.y, w, h);
-      if(underline){
-          pg.pushStyle();
-          pg.stroke(c);
-          pg.strokeWeight(lineHeight);
-          pg.line(pos.x, pos.y, lineWidth + pos.x, pos.y );
-          pg.popStyle();
-      }
+      pg.text(content, 0, 0, w, h);
+      pg.popMatrix();
       pg.endDraw();
     } else {
       System.err.println("Text hasn't been set fully");
