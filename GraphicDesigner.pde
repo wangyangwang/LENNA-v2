@@ -5,39 +5,39 @@ class GraphicDesigner {
   StageInfo design(Poster poster) {
     addBackgroundColorToPoster(poster);
     myGrid = poster.grids.get( poster.partitionArrangement.get("graphics") );
-    PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
+    //PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
     chooseGraphicType();
     String detailsFromGraphics = "";
 
     switch (graphicType) {
     case "offset":
       OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid);
-      generatedPGraphics = offsetGraphics.getGraphics();
+      //generatedPGraphics = offsetGraphics.getGraphics();
       detailsFromGraphics = offsetGraphics.details;
       break;
 
     case "pattern":
       PatternGraphics patternGraphics = new PatternGraphics(poster, myGrid);
-      generatedPGraphics = patternGraphics.getGraphics();
+      //generatedPGraphics = patternGraphics.getGraphics();
       detailsFromGraphics = patternGraphics.details;
       break;
 
     default:
-      generatedPGraphics = empty();
+      //generatedPGraphics = empty();
       break;
     }
 
-    applyGraphicToPoster(generatedPGraphics, poster);
+    //applyGraphicToPoster(generatedPGraphics, poster);
 
 
     String details = "Graphic Type:   " + graphicType + "\n" + "Graphic Partition Location:   " + myGrid.index + "\n" + detailsFromGraphics;
-    StageInfo stageInfo = new StageInfo(details, generatedPGraphics);
+    StageInfo stageInfo = new StageInfo(details);
     return stageInfo;
   }
 
   private void chooseGraphicType() {
     String[] graphicTypes = new String[] {"offset", "pattern", "empty"};
-    int[] graphicTypeProbabilities = new int[]{100, 0, 0};
+    int[] graphicTypeProbabilities = new int[]{1, 0, 0};
     graphicType = pickByProbability(graphicTypes, graphicTypeProbabilities).toString();
   }
 

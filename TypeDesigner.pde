@@ -33,19 +33,16 @@ class TypeDesigner {
     int randomFontIndex = floor(random(fonts.size()));
     PFont font = fonts.get(randomFontIndex);
     PFont boldFont = boldFonts.get(randomFontIndex);
-
     details+="Font:   "+font.getName() + "\n";
 
     //text vertical alignment
     textAlignX = LEFT;
-
     details+="Global X Alignment:   "+textAlignX + "\n";
 
     // headline font size
     float minHeadlineSize = 0.025 * posterHeight;
     float maxHeadlineSize = 0.06 * posterHeight;
     int headlineFontSize = (int)random(minHeadlineSize, maxHeadlineSize);
-
     details+="headlineFontSize:   " + headlineFontSize + "\n";
 
     // headline width
@@ -53,11 +50,16 @@ class TypeDesigner {
     int[] headlineWidthProbabilities = new int[] {100};
     int headlineWidth = floor(((float)pickByProbability(headlineWidths, headlineWidthProbabilities)) * (posterWidth - poster.padding * 2));
 
+    //headline underline
+    // boolean underline = false;
+    // if(random(0,1)>0.0){
+    //     underline = true;
+    // }
+
     // paragraph font size
     float minColumnFontSize = 0.010 * posterHeight;
     float maxColumnFontSize = 0.012 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
-
     details += "Paragraph Font Size:   " + columnFontSize + "\n";
 
     // headline vs paragraph arrangement
@@ -105,7 +107,8 @@ class TypeDesigner {
     details += "Text Color:   " + columnColor + "\n";
 
 
-    float yoffset = myGrid.index * (posterHeight - myGrid.h); 
+    float yoffset = myGrid.index * (posterHeight - myGrid.h);
+
     // create headline objects
     Text headline = new Text("headline", headlineFontSize);
     int headlineRectHeight = 10000;
@@ -115,6 +118,9 @@ class TypeDesigner {
     headline.setColor(headlineColor);
     headline.setFont(boldFont);
     headline.setAlign(headlineAlignX, headlineAlignY);
+    // if(underline){
+    //     headline.addLine(posterWidth - poster.padding * 2, 5);
+    // }
 
     // create column objects
     ArrayList<Text> columns = new ArrayList<Text>();
@@ -129,7 +135,12 @@ class TypeDesigner {
       columns.add(col);
     }
 
+
     //Draw them to the graphics
+    poster.content.beginDraw();
+    poster.content.blendMode(BLEND);
+    poster.content.endDraw();
+
     headline.drawOn(poster.content);
     for (Text col : columns) {
       col.drawOn(poster.content);

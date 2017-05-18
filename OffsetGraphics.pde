@@ -116,22 +116,22 @@ class OffsetGraphics extends Graphics {
 
 
     ///////////////////////start drawing
-    graphics.beginDraw();
+    poster.content.beginDraw();
 
-    graphics.background(poster.colorScheme.backgroundColor);
+    poster.content.background(poster.colorScheme.backgroundColor);
 
-    graphics.pushMatrix();
-    graphics.translate(xAdjustment, yAdjustment);
+    poster.content.pushMatrix();
+    poster.content.translate(xAdjustment, yAdjustment + yoffset);
     //graphics.scale(globalScaler);
 
     //layer blending
     if (layerBlending) {
-      graphics.blendMode(MULTIPLY);
+      poster.content.blendMode(MULTIPLY);
     }
 
     for (int i=0; i<numberOfShape; i++) { // numberOfShape
-      graphics.pushMatrix();
-      graphics.translate(i * offsetDist * shapeSize * offsetDirection.x, i * offsetDist * shapeSize * offsetDirection.y); // offsetDist + offsetDirection
+      poster.content.pushMatrix();
+      poster.content.translate(i * offsetDist * shapeSize * offsetDirection.x, i * offsetDist * shapeSize * offsetDirection.y); // offsetDist + offsetDirection
       // shape
       int scaledSize = floor(shapeSize * pow(scaler, i));
       color cc = poster.colorScheme.graphicsColor[((i)%poster.colorScheme.graphicsColor.length)];
@@ -140,60 +140,48 @@ class OffsetGraphics extends Graphics {
       switch(strokeStyle) {
       case "fill":
       default:
-        graphics.fill(cc); //color
-        graphics.noStroke();
+        poster.content.fill(cc); //color
+        poster.content.noStroke();
         break;
 
       case "stroke":
-        graphics.noFill();
-        graphics.stroke(cc);
-        graphics.strokeWeight(strokeWeight);
+        poster.content.noFill();
+        poster.content.stroke(cc);
+        poster.content.strokeWeight(strokeWeight);
         break;
       }
 
       switch(shape) {
       case "rectangle":
-        graphics.rectMode(CENTER);
-        graphics.rect(0, 0, scaledSize, scaledSize);
+        poster.content.pushStyle();
+        poster.content.rectMode(CENTER);
+        poster.content.rect(0, 0, scaledSize, scaledSize);
+        poster.content.popStyle();
         break;
 
       case "letter":
-        graphics.textFont(createFont("Helvetica-Bold", 500));
+        poster.content.textFont(createFont("Helvetica-Bold", 500));
         String alphabet = "QWERTYUIOPLKJHGFDSAZXCVBNMmnbvcxzasdfghjklpoiuytrewq";
         char ourChar = alphabet.charAt(floor(random(alphabet.length())));
-        graphics.textAlign(CENTER, CENTER);
-        graphics.textSize(scaledSize);
-        graphics.text(ourChar, 0, 0);
+        poster.content.textAlign(CENTER, CENTER);
+        poster.content.textSize(scaledSize);
+        poster.content.text(ourChar, 0, 0);
         break;
 
       case "triangle":
-        graphics.triangle(0, -scaledSize/2, scaledSize/2, scaledSize/2, -scaledSize/2, scaledSize/2);
+        poster.content.triangle(0, -scaledSize/2, scaledSize/2, scaledSize/2, -scaledSize/2, scaledSize/2);
         break;
 
       case "ellipse":
-        graphics.ellipse(0, 0, scaledSize, scaledSize);
+        poster.content.ellipse(0, 0, scaledSize, scaledSize);
         break;
 
       default:
         System.err.println("can't recognize shape");
         break;
       }
-      graphics.popMatrix();
+      poster.content.popMatrix();
     }
-    //////////////////// DEBUG draws ///////////
-    // graphics.fill(0,100);
-    // graphics.noStroke();
-    // graphics.rectMode(CENTER);
-    // // graphics.rect(0,0,constrain(graphicsWidth,30,1000000),constrain(graphicsHeight,30,1000000));
-    //
-    //
-    // graphics.ellipse(0,0,50,50);
-    // graphics.strokeWeight(10);
-    // graphics.stroke(0);
-    // graphics.line(0,0,hypotenuse * offsetDirection.x,   hypotenuse * offsetDirection.y);
-    // graphics.popMatrix();
-
-    ////////////////////////////end drawing
-    graphics.endDraw();
+    poster.content.endDraw();
   }
 }
