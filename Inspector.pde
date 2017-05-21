@@ -1,9 +1,10 @@
 class Inspector {
 
-  boolean noise = false;
+  final boolean noise = false;
+  final boolean drawAllParameters = true;
+  final boolean drawID = false;
+ 
   private ArrayList<String> metadata  = new ArrayList<String>();
-  boolean drawAllParameters = true;
-  boolean drawID = false;
 
 
   StageInfo inspect(Poster poster, int posterCount) {
@@ -37,7 +38,7 @@ class Inspector {
         yAlign = BOTTOM;
         y = posterHeight - poster.padding;
       }
-      poster.content.textSize(posterHeight * 0.02);
+      poster.content.textSize(posterHeight * 0.015);
       poster.content.textAlign(RIGHT, yAlign);
       poster.content.text((int)random(928947, 90289383), posterWidth - poster.padding, y);
     }

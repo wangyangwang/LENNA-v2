@@ -93,9 +93,6 @@ class TypeDesigner {
     float maxHeadlineSize = 0.06 * posterHeight;
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
-    if (!hasColumn) {
-      headlineFontSize *= 1.7;
-    }
     details+="headlineFontSize:   " + headlineFontSize + "\n";
 
 

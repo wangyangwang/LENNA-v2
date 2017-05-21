@@ -37,7 +37,7 @@ class GraphicDesigner {
 
   private void chooseGraphicType() {
     String[] graphicTypes = new String[] {"offset", "pattern", "empty"};
-    int[] graphicTypeProbabilities = new int[]{0, 1, 0};
+    int[] graphicTypeProbabilities = new int[]{1, 1, 0};
     if (myGrid.fullHeight) {
       graphicTypeProbabilities = new int[]{1, 0, 0};
     }

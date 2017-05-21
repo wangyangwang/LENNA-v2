@@ -1,7 +1,7 @@
 
 class ColorScheme {
   public color[] colors;
-  float shuffleProbability = 0.3;
+  float shuffleProbability = 0.8;
   float whiteBackgroundProbability = 0;
   color backgroundColor;
   color[] graphicsColor = new color[3];
@@ -12,6 +12,7 @@ class ColorScheme {
     this.colors = colorArray;
 
     if (random(0, 1) < shuffleProbability) {
+      shuffle();
       shuffle();
     }
 

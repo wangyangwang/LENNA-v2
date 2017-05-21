@@ -14,6 +14,8 @@ class Poster {
   PGraphics content;
   String details = "";
 
+  final float graphicsGridFullHeightProbability = 0.15;
+
   //Constructor
   Poster(int _posterW, int _posterH) {
     w = _posterW;
@@ -70,7 +72,7 @@ class Poster {
   void arrangePartitions() {
 
     int partitionIndexForGraphics = 999;
-    float graphicsGridFullHeightProbability = 0.3;
+
 
     // always give graphics the bigger partition
     if (partitionValue < 0.5 && partitionValue > 0) {
