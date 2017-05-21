@@ -60,7 +60,7 @@ class Text {
       pg.textSize(fontSize);
       if (contentType == "headline") {
         pg.strokeCap(SQUARE);
-        pg.textLeading(fontSize);
+        pg.textLeading(fontSize*0.9);
       }
       pg.fill(c);
       pg.text(content, 0, 0, w, h);

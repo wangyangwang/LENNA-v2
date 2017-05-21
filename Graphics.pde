@@ -1,7 +1,7 @@
 public abstract class Graphics {
 
   //PGraphics graphics;
-  String details;
+  String details = "";
   int w, h;
   float padding;
   Grid myGrid;
@@ -13,13 +13,19 @@ public abstract class Graphics {
     h = myGrid.h;
     padding = poster.padding;
     calculateYoffset();
-    //initPGraphics();
     makeDecisions();
+    addBackgroundToPoster();
     design();
     inspector.addToMeta(details);
   }
 
   abstract void makeDecisions();
+
+  void addBackgroundToPoster() {
+    poster.content.beginDraw();
+    poster.content.background(poster.colorScheme.backgroundColor);
+    poster.content.endDraw();
+  }
 
   abstract void design();
 

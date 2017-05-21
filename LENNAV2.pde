@@ -50,8 +50,10 @@ int posterHeight = 3508/2;
 Poster poster;
 
 void setup () {
-  size(1440, 900);
-
+  size(1440, 900, P2D);
+  //pixelDensity(2);
+  textMode(SHAPE);
+  
   //Create our design crew
   colorDesigner = new ColorDesigner("colorSchemes.txt");
   typeDesigner = new TypeDesigner();

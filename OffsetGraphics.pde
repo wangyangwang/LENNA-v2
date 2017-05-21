@@ -19,7 +19,7 @@ class OffsetGraphics extends Graphics {
     int[] shapeProbabilities = new int[] {20, 15, 25, 30};//default
 
     shape = pickByProbability(shapes, shapeProbabilities).toString();
-    addToDetails("\nShape: " + shape);
+    addToDetails("Shape: " + shape);
 
     //pick style
     String[] strokeStyles = new String[] {"fill", "stroke"};
@@ -29,10 +29,10 @@ class OffsetGraphics extends Graphics {
 
     //Pick number of object
     Integer[] number = new Integer[] {2, 3, 4};
-    int[] numberProbability = new int[] {60, 30, 10}; //default
+    int[] numberProbability = new int[] {50, 30, 10}; //default
 
     if (shape=="letter") {
-      numberProbability = new int[] {100, 0, 0};
+      numberProbability = new int[] {90, 10, 0};
     }
 
     numberOfShape = (int)pickByProbability(number, numberProbability);
@@ -53,7 +53,7 @@ class OffsetGraphics extends Graphics {
     //int[] offsetDistanceProbabilities = new int[] {0, 0, 0, 0, 0, 5, 5}; //default
     switch(shape) {
     case "letter":
-      offsetDistanceProbabilities = new int[] {30, 20, 10, 10, 10};
+      offsetDistanceProbabilities = new int[] {3, 2, 0, 0, 0};
       break;
     }
     if (scaler != 1) {
@@ -127,7 +127,7 @@ class OffsetGraphics extends Graphics {
     ///////////////////////start drawing
     poster.content.beginDraw();
 
-    poster.content.background(poster.colorScheme.backgroundColor);
+    //poster.content.background(poster.colorScheme.backgroundColor);
 
     poster.content.pushMatrix();
     poster.content.translate(xAdjustment, yAdjustment + yoffset);

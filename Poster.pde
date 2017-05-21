@@ -12,7 +12,7 @@ class Poster {
   HashMap<String, Float> partitionSet = new HashMap();
   ColorScheme colorScheme;
   PGraphics content;
-  String details;
+  String details = "";
 
   //Constructor
   Poster(int _posterW, int _posterH) {
@@ -22,7 +22,11 @@ class Poster {
     getPadding();
     arrangePartitions();
     getRotation();
-    content = createGraphics(w, h);
+    content = createGraphics(w, h, P2D);
+    content.smooth(2);
+    content.beginDraw();
+    content.textMode(SHAPE);
+    content.endDraw();
     inspector.addToMeta(details);
   }
 

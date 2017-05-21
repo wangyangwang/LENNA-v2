@@ -1,7 +1,8 @@
 
 class ColorScheme {
   public color[] colors;
-  float shuffleProbability = 0.25;
+  float shuffleProbability = 0.3;
+  float whiteBackgroundProbability = 0;
   color backgroundColor;
   color[] graphicsColor = new color[3];
   color textColor;
@@ -14,7 +15,12 @@ class ColorScheme {
       shuffle();
     }
 
-    backgroundColor = colors[0];
+    if (random(0, 1) < whiteBackgroundProbability) {
+      backgroundColor = color(250);
+    } else {
+      backgroundColor = colors[0];
+    }
+
     graphicsColor[0] = colors[1];
     graphicsColor[1] = colors[2];
     graphicsColor[2] = colors[3];
