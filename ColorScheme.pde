@@ -1,7 +1,7 @@
 
 class ColorScheme {
   public color[] colors;
-  float shuffleProbability = 0.8;
+
   float whiteBackgroundProbability = 0;
   color backgroundColor;
   color[] graphicsColor = new color[3];
@@ -10,11 +10,6 @@ class ColorScheme {
 
   ColorScheme(color[] colorArray) {
     this.colors = colorArray;
-
-    if (random(0, 1) < shuffleProbability) {
-      shuffle();
-      shuffle();
-    }
 
     if (random(0, 1) < whiteBackgroundProbability) {
       backgroundColor = color(250);
@@ -41,7 +36,7 @@ class ColorScheme {
 
     details = "Background Color:   " + hex(backgroundColor) + "\n";
     for (int i = 0; i < graphicsColor.length; i++) {
-      details+="Graphics Color " + i + ":   " + hex(graphicsColor[i]) + "\n";
+      details += "Graphics Color " + i + ":   " + hex(graphicsColor[i]) + "\n";
     }
     details+="Text Color:   " + hex(textColor) + "\n";
   }
@@ -53,6 +48,7 @@ class ColorScheme {
 
   void shuffle() {
     this.colors = shuffleColorArray(colors);
+    log.println("Shuffing colors...");
   }
 
 

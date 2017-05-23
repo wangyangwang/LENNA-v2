@@ -15,27 +15,28 @@ class OffsetGraphics extends Graphics {
 
   void makeDecisions() {
     //Pick shape
+    log.println("Choosing Shape...");
     String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse"};
     int[] shapeProbabilities = new int[] {20, 15, 25, 30};//default
-
     shape = pickByProbability(shapes, shapeProbabilities).toString();
+    log.println("Shape type: [" + shape+"]");
     addToDetails("Shape: " + shape);
 
     //pick style
     String[] strokeStyles = new String[] {"fill", "stroke"};
     int[] strokeStyleProbabilities = new int[] {90, 10};
     strokeStyle = pickByProbability(strokeStyles, strokeStyleProbabilities).toString();
-    addToDetails("\nShape Style: " + strokeStyle);
+    log.println("stroke: [" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"]") );
+    addToDetails("\nShape Style: [" + strokeStyle+"]");
 
     //Pick number of object
     Integer[] number = new Integer[] {2, 3, 4};
     int[] numberProbability = new int[] {50, 30, 10}; //default
-
     if (shape=="letter") {
       numberProbability = new int[] {90, 10, 0};
     }
-
     numberOfShape = (int)pickByProbability(number, numberProbability);
+    log.println("Shape number: ["+numberOfShape+"]");
     addToDetails("\nNumber of Shapes: " + numberOfShape);
 
     //Pick scaler
@@ -45,6 +46,7 @@ class OffsetGraphics extends Graphics {
       scalerProbabilites = new int[] {100, 0, 0};
     }
     scaler = (Float)pickByProbability(scalers, scalerProbabilites);
+    log.println("The graphics scales by: [" + scaler+"]");
     addToDetails("\nShape scales by: " + scaler);
 
     //pick offsetDistance
@@ -61,6 +63,7 @@ class OffsetGraphics extends Graphics {
     }
 
     offsetDist = (Float)pickByProbability(offsetDistances, offsetDistanceProbabilities);
+    log.println("Shape offset 1by1 by: ["+offsetDist + "] % of shape's size" );
     addToDetails("\nOffset by " + offsetDist + " of the shape's size");
 
     //pick offsetDirection
@@ -74,6 +77,7 @@ class OffsetGraphics extends Graphics {
     }
     offsetDirection = (PVector)pickByProbability(offsetDirections, offsetDirectionProbabilities);
     addToDetails("\nOffsetting direction: " + degrees(offsetDirection.heading()) + " degree" );
+    log.println("Shapes offset by: ["+degrees(offsetDirection.heading()) + "] degree");
 
     //layer blending or not
     Boolean[] ifLayerBlend = new Boolean[] {true, false};
@@ -85,18 +89,19 @@ class OffsetGraphics extends Graphics {
       layerBlendProbability = new int[] {100, 0};
     }
     layerBlending = (boolean)pickByProbability(ifLayerBlend, layerBlendProbability);
+    log.println("Layer blending? [" + layerBlending+"]");
   }
 
   void design() {
-    int strokeWeight = 50;
-    int shapeSize = floor(min(w, h) * random(0.4, 0.6));
+    int strokeWeight = floor(random(40, 100));
+    int shapeSize = floor(min(w, h) * random(0.4, 0.9));
 
     switch (shape) {
     case "letter":
       shapeSize = floor(min(w, h) * 1);
       break;
     }
-
+    log.println("Drawing shapes according to all parameters generated above...");
     /////////////////////Centering the graphics
     float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
     float theta = offsetDirection.heading();
@@ -192,5 +197,6 @@ class OffsetGraphics extends Graphics {
       poster.content.popMatrix();
     }
     poster.content.endDraw();
+    log.println("Finished drawing graphics.");
   }
 }

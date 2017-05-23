@@ -5,10 +5,12 @@ class GraphicDesigner {
   StageInfo design(Poster poster) {
     addBackgroundColorToPoster(poster);
     myGrid = poster.grids.get( poster.partitionArrangement.get("graphics") );
+    log.println("Init grid background...");
     //PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
     chooseGraphicType();
     String detailsFromGraphics = "";
 
+    log.println("Creating graphics...");
     switch (graphicType) {
     case "offset":
       OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid);
@@ -27,6 +29,8 @@ class GraphicDesigner {
       break;
     }
 
+
+
     //applyGraphicToPoster(generatedPGraphics, poster);
 
 
@@ -36,12 +40,14 @@ class GraphicDesigner {
   }
 
   private void chooseGraphicType() {
+    log.println("Choosing graphics type...");
     String[] graphicTypes = new String[] {"offset", "pattern", "empty"};
-    int[] graphicTypeProbabilities = new int[]{1, 1, 0};
+    int[] graphicTypeProbabilities = new int[]{70, 30, 0};
     if (myGrid.fullHeight) {
       graphicTypeProbabilities = new int[]{1, 0, 0};
     }
     graphicType = pickByProbability(graphicTypes, graphicTypeProbabilities).toString();
+    log.println("Graphics type is: ["  + graphicType+"]");
   }
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {

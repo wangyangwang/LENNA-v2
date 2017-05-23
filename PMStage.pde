@@ -35,7 +35,7 @@ class ProgressManagerStage {
     pushMatrix();
     pushStyle();
     translate(x, y);
-    textAlign(CENTER);
+    textAlign(LEFT);
 
     /* highlight stage in progress */
     if (inProgress) {

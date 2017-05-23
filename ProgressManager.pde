@@ -1,14 +1,19 @@
 class ProgressManager {
   Stage STAGE;
   int posterCount;
-  int stageDelay = 0;
+  int stageDelay = 200;
   PFont spaceMono;
   int titleSize = 29;
-
   ArrayList<ProgressManagerStage> progressManagerStages;
+  String displayDir;
 
   ProgressManager () {
-    spaceMono = createFont("Helvetica", 100);
+    if (width>height) {
+      displayDir = "horizontal";
+    } else {
+      displayDir = "vertical";
+    }
+    spaceMono = createFont("spacemono", 100);
     posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 
@@ -34,6 +39,7 @@ class ProgressManager {
 
   /* for stage with thumbnail */
   void update(Stage _STAGE, StageInfo stageInfo) {
+    log.println("Updating progress interface infoation...");
     update(_STAGE);
     int currentStageIndex = STAGE.ordinal();
     if (stageInfo.thumbnail != null) {
@@ -64,12 +70,17 @@ class ProgressManager {
       } else {
         pms.inProgress = false;
       }
-      pms.display((width/stageNumber)/2 + pms.stageIndex * (width/stageNumber), 200);
+      if (displayDir=="vertical") {
+        pms.display(width/2, (height/stageNumber)/2 + pms.stageIndex * (height/stageNumber));
+      } else {
+        pms.display((width/stageNumber)/2 + pms.stageIndex * (width/stageNumber), 200);
+      }
     }
     textFont(spaceMono);
     textAlign(LEFT);
     textSize(titleSize);
     text("Making Poster #" + posterCount + "...", 100, 100);
+    log.println("Display stage information");
   }
 }
 ////////////////////////////////////////////////////

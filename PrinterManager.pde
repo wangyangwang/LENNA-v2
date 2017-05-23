@@ -5,10 +5,13 @@ class PrinterManager {
 
   StageInfo print(Poster poster, int poster_count) {
     String posterFileName = "poster_#" + poster_count+".png";
+    log.println("Saving file, file name: ["+posterFileName+"]");
     poster.content.save("posters/"+posterFileName);
+
     String newPosterPath = sketchPath("")+"posters/"+posterFileName;
 
     if (actuallyPrint) {
+      log.println("Sending designed poster to printer...");
       sendToPrinter(newPosterPath);
     }
 

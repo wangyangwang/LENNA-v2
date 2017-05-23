@@ -14,7 +14,7 @@ class TypeDesigner {
   // poster by poster
   Grid myGrid;
   float noColumnProbability = 0.1;
-  boolean hasColumn;
+
 
 
   TypeDesigner () {
@@ -40,18 +40,14 @@ class TypeDesigner {
     int randomFontIndex = floor(random(fonts.size()));
     PFont font = fonts.get(randomFontIndex);
     PFont boldFont = boldFonts.get(randomFontIndex);
-    details+="Font:   "+font.getName() + "\n";
+    String fontname = font.getName();
+    details+="Font:   " + fontname + "\n";
+    log.println("Picked font: ["+fontname+"]");
+
 
     //text vertical alignment
     details+="Global X Alignment:   "+textAlignX + "\n";
-
-    // if show column
-    if (random(0, 1) < noColumnProbability) {
-      hasColumn = false;
-    } else {
-      hasColumn = true;
-    }
-
+    log.println("Text vertical align: ["+textAlignX+"]");
 
 
     // headline width
@@ -59,17 +55,12 @@ class TypeDesigner {
     int[] headlineWidthProbabilities = new int[] {1};
     int headlineWidth = floor(((float)pickByProbability(headlineWidths, headlineWidthProbabilities)) * (posterWidth - poster.padding * 2));
 
-    //headline underline
-    // boolean underline = false;
-    // if(random(0,1)>0.0){
-    //     underline = true;
-    // }
-
     // paragraph font size
     float minColumnFontSize = 0.009 * posterHeight;
     float maxColumnFontSize = 0.011 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
     details += "Paragraph Font Size:   " + columnFontSize + "\n";
+    log.println("Column font size: ["+columnFontSize+"]");
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -94,7 +85,7 @@ class TypeDesigner {
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";
-
+    log.println("Headline font size: ["+headlineFontSize+"]");
 
     //column Count
     int columnCount;
@@ -102,10 +93,12 @@ class TypeDesigner {
     int[] columnCountsProbabilities = new int[] {1, 4, 5};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
     details += "Paragraph Count:   " + columnCount + "\n";
+    log.println("Column number: ["+columnCount+"]");
 
 
     //column width
     float columnWidth = ((posterWidth - poster.padding * 2) / columnCount) * 0.9;
+    log.println("Column width: ["+columnWidth+"]");
 
     //space between headline and columns
     int spaceingBetweenHeadlineAndColumns = floor( posterHeight * 0.024 );
@@ -124,8 +117,6 @@ class TypeDesigner {
 
     //headline color
     color headlineColor = poster.colorScheme.textColor;
-
-
 
     //column color
     color columnColor = poster.colorScheme.textColor;
@@ -162,8 +153,6 @@ class TypeDesigner {
       col.setAlign(textAlignX, TOP);
       columns.add(col);
     }
-
-
 
     //Draw them to the graphics
     poster.content.beginDraw();

@@ -14,6 +14,7 @@ import processing.pdf.*;
 import java.lang.Runtime;
 
 
+
 //////////////////////////////////
 /* Stage control */
 
@@ -32,6 +33,7 @@ public enum Stage {
 
 //////////////////////////////////
 
+PrintWriter log;
 Stage STAGE;
 int stageNumber = STAGE.values().length;
 
@@ -41,25 +43,35 @@ PrinterManager printerManager;
 TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
-color inspectorBackground = color(180);
+color inspectorBackground = color(100);
 
 int posterWidth = 2480/2;
 int posterHeight = 3508/2;
+
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
 void setup () {
   size(1440, 900, P2D);
-  //pixelDensity(2);
+  pixelDensity(2);
   textMode(SHAPE);
-  
+  smooth(4);
+  log = createWriter("lenna.log");
+  log.println("initializing objects...");
+
   //Create our design crew
+  log.println("Intilazing color designer...");
   colorDesigner = new ColorDesigner("colorSchemes.txt");
+  log.println("Intilazing type designer...");
   typeDesigner = new TypeDesigner();
+  log.println("Intilazing graphic designer...");
   graphicDesigner = new GraphicDesigner();
+  log.println("Intilazing progress interface manager...");
   progressManager = new ProgressManager();
+  log.println("Intilazing print manager...");
   printerManager = new PrinterManager();
+  log.println("Intilazing inspector...");
   inspector = new Inspector();
 
 
@@ -76,11 +88,13 @@ void draw() {
 
   switch (STAGE) {
   case CREATION:
+    log.println("====================NEW POSTER========================");
     poster = new Poster(posterWidth, posterHeight);
     stageInfo = new StageInfo(poster.details);
     progressManager.update(STAGE, stageInfo);
     STAGE = STAGE.next();
     delay(progressManager.stageDelay);
+    log.println("-------------");
     break;
 
   case COLOR_DESIGN:
@@ -88,6 +102,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
 
   case GRAPHIC_DESIGN:
@@ -95,6 +110,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
 
   case TYPE_DESIGN:
@@ -102,6 +118,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
 
   case INSPECTION:
@@ -109,6 +126,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
 
   case PRINT:
@@ -116,6 +134,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
 
   case FINISH:
@@ -124,10 +143,12 @@ void draw() {
     inspector.reset();
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
+    log.println("-------------");
     break;
   }
 
   progressManager.display();
+  log.flush();
 }
 
 
@@ -190,7 +211,7 @@ String getContent(int minWords, int maxWords) {
   }
   catch(Exception e) {
     System.err.println(e);
-    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.";
+    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result";
   }
 }
 String getPomoHeadline() {
