@@ -1,8 +1,5 @@
-
-
 class PrinterManager {
   boolean actuallyPrint = false;
-
   StageInfo print(Poster poster, int poster_count) {
     String posterFileName = "poster_#" + poster_count+".png";
     log.println("Saving file, file name: ["+posterFileName+"]");

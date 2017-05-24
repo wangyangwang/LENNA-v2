@@ -9,12 +9,12 @@ Intilazing inspector...
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 0
@@ -22,8 +22,8 @@ Updating progress interface infoation...
 -------------
 Display stage information
 Shuffing colors...
-Color scheme selected: [[I@6c88c34d]
-Background Color: [FFDDDDDD]
+Color scheme selected: [[I@4db2d70e]
+Background Color: [FFFFFFFF]
 Text Color: [FF1E1E1E]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -31,24 +31,28 @@ Updating progress interface infoation...
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [pattern]
+Graphics type is: [offset]
 Creating graphics...
-Number of shapes: [15]
-Row/Column number: [15][15]
-Each shape will have: [5] vectices
-Width of single shape: [73.0] height: [63.0]
-Horizontal gap: [27.058268]vertical gap: [23.351656]
-Shape rotates 1by1 by [0.0]
-Drawing the pattern on our poster...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
 Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [17]
-Headline font size: [64]
+Column font size: [10]
+Headline font size: [59]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -66,21 +70,20 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Silver Ratio
-Grid 1 Height: 356
-Grid 2 Height: 1398
-Poster padding: 68
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 1
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@19224599]
-Background Color: [FFE1E0DD]
+Color scheme selected: [[I@122d7e1c]
+Background Color: [FFFFFFFF]
 Text Color: [FF1E1E1E]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -88,24 +91,28 @@ Updating progress interface infoation...
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [pattern]
+Graphics type is: [offset]
 Creating graphics...
-Number of shapes: [40]
-Row/Column number: [1][40]
-Each shape will have: [4] vectices
-Width of single shape: [27.0] height: [1262.0]
-Horizontal gap: [10.248105]vertical gap: [0.0]
-Shape rotates 1by1 by [0.0]
-Drawing the pattern on our poster...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Gotham]
+Picked font: [Helvetica-Medium]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [63]
+Column font size: [11]
+Headline font size: [80]
 Column number: [2]
-Column width: [496.8]
+Column width: [321.3]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -123,49 +130,45 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
 Layout: Golden Ratio
-Grid 1 Height: 1083
-Grid 2 Height: 671
-Poster padding: 68
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
 Arranging graphics and typography to grids...
-Grid on top has: graphics grid on bottom has: letters
+Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 2
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@14ba1adb]
-Background Color: [FFDDDDDD]
-Text Color: [FF1E1E1E]
+Color scheme selected: [[I@62a3d1ff]
+Background Color: [FFEE8012]
+Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
 -------------
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [offset]
+Graphics type is: [pattern]
 Creating graphics...
-Choosing Shape...
-Shape type: [ellipse]
-stroke: [No Stroke
-Shape number: [3]
-The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.5] % of shape's size
-Shapes offset by: [0.0] degree
-Layer blending? [true]
-Drawing shapes according to all parameters generated above...
-Finished drawing graphics.
+Number of shapes: [15]
+Row/Column number: [15][1]
+Each shape will have: [4] vectices
+Width of single shape: [714.0] height: [42.0]
+Horizontal gap: [0.0]vertical gap: [32.94156]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Futura]
+Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [56]
+Column font size: [12]
+Headline font size: [66]
 Column number: [2]
-Column width: [496.8]
+Column width: [321.3]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -183,20 +186,19 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
 Arranging graphics and typography to grids...
-Grid on top has: letters grid on bottom has: graphics
+Grid on top has: graphics grid on bottom has: letters
 New poster created! ID: 3
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@518c561a]
+Color scheme selected: [[I@2bf8956d]
 Background Color: [FFE1E0DD]
 Text Color: [FF1E1E1E]
 Draw color to a thumbnail for the interface...
@@ -205,24 +207,28 @@ Updating progress interface infoation...
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [pattern]
+Graphics type is: [offset]
 Creating graphics...
-Number of shapes: [15]
-Row/Column number: [15][15]
-Each shape will have: [3] vectices
-Width of single shape: [73.0] height: [63.0]
-Horizontal gap: [7.359872]vertical gap: [6.3516703]
-Shape rotates 1by1 by [5.94261]
-Drawing the pattern on our poster...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
 Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [57]
-Column number: [2]
-Column width: [496.8]
+Column font size: [11]
+Headline font size: [81]
+Column number: [4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -240,22 +246,21 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
 Arranging graphics and typography to grids...
-Grid on top has: letters grid on bottom has: graphics
+Grid on top has: graphics grid on bottom has: letters
 New poster created! ID: 4
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@556a4e00]
-Background Color: [FFDDDDDD]
-Text Color: [FF1E1E1E]
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
+Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
 -------------
@@ -265,24 +270,25 @@ Choosing graphics type...
 Graphics type is: [offset]
 Creating graphics...
 Choosing Shape...
-Shape type: [ellipse]
+Shape type: [triangle]
 stroke: [Only Stroke]
 Shape number: [2]
-The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.5] % of shape's size
-Shapes offset by: [-45.0] degree
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
 Layer blending? [true]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Futura]
+Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [18]
-Headline font size: [104]
+Column font size: [11]
+Headline font size: [78]
 Column number: [2]
-Column width: [496.8]
+Column width: [321.3]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -300,22 +306,22 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
 Layout: Golden Ratio
-Grid 1 Height: 1083
-Grid 2 Height: 671
-Poster padding: 68
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
 Arranging graphics and typography to grids...
-Grid on top has: graphics grid on bottom has: letters
+Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 5
 Updating progress interface infoation...
 -------------
 Display stage information
 Shuffing colors...
-Color scheme selected: [[I@63a7e714]
-Background Color: [FFF43530]
-Text Color: [FFFAFAFA]
+Color scheme selected: [[I@2a25feca]
+Background Color: [FFFEF9F7]
+Text Color: [FF1E1E1E]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
 -------------
@@ -325,24 +331,25 @@ Choosing graphics type...
 Graphics type is: [offset]
 Creating graphics...
 Choosing Shape...
-Shape type: [letter]
+Shape type: [rectangle]
 stroke: [No Stroke
 Shape number: [2]
 The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [180.0] degree
-Layer blending? [true]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Helvetica-Medium]
+Picked font: [Futura]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [60]
-Column number: [2]
-Column width: [496.8]
+Column font size: [12]
+Headline font size: [57]
+Column number: [4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -360,22 +367,21 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 6
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@4e0a5a7e]
-Background Color: [FFF0CA75]
-Text Color: [FFFAFAFA]
+Color scheme selected: [[I@2bf8956d]
+Background Color: [FFE1E0DD]
+Text Color: [FF1E1E1E]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
 -------------
@@ -385,13 +391,14 @@ Choosing graphics type...
 Graphics type is: [offset]
 Creating graphics...
 Choosing Shape...
-Shape type: [ellipse]
+Shape type: [letter]
 stroke: [No Stroke
 Shape number: [2]
 The graphics scales by: [1.0]
 Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [0.0] degree
-Layer blending? [false]
+Shapes offset by: [-90.0] degree
+Layer blending? [true]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
@@ -399,10 +406,10 @@ Updating progress interface infoation...
 Display stage information
 Picked font: [Gotham]
 Text vertical align: [37]
-Column font size: [18]
-Headline font size: [62]
-Column number: [4]
-Column width: [248.4]
+Column font size: [12]
+Headline font size: [88]
+Column number: [2]
+Column width: [321.3]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -420,21 +427,20 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Silver Ratio
-Grid 1 Height: 356
-Grid 2 Height: 1398
-Poster padding: 68
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 7
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@66fe730]
-Background Color: [FFF45844]
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -442,27 +448,24 @@ Updating progress interface infoation...
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [offset]
+Graphics type is: [pattern]
 Creating graphics...
-Choosing Shape...
-Shape type: [rectangle]
-stroke: [No Stroke
-Shape number: [3]
-The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [180.0] degree
-Layer blending? [true]
-Drawing shapes according to all parameters generated above...
-Finished drawing graphics.
+Number of shapes: [15]
+Row/Column number: [1][15]
+Each shape will have: [4] vectices
+Width of single shape: [47.0] height: [635.0]
+Horizontal gap: [11.787277]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Gotham]
+Picked font: [Helvetica-Medium]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [102]
+Column font size: [12]
+Headline font size: [50]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -480,21 +483,20 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 8
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@28b49b1b]
-Background Color: [FFC2B4A6]
+Color scheme selected: [[I@b9819a9]
+Background Color: [FFF45844]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -505,24 +507,25 @@ Choosing graphics type...
 Graphics type is: [offset]
 Creating graphics...
 Choosing Shape...
-Shape type: [triangle]
+Shape type: [rectangle]
 stroke: [No Stroke
 Shape number: [2]
 The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [-45.0] degree
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-135.0] degree
 Layer blending? [true]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Avenir-Medium]
+Picked font: [Helvetica-Medium]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [103]
+Column font size: [12]
+Headline font size: [97]
 Column number: [2]
-Column width: [496.8]
+Column width: [321.3]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -540,21 +543,20 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Silver Ratio
-Grid 1 Height: 1397
-Grid 2 Height: 357
-Poster padding: 68
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: graphics grid on bottom has: letters
 New poster created! ID: 9
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@20a9090]
-Background Color: [FFBFBABE]
+Color scheme selected: [[I@99536b4]
+Background Color: [FFFBAE17]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -562,27 +564,24 @@ Updating progress interface infoation...
 Display stage information
 Init grid background...
 Choosing graphics type...
-Graphics type is: [offset]
+Graphics type is: [pattern]
 Creating graphics...
-Choosing Shape...
-Shape type: [rectangle]
-stroke: [No Stroke
-Shape number: [2]
-The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [0.0] degree
-Layer blending? [true]
-Drawing shapes according to all parameters generated above...
-Finished drawing graphics.
+Number of shapes: [40]
+Row/Column number: [40][40]
+Each shape will have: [5] vectices
+Width of single shape: [17.0] height: [15.0]
+Horizontal gap: [4.4990625]vertical gap: [3.969761]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Helvetica-Medium]
+Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [18]
-Headline font size: [73]
+Column font size: [12]
+Headline font size: [81]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -600,20 +599,19 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Silver Ratio
-Grid 1 Height: 1397
-Grid 2 Height: 357
-Poster padding: 68
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: graphics grid on bottom has: letters
 New poster created! ID: 10
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@5ceb8e07]
+Color scheme selected: [[I@b9819a9]
 Background Color: [FFF45844]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
@@ -629,20 +627,21 @@ Shape type: [letter]
 stroke: [No Stroke
 Shape number: [2]
 The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [-45.0] degree
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
 Layer blending? [true]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
 -------------
 Display stage information
-Picked font: [Helvetica-Medium]
+Picked font: [Gotham]
 Text vertical align: [37]
-Column font size: [19]
-Headline font size: [59]
+Column font size: [11]
+Headline font size: [55]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -660,21 +659,20 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
-Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 11
 Updating progress interface infoation...
 -------------
 Display stage information
-Shuffing colors...
-Color scheme selected: [[I@431c1cc5]
-Background Color: [FFF45844]
+Color scheme selected: [[I@391c9522]
+Background Color: [FFDB2F27]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -685,13 +683,14 @@ Choosing graphics type...
 Graphics type is: [offset]
 Creating graphics...
 Choosing Shape...
-Shape type: [letter]
+Shape type: [rectangle]
 stroke: [No Stroke
-Shape number: [2]
-The graphics scales by: [1.0]
-Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [-135.0] degree
+Shape number: [3]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
 Layer blending? [true]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
@@ -699,10 +698,10 @@ Updating progress interface infoation...
 Display stage information
 Picked font: [Avenir-Medium]
 Text vertical align: [37]
-Column font size: [18]
-Headline font size: [97]
+Column font size: [11]
+Headline font size: [51]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
 Updating progress interface infoation...
 -------------
 Display stage information
@@ -720,21 +719,81 @@ Display stage information
 ====================NEW POSTER========================
 A new poster is being created...
 ....creating poster...
-poster width: 1240,height: 1754
+poster width: 802,height: 1169
 Deciding layout...
 Layout: Golden Ratio
-Grid 1 Height: 670
-Grid 2 Height: 1084
-Poster padding: 68
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
 Arranging graphics and typography to grids...
 Grid on top has: letters grid on bottom has: graphics
 New poster created! ID: 12
 Updating progress interface infoation...
 -------------
 Display stage information
+Color scheme selected: [[I@6224b9f7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [49]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#13.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 13
+Updating progress interface infoation...
+-------------
+Display stage information
 Shuffing colors...
-Color scheme selected: [[I@179fe5]
-Background Color: [FF08327D]
+Color scheme selected: [[I@27f01c5b]
+Background Color: [FFEE8012]
 Text Color: [FFFAFAFA]
 Draw color to a thumbnail for the interface...
 Updating progress interface infoation...
@@ -750,8 +809,310 @@ stroke: [No Stroke
 Shape number: [2]
 The graphics scales by: [1.0]
 Shape offset 1by1 by: [0.382] % of shape's size
-Shapes offset by: [180.0] degree
+Shapes offset by: [-45.0] degree
 Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [74]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#14.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 14
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@34804c75]
+Background Color: [FFE0E5DB]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-45.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [79]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#15.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 15
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@64036213]
+Background Color: [FFF77E5E]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [48]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#16.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 16
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@4db2d70e]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [box]
+stroke: [Only Stroke]
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [80]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#17.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 17
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@44d3e0d7]
+Background Color: [FFBFBABE]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [60]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#18.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 18
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@34804c75]
+Background Color: [FFE0E5DB]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-90.0] degree
+Layer blending? [false]
+Blend mode: [128]
 Drawing shapes according to all parameters generated above...
 Finished drawing graphics.
 Updating progress interface infoation...
@@ -759,10 +1120,4185 @@ Updating progress interface infoation...
 Display stage information
 Picked font: [Futura]
 Text vertical align: [37]
-Column font size: [16]
-Headline font size: [80]
+Column font size: [11]
+Headline font size: [102]
 Column number: [4]
-Column width: [248.4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#19.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 19
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3a9abe4c]
+Background Color: [FFDDDDDD]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [1][40]
+Each shape will have: [4] vectices
+Width of single shape: [17.0] height: [843.0]
+Horizontal gap: [7.210825]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [79]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#20.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 20
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3a9abe4c]
+Background Color: [FFDDDDDD]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [104]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#21.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 21
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@151890ab]
+Background Color: [FFDBB700]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [4]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [57]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#22.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 22
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3a9abe4c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [15][15]
+Each shape will have: [3] vectices
+Width of single shape: [47.0] height: [56.0]
+Horizontal gap: [8.017286]vertical gap: [9.552511]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [55]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#23.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 23
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@64036213]
+Background Color: [FFF77E5E]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][1]
+Each shape will have: [4] vectices
+Width of single shape: [714.0] height: [15.0]
+Horizontal gap: [0.0]vertical gap: [3.2533987]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [88]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#24.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 24
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@99536b4]
+Background Color: [FFFBAE17]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [74]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#25.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 25
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@4c9ed63b]
+Background Color: [FF08327D]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [1][40]
+Each shape will have: [4] vectices
+Width of single shape: [17.0] height: [843.0]
+Horizontal gap: [4.564353]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [99]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#26.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 26
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@2ec2172d]
+Background Color: [FFF45844]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [4]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [68]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#27.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 27
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2bf8956d]
+Background Color: [FFE1E0DD]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [180.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [48]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#28.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 28
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3a9abe4c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-45.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [103]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#29.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 29
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [98]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#30.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 30
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@122d7e1c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [box]
+stroke: [Only Stroke]
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [93]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#31.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 31
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [62]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#32.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 32
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@dcd23db]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [87]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#33.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 33
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@3f1b2ff7]
+Background Color: [FFEE8012]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [15][15]
+Each shape will have: [3] vectices
+Width of single shape: [47.0] height: [42.0]
+Horizontal gap: [21.313227]vertical gap: [19.045862]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [69]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#34.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 34
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2ec2172d]
+Background Color: [FFF45844]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [85]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#35.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 35
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@99536b4]
+Background Color: [FFFBAE17]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [101]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#36.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 36
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3f1b2ff7]
+Background Color: [FFEE8012]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [Only Stroke]
+Shape number: [3]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [58]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#37.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 37
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2a25feca]
+Background Color: [FFFEF9F7]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][40]
+Each shape will have: [3] vectices
+Width of single shape: [17.0] height: [21.0]
+Horizontal gap: [6.007206]vertical gap: [7.420666]
+Shape rotates 1by1 by [2.520228]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [56]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#38.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 38
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@4db2d70e]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [52]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#39.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 39
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2ec2172d]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [180.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [104]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#40.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 40
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2ec2172d]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [box]
+stroke: [Only Stroke]
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [48]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#41.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 41
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3f1b2ff7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [59]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#42.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 42
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@44d3e0d7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [84]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#43.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 43
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3f1b2ff7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [65]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#44.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 44
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@dcd23db]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.618] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [49]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#45.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 45
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@122d7e1c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-90.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [98]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#46.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 46
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@58224912]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][40]
+Each shape will have: [5] vectices
+Width of single shape: [17.0] height: [15.0]
+Horizontal gap: [11.525442]vertical gap: [10.169508]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [62]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#47.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 47
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@99536b4]
+Background Color: [FFFBAE17]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [1][15]
+Each shape will have: [4] vectices
+Width of single shape: [47.0] height: [635.0]
+Horizontal gap: [40.552235]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [96]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#48.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 48
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@d9e0ce1]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [1][40]
+Each shape will have: [4] vectices
+Width of single shape: [17.0] height: [844.0]
+Horizontal gap: [13.193019]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [75]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#49.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 49
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@99536b4]
+Background Color: [FFFBAE17]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.618] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [76]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#50.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 50
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@391c9522]
+Background Color: [FFDB2F27]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [83]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#51.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 51
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@b531f24]
+Background Color: [FFF77E5E]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [83]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#52.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 52
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2bf8956d]
+Background Color: [FFE1E0DD]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [102]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#53.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 53
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@58224912]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [69]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#54.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 54
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@dcd23db]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.618] % of shape's size
+Shapes offset by: [-45.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [67]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#55.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 55
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@122d7e1c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [62]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#56.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 56
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@dcd23db]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [Only Stroke]
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [76]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#57.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 57
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2bf8956d]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [73]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#58.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 58
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@4db2d70e]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-90.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [75]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#59.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 59
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@391c9522]
+Background Color: [FFDB2F27]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-90.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [89]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#60.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 60
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@ebadcb]
+Background Color: [FF0098D8]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [4]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-45.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [103]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#61.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 61
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@391c9522]
+Background Color: [FFDB2F27]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [101]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#62.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 62
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@4c9ed63b]
+Background Color: [FF08327D]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [55]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#63.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 63
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [1][15]
+Each shape will have: [4] vectices
+Width of single shape: [47.0] height: [843.0]
+Horizontal gap: [26.919422]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [55]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#64.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 64
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@ebadcb]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [93]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#65.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 65
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@391c9522]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [1][40]
+Each shape will have: [4] vectices
+Width of single shape: [17.0] height: [634.0]
+Horizontal gap: [12.1541]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [60]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#66.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 66
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@44d3e0d7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [67]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#67.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 67
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@29fcee14]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][1]
+Each shape will have: [4] vectices
+Width of single shape: [714.0] height: [15.0]
+Horizontal gap: [0.0]vertical gap: [9.840067]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [74]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#68.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 68
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@58224912]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [74]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#69.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 69
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2ec2172d]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][40]
+Each shape will have: [3] vectices
+Width of single shape: [17.0] height: [15.0]
+Horizontal gap: [4.1948752]vertical gap: [3.7013605]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [62]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#70.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 931
+Grid 2 Height: 238
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 70
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@ade2bd2]
+Background Color: [FFF77E5E]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [86]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#71.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 71
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@dcd23db]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [55]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#72.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 72
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@ade2bd2]
+Background Color: [FFF77E5E]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [1][15]
+Each shape will have: [4] vectices
+Width of single shape: [47.0] height: [844.0]
+Horizontal gap: [35.11203]vertical gap: [0.0]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [92]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#73.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 73
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@25e2b5c4]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [letter]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [56]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#74.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 74
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@25e2b5c4]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [80]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#75.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 75
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2a25feca]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [40]
+Row/Column number: [40][1]
+Each shape will have: [4] vectices
+Width of single shape: [714.0] height: [15.0]
+Horizontal gap: [0.0]vertical gap: [7.080849]
+Shape rotates 1by1 by [0.0]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [69]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#76.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 76
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@1af993ec]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.618] % of shape's size
+Shapes offset by: [-90.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [78]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#77.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 77
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@e9faf7c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [64]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#78.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 78
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@29fcee14]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [90]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#79.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Silver Ratio
+Grid 1 Height: 237
+Grid 2 Height: 932
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 79
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@6224b9f7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [4]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [88]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#80.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 80
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@3a9abe4c]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [rectangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [180.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [47]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#81.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 81
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@ebadcb]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [sphere]
+stroke: [Only Stroke]
+Shape number: [1]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.382] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Avenir-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [96]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#82.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 82
+Updating progress interface infoation...
+-------------
+Display stage information
+Shuffing colors...
+Color scheme selected: [[I@46883d]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-45.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [57]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#83.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 83
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2a25feca]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.382]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [60]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#84.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 84
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@44d3e0d7]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [2]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Gotham]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [78]
+Column number: [1]
+Column width: [642.6]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#85.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 85
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@2a25feca]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [3]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [10]
+Headline font size: [51]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#86.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 86
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@29fcee14]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [triangle]
+stroke: [No Stroke
+Shape number: [4]
+The graphics scales by: [1.0]
+Shape offset 1by1 by: [0.5] % of shape's size
+Shapes offset by: [-135.0] degree
+Layer blending? [false]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [12]
+Headline font size: [103]
+Column number: [2]
+Column width: [321.3]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#87.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 446
+Grid 2 Height: 723
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: letters grid on bottom has: graphics
+New poster created! ID: 87
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@740debab]
+Background Color: [FFC2B4A6]
+Text Color: [FFFAFAFA]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [pattern]
+Creating graphics...
+Number of shapes: [15]
+Row/Column number: [15][15]
+Each shape will have: [3] vectices
+Width of single shape: [47.0] height: [42.0]
+Horizontal gap: [20.335629]vertical gap: [18.172264]
+Shape rotates 1by1 by [5.433816]
+Drawing the pattern on our poster...
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Futura]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [88]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#88.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 88
+Updating progress interface infoation...
+-------------
+Display stage information
+Color scheme selected: [[I@58224912]
+Background Color: [FFFFFFFF]
+Text Color: [FF1E1E1E]
+Draw color to a thumbnail for the interface...
+Updating progress interface infoation...
+-------------
+Display stage information
+Init grid background...
+Choosing graphics type...
+Graphics type is: [offset]
+Creating graphics...
+Choosing Shape...
+Shape type: [ellipse]
+stroke: [Only Stroke]
+Shape number: [4]
+The graphics scales by: [1.618]
+Shape offset 1by1 by: [0.0] % of shape's size
+Shapes offset by: [0.0] degree
+Layer blending? [true]
+Blend mode: [128]
+Drawing shapes according to all parameters generated above...
+Finished drawing graphics.
+Updating progress interface infoation...
+-------------
+Display stage information
+Picked font: [Helvetica-Medium]
+Text vertical align: [37]
+Column font size: [11]
+Headline font size: [93]
+Column number: [4]
+Column width: [160.2]
+Updating progress interface infoation...
+-------------
+Display stage information
+insepcting the poster...
+inspection finished
+Updating progress interface infoation...
+-------------
+Display stage information
+Saving file, file name: [poster_#89.png]
+Updating progress interface infoation...
+-------------
+Display stage information
+-------------
+Display stage information
+====================NEW POSTER========================
+A new poster is being created...
+....creating poster...
+poster width: 802,height: 1169
+Deciding layout...
+Layout: Golden Ratio
+Grid 1 Height: 722
+Grid 2 Height: 447
+Poster padding: 44
+Arranging graphics and typography to grids...
+Grid on top has: graphics grid on bottom has: letters
+New poster created! ID: 89
 Updating progress interface infoation...
 -------------
 Display stage information

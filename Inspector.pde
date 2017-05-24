@@ -2,7 +2,7 @@ class Inspector {
 
   final boolean noise = false;
   final boolean drawAllParameters = true;
-  final boolean drawID = false;
+  final boolean drawID = true;
 
   private ArrayList<String> metadata  = new ArrayList<String>();
 
@@ -30,18 +30,18 @@ class Inspector {
       }
     }
 
-    if (drawID) {
-      if (poster.grids.get(0).contentType=="letters") {
-        yAlign = TOP;
-        y = poster.padding;
-      } else {
-        yAlign = BOTTOM;
-        y = posterHeight - poster.padding;
-      }
-      poster.content.textSize(posterHeight * 0.015);
-      poster.content.textAlign(RIGHT, yAlign);
-      poster.content.text((int)random(928947, 90289383), posterWidth - poster.padding, y);
-    }
+    //if (drawID) {
+    //  if (poster.grids.get(0).contentType=="letters") {
+    //    yAlign = TOP;
+    //    y = 0;
+    //  } else {
+    //    yAlign = BOTTOM;
+    //    y = posterHeight;
+    //  }
+    //  poster.content.textSize(posterHeight * 0.015);
+    //  poster.content.textAlign(RIGHT, yAlign);
+    //  poster.content.text("ID: #" + posterCount + "   " + hour() + ":" +minute() + ", " +month() + "/" + day(), posterWidth, y);
+    //}
 
     poster.content.endDraw();
 

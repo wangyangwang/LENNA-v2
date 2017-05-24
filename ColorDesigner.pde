@@ -17,7 +17,15 @@ class ColorDesigner {
 
     if (allColorSchemes.size() != 0) {
       poster.colorScheme = allColorSchemes.get(floor(random(0, allColorSchemes.size())));
-      poster.colorScheme.shuffle();
+      
+      if (random(0, 1)<0.2) {
+        poster.colorScheme.shuffle();
+      }
+      
+      if (random(0, 1)<0.3) {
+        poster.colorScheme.setBackgroundWhite();
+      }
+      
       log.println("Color scheme selected: [" + poster.colorScheme.colors + "]");
       log.println("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
       log.println("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");

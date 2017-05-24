@@ -80,8 +80,8 @@ class TypeDesigner {
     }
 
     // headline font size
-    float minHeadlineSize = 0.03 * posterHeight;
-    float maxHeadlineSize = 0.06 * posterHeight;
+    float minHeadlineSize = 0.04 * posterHeight;
+    float maxHeadlineSize = 0.09 * posterHeight;
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";
@@ -131,7 +131,7 @@ class TypeDesigner {
     int headlineRectHeight = 10000;
     if (headlineLocation==1) headlineRectHeight *= -1;
     headline.setBound(headlinePosition[0], headlinePosition[1] + (int)yoffset, headlineWidth, headlineRectHeight);
-    headline.setContent(getPomoHeadline());
+    headline.setContent(getRandomTOEFLword());
     headline.setColor(headlineColor);
     headline.setFont(boldFont);
     headline.setAlign(headlineAlignX, headlineAlignY);

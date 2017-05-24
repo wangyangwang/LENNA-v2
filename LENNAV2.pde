@@ -13,8 +13,6 @@ import java.io.IOException;
 import processing.pdf.*;
 import java.lang.Runtime;
 
-
-
 //////////////////////////////////
 /* Stage control */
 
@@ -45,15 +43,14 @@ GraphicDesigner graphicDesigner;
 Inspector inspector;
 color inspectorBackground = color(100);
 
-int posterWidth = 2480/2;
-int posterHeight = 3508/2;
-
+final int posterWidth = 2408/3;
+final int posterHeight = 3508/3;
 
 //We will use this one object and rewrite it for every poster
 Poster poster;
 
 void setup () {
-  size(1440, 900, P2D);
+  size(1440, 900, P3D);
   pixelDensity(2);
   textMode(SHAPE);
   smooth(4);
@@ -214,6 +211,7 @@ String getContent(int minWords, int maxWords) {
     return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result";
   }
 }
+
 String getPomoHeadline() {
 
   GetRequest get = new GetRequest("http://www.elsewhere.org/journal/pomo/");
@@ -237,4 +235,13 @@ String getPomoHeadline() {
   }
 
   return result;
+}
+
+String getRandomTOEFLword() {
+  String theword;
+  String[] lines = loadStrings("words.txt");
+  int randomIndex = floor(random(lines.length));
+  theword = lines[randomIndex];
+  theword = theword.substring(0, 1).toUpperCase() + theword.substring(1);
+  return theword;
 }

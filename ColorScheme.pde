@@ -2,7 +2,7 @@
 class ColorScheme {
   public color[] colors;
 
-  float whiteBackgroundProbability = 0;
+  float whiteBackgroundProbability = 1;
   color backgroundColor;
   color[] graphicsColor = new color[3];
   color textColor;
@@ -10,13 +10,7 @@ class ColorScheme {
 
   ColorScheme(color[] colorArray) {
     this.colors = colorArray;
-
-    if (random(0, 1) < whiteBackgroundProbability) {
-      backgroundColor = color(250);
-    } else {
-      backgroundColor = colors[0];
-    }
-
+    backgroundColor = colors[0];
     graphicsColor[0] = colors[1];
     graphicsColor[1] = colors[2];
     graphicsColor[2] = colors[3];
@@ -51,6 +45,10 @@ class ColorScheme {
     log.println("Shuffing colors...");
   }
 
+  void setBackgroundWhite() {
+    backgroundColor = color(255);
+    textColor = color(30);
+  }
 
 
   color[] shuffleColorArray(color[] cs) {

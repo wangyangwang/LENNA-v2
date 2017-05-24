@@ -28,9 +28,6 @@ class GraphicDesigner {
       //generatedPGraphics = empty();
       break;
     }
-
-
-
     //applyGraphicToPoster(generatedPGraphics, poster);
 
 
@@ -42,7 +39,7 @@ class GraphicDesigner {
   private void chooseGraphicType() {
     log.println("Choosing graphics type...");
     String[] graphicTypes = new String[] {"offset", "pattern", "empty"};
-    int[] graphicTypeProbabilities = new int[]{70, 30, 0};
+    int[] graphicTypeProbabilities = new int[]{7, 2, 0};
     if (myGrid.fullHeight) {
       graphicTypeProbabilities = new int[]{1, 0, 0};
     }

@@ -13,12 +13,15 @@ class Poster {
   ColorScheme colorScheme;
   PGraphics content;
   String details = "";
+  int id;
+  String createdTime = "";
 
   final float graphicsGridFullHeightProbability = 0.15;
 
   //Constructor
   Poster(int _posterW, int _posterH) {
-
+    createdTime = hour() + ":" + minute() + "    " + month() + "/" + day();
+    id = progressManager.posterCount;
     log.println("A new poster is being created...");
     w = _posterW;
     h = _posterH;
@@ -28,13 +31,14 @@ class Poster {
     getPadding();
     arrangePartitions();
     getRotation();
-    content = createGraphics(w, h, P2D);
+    content = createGraphics(w, h, P3D);
     content.smooth(2);
     content.beginDraw();
     content.textMode(SHAPE);
     content.endDraw();
+    details += id + "   " + createdTime + "\n";
     inspector.addToMeta(details);
-    log.println("New poster created! ID: " + progressManager.posterCount);
+    log.println("New poster created! ID: " + id);
   }
 
   void getRotation() {

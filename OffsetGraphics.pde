@@ -8,6 +8,9 @@ class OffsetGraphics extends Graphics {
   boolean oversize;
   boolean layerBlending;
   PVector offsetDirection;
+  int blendmode;
+  float rotateX;
+
 
   OffsetGraphics (Poster _poster, Grid _mygrid) {
     super(_poster, _mygrid);
@@ -16,24 +19,37 @@ class OffsetGraphics extends Graphics {
   void makeDecisions() {
     //Pick shape
     log.println("Choosing Shape...");
-    String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse"};
-    int[] shapeProbabilities = new int[] {20, 15, 25, 30};//default
+    String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse", "box", "sphere"};
+    int[] shapeProbabilities = new int[] {15, 15, 25, 30, 3, 3};//default
     shape = pickByProbability(shapes, shapeProbabilities).toString();
     log.println("Shape type: [" + shape+"]");
     addToDetails("Shape: " + shape);
 
+    // rotate x
+    if (shape=="sphere" || shape=="box") {
+      rotateX = random(0, TWO_PI);
+    } else {
+      rotateX = 0;
+    }
+
     //pick style
     String[] strokeStyles = new String[] {"fill", "stroke"};
     int[] strokeStyleProbabilities = new int[] {90, 10};
+    if (shape == "box" || shape == "sphere") {
+      strokeStyleProbabilities = new int[] {0, 1};
+    }
     strokeStyle = pickByProbability(strokeStyles, strokeStyleProbabilities).toString();
     log.println("stroke: [" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"]") );
     addToDetails("\nShape Style: [" + strokeStyle+"]");
 
     //Pick number of object
-    Integer[] number = new Integer[] {2, 3, 4};
-    int[] numberProbability = new int[] {50, 30, 10}; //default
+    Integer[] number = new Integer[] {1, 2, 3, 4};
+    int[] numberProbability = new int[] {0, 50, 30, 10}; //default
     if (shape=="letter") {
-      numberProbability = new int[] {90, 10, 0};
+      numberProbability = new int[] {5, 90, 10, 0};
+    }
+    if (shape=="sphere") {
+      numberProbability = new int[] {1, 0, 0, 0};
     }
     numberOfShape = (int)pickByProbability(number, numberProbability);
     log.println("Shape number: ["+numberOfShape+"]");
@@ -42,9 +58,9 @@ class OffsetGraphics extends Graphics {
     //Pick scaler
     Float[] scalers = new Float[] {1.0, 1.382, 1.618};
     int[] scalerProbabilites = new int[] {80, 10, 10};//default
-    if (shape=="letter") {
-      scalerProbabilites = new int[] {100, 0, 0};
-    }
+    //if (shape=="letter") {
+    //scalerProbabilites = new int[] {100, 0, 0};
+    //}
     scaler = (Float)pickByProbability(scalers, scalerProbabilites);
     log.println("The graphics scales by: [" + scaler+"]");
     addToDetails("\nShape scales by: " + scaler);
@@ -90,10 +106,18 @@ class OffsetGraphics extends Graphics {
     }
     layerBlending = (boolean)pickByProbability(ifLayerBlend, layerBlendProbability);
     log.println("Layer blending? [" + layerBlending+"]");
+
+    //layer blend mode
+    //Integer[] blendmodes = new Integer[]{MULTIPLY, ADD, SUBTRACT, DARKEST, LIGHTEST, EXCLUSION, REPLACE};
+    //int[] blendmodeProbabilities = new int[]{2, 1, 1, 1, 1, 1, 1};
+    //blendmode = (int)pickByProbability(blendmodes, blendmodeProbabilities);
+    blendmode = MULTIPLY;
+    log.println("Blend mode: ["+blendmode+"]");
+    addToDetails("\nBlend Mode:   "+blendmode);
   }
 
   void design() {
-    int strokeWeight = floor(random(40, 100));
+    int strokeWeight = floor(h * random(0.003, 0.009));
     int shapeSize = floor(min(w, h) * random(0.4, 0.9));
 
     switch (shape) {
@@ -128,19 +152,16 @@ class OffsetGraphics extends Graphics {
     float globalScaler = min(xScaleFactor, yScaleFactor);
     addToDetails("\nGraphics scaled by: " + globalScaler);
 
-
     ///////////////////////start drawing
     poster.content.beginDraw();
-
-    //poster.content.background(poster.colorScheme.backgroundColor);
-
     poster.content.pushMatrix();
     poster.content.translate(xAdjustment, yAdjustment + yoffset);
+    poster.content.rotateX(rotateX);
     //poster.content.scale(globalScaler);
 
     //layer blending
     if (layerBlending) {
-      poster.content.blendMode(MULTIPLY);
+      poster.content.blendMode(blendmode);
     }
 
     for (int i=0; i<numberOfShape; i++) { // numberOfShape
@@ -188,6 +209,15 @@ class OffsetGraphics extends Graphics {
 
       case "ellipse":
         poster.content.ellipse(0, 0, scaledSize, scaledSize);
+        break;
+
+      case "box":
+        poster.content.box(scaledSize * 0.8);
+        break;
+
+      case "sphere":
+        poster.content.sphereDetail(floor(random(3, 5)));
+        poster.content.sphere(scaledSize * 0.6);
         break;
 
       default:
