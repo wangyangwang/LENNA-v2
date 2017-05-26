@@ -2,7 +2,6 @@
 class ColorScheme {
   public color[] colors;
 
-  float whiteBackgroundProbability = 1;
   color backgroundColor;
   color[] graphicsColor = new color[3];
   color textColor;

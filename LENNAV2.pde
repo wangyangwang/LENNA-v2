@@ -43,8 +43,8 @@ GraphicDesigner graphicDesigner;
 Inspector inspector;
 color inspectorBackground = color(100);
 
-final int posterWidth = 2408/3;
-final int posterHeight = 3508/3;
+final int posterWidth = 2408;
+final int posterHeight = 3508;
 
 //We will use this one object and rewrite it for every poster
 Poster poster;

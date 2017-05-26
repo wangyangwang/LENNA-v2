@@ -9,10 +9,10 @@ class ProgressManagerStage {
   boolean detailsAdded;
 
   /* hard coded variables */
-  int textSize = 15;
+  int textSize = 20;
   color textColor = color(0);
-  color inProgressTextColor = color(255);
-  int inProgressTextSize = 15;
+  color inProgressTextColor = color(0, 255, 0);
+  int inProgressTextSize = textSize;
   float previewWidth = 170;
   float previewHeight;
   int previewYOffset = 100;
@@ -37,6 +37,7 @@ class ProgressManagerStage {
     translate(x, y);
     textAlign(LEFT);
 
+
     /* highlight stage in progress */
     if (inProgress) {
       textSize(inProgressTextSize);
@@ -47,18 +48,18 @@ class ProgressManagerStage {
     }
 
     noStroke();
-    ellipse(0, 0, 15, 15);
+    box(20);
     text(name, 0, textOffset);
 
     textAlign(LEFT, TOP);
     if (thumbnailAdded) {
       previewHeight = (Float)(previewWidth/graphicsPreview.width)  * graphicsPreview.height;
-      image(graphicsPreview, 0 - previewWidth/2, previewYOffset, previewWidth, previewHeight);
+      image(graphicsPreview, 0, previewYOffset, previewWidth, previewHeight);
     }
     if (detailsAdded) {
       textSize(detailsTextSize);
       fill(detailsTextColor);
-      text(details, -previewWidth/2, previewHeight + previewYOffset + detailsYOffset, previewWidth, 10000);
+      text(details, 0, previewHeight + previewYOffset + detailsYOffset, previewWidth, 10000);
     }
 
 

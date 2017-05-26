@@ -1,9 +1,9 @@
 class ProgressManager {
   Stage STAGE;
-  int posterCount;
-  int stageDelay = 0;
+  int posterCount = 0;
+  int stageDelay = 1000;
   PFont spaceMono;
-  int titleSize = 29;
+  int titleSize = 45;
   ArrayList<ProgressManagerStage> progressManagerStages;
   String displayDir;
 
@@ -13,8 +13,8 @@ class ProgressManager {
     } else {
       displayDir = "vertical";
     }
-    spaceMono = createFont("spacemono", 100);
-    posterCount = 0;
+    spaceMono = createFont("space mono", 100);
+    //posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 
     for (int i = 0; i < stageNumber; i++) {
@@ -64,6 +64,7 @@ class ProgressManager {
 
 
   void display () {
+    textFont(spaceMono);
     for (ProgressManagerStage pms : progressManagerStages) {
       if (STAGE.next().toString() == pms.name) {
         pms.inProgress = true;
@@ -76,9 +77,10 @@ class ProgressManager {
         pms.display((width/stageNumber)/2 + pms.stageIndex * (width/stageNumber), 200);
       }
     }
-    textFont(spaceMono);
+
     textAlign(LEFT);
     textSize(titleSize);
+    fill(0);
     text("Making Poster #" + posterCount + "...", 100, 100);
     log.println("Display stage information");
   }
