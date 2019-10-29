@@ -1,8 +1,8 @@
 class TypeDesigner {
 
   //const
-  final String[] allFonts = new String[] {"Helvetica-Medium", "Futura", "Avenir-Medium", "Gotham"};
-  final String[] allFontsBold = new String[] {"Helvetica-Bold", "Futura-Medium", "Avenir-Heavy", "Gotham-Medium"};
+  final String[] allFonts = new String[] {"Helvetica", "Futura", "Avenir-Medium",  "LexendDeca-Regular", "Montserrat-Medium"};
+  final String[] allFontsBold = new String[] {"Helvetica-Bold", "Futura-Medium", "Avenir-Heavy", "LexendDeca-Regular", "Montserrat-Bold"};
 
   final ArrayList<PFont> fonts = new ArrayList<PFont>();
   final ArrayList<PFont> boldFonts = new ArrayList<PFont>();
@@ -81,7 +81,7 @@ class TypeDesigner {
 
     // headline font size
     float minHeadlineSize = 0.04 * posterHeight;
-    float maxHeadlineSize = 0.09 * posterHeight;
+    float maxHeadlineSize = 0.15 * posterHeight;
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";

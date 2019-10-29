@@ -13,7 +13,7 @@ class ProgressManager {
     } else {
       displayDir = "vertical";
     }
-    spaceMono = createFont("space mono", 100);
+    spaceMono = createFont("Courier", 100);
     //posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 
