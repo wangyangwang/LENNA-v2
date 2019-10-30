@@ -1,7 +1,12 @@
+
+//pass poster to printer
 class PrinterManager {
   boolean actuallyPrint = false;
-  StageInfo print(Poster poster, int poster_count) {
-    String posterFileName = "poster_#" + poster_count+".png";
+  
+  StageInfo print(Poster poster) {
+    
+    String posterFileName = year()+"_"+month()+"_"+day()+"_"+hour()+"_"+minute()+"_"+second()+"_"+millis()+".png";
+    
     log.println("Saving file, file name: ["+posterFileName+"]");
     poster.content.save("posters/"+posterFileName);
 

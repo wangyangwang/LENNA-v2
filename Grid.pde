@@ -1,5 +1,5 @@
 class Grid {
-  String contentType;
+  String contentType; //"letters" or "graphics"
   int h, w;
   boolean fullHeight;
   int index; //0 means this grid is on top, 1 means bottom

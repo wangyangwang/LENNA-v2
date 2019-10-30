@@ -29,9 +29,6 @@ public abstract class Graphics {
 
   abstract void design();
 
-  //public PGraphics getGraphics () {
-  //  return graphics;
-  //}
 
   void addToDetails(String s) {
     details += s;

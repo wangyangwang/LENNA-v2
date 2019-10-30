@@ -2,7 +2,7 @@ class ProgressManager {
   Stage STAGE;
   int posterCount = 0;
   int stageDelay = 1000;
-  PFont spaceMono;
+  PFont displayFont;
   int titleSize = 45;
   ArrayList<ProgressManagerStage> progressManagerStages;
   String displayDir;
@@ -13,7 +13,7 @@ class ProgressManager {
     } else {
       displayDir = "vertical";
     }
-    spaceMono = createFont("Courier", 100);
+    displayFont = createFont("Inconsolata-Bold", 100);
     //posterCount = 0;
     progressManagerStages = new ArrayList<ProgressManagerStage>();
 
@@ -64,7 +64,9 @@ class ProgressManager {
 
 
   void display () {
-    textFont(spaceMono);
+    //set on screen font
+    textFont(displayFont);
+    //display all stages
     for (ProgressManagerStage pms : progressManagerStages) {
       if (STAGE.next().toString() == pms.name) {
         pms.inProgress = true;
