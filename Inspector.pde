@@ -8,7 +8,7 @@ class Inspector {
 
 
   StageInfo inspect(Poster poster, int posterCount) {
-    log.println("insepcting the poster...");
+    log.print("insepcting the poster...");
     poster.content.beginDraw();
     poster.content.fill(poster.colorScheme.textColor);
     poster.content.textSize(posterHeight*0.006688);
@@ -52,7 +52,7 @@ class Inspector {
 
     String details = "Inspected";
     StageInfo stageInfo = new StageInfo(details);
-    log.println("inspection finished");
+    log.print("inspection finished");
     return stageInfo;
   }
 

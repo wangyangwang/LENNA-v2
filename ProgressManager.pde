@@ -39,7 +39,7 @@ class ProgressManager {
 
   /* for stage with thumbnail */
   void update(Stage _STAGE, StageInfo stageInfo) {
-    log.println("Updating progress interface infoation...");
+    log.print("Updating progress interface infoation...");
     update(_STAGE);
     int currentStageIndex = STAGE.ordinal();
     if (stageInfo.thumbnail != null) {
@@ -84,7 +84,7 @@ class ProgressManager {
     textSize(titleSize);
     fill(0);
     text("Making Poster #" + posterCount + "...", 100, 100);
-    log.println("Display stage information");
+    log.print("Display stage information");
   }
 }
 ////////////////////////////////////////////////////

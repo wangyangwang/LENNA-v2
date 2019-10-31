@@ -84,20 +84,20 @@ public void setup () {
 	textMode(SHAPE);
 	
 	log = createWriter("lenna.log");
-	log.println("initializing objects...");
+	log.print("initializing objects...");
 
 	//Create our design crew
-	log.println("Intilazing color designer...");
+	log.print("Intilazing color designer...");
 	colorDesigner = new ColorDesigner("colorSchemes.txt");
-	log.println("Intilazing type designer...");
+	log.print("Intilazing type designer...");
 	typeDesigner = new TypeDesigner();
-	log.println("Intilazing graphic designer...");
+	log.print("Intilazing graphic designer...");
 	graphicDesigner = new GraphicDesigner();
-	log.println("Intilazing progress interface manager...");
+	log.print("Intilazing progress interface manager...");
 	progressManager = new ProgressManager();
-	log.println("Intilazing print manager...");
+	log.print("Intilazing print manager...");
 	printerManager = new PrinterManager();
-	log.println("Intilazing inspector...");
+	log.print("Intilazing inspector...");
 	inspector = new Inspector();
 
 
@@ -114,13 +114,13 @@ public void draw() {
 
 	switch (STAGE) {
 	case CREATION:
-		log.println("====================NEW POSTER========================");
+		log.print("====================NEW POSTER========================");
 		poster = new Poster(posterWidth, posterHeight);
 		stageInfo = new StageInfo(poster.details);
 		progressManager.update(STAGE, stageInfo);
 		STAGE = STAGE.next();
 		delay(progressManager.stageDelay);
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case COLOR_DESIGN:
@@ -128,7 +128,7 @@ public void draw() {
 		progressManager.update(STAGE, stageInfo);
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case GRAPHIC_DESIGN:
@@ -136,7 +136,7 @@ public void draw() {
 		progressManager.update(STAGE, stageInfo);
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case TYPE_DESIGN:
@@ -144,7 +144,7 @@ public void draw() {
 		progressManager.update(STAGE, stageInfo);
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case INSPECTION:
@@ -152,7 +152,7 @@ public void draw() {
 		progressManager.update(STAGE, stageInfo);
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case PRINT:
@@ -160,7 +160,7 @@ public void draw() {
 		progressManager.update(STAGE, stageInfo);
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 
 	case FINISH:
@@ -169,7 +169,7 @@ public void draw() {
 		inspector.reset();
 		delay(progressManager.stageDelay);
 		STAGE=STAGE.next();
-		log.println("-------------");
+		log.print("-------------");
 		break;
 	}
 
@@ -282,7 +282,7 @@ class ColorDesigner {
   ColorDesigner(String colorSchemeFileName) {
     allColorSchemes = new ArrayList<ColorScheme>();
     loadColorSchemes(colorSchemeFileName);
-    log.println("Loading all color schemes into memoery...");
+    log.print("Loading all color schemes into memoery...");
   }
 
   public StageInfo design(Poster poster) {
@@ -302,12 +302,12 @@ class ColorDesigner {
         poster.colorScheme.setBackgroundWhite();
       }
 
-      log.println("Color scheme selected: [" + poster.colorScheme.colors + "]");
-      log.println("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
-      log.println("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");
+      log.print("Color scheme selected: [" + poster.colorScheme.colors + "]");
+      log.print("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
+      log.print("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");
 
       poster.colorScheme.addDetailsToInspector();
-      log.println("Draw color to a thumbnail for the interface...");
+      log.print("Draw color to a thumbnail for the interface...");
       colorPalette.beginDraw();
       colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;
@@ -384,7 +384,7 @@ class ColorScheme {
 
   public void shuffle() {
     this.colors = shuffleColorArray(colors);
-    log.println("Shuffing colors...");
+    log.print("Shuffing colors...");
   }
 
   public void setBackgroundWhite() {
@@ -418,12 +418,12 @@ class GraphicDesigner {
   public StageInfo design(Poster poster) {
     addBackgroundColorToPoster(poster);
     myGrid = poster.grids.get( poster.partitionArrangement.get("graphics") );
-    log.println("Init grid background...");
+    log.print("Init grid background...");
     //PGraphics generatedPGraphics = createGraphics(myGrid.w, myGrid.h);
     chooseGraphicType();
     String detailsFromGraphics = "";
 
-    log.println("Creating graphics...");
+    log.print("Creating graphics...");
     switch (graphicType) {
     case "offset":
       OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid);
@@ -450,14 +450,14 @@ class GraphicDesigner {
   }
 
   private void chooseGraphicType() {
-    log.println("Choosing graphics type...");
+    log.print("Choosing graphics type...");
     String[] graphicTypes = new String[] {"offset", "pattern", "empty"};
     int[] graphicTypeProbabilities = new int[]{7, 2, 0};
     if (myGrid.fullHeight) {
       graphicTypeProbabilities = new int[]{1, 0, 0};
     }
     graphicType = pickByProbability(graphicTypes, graphicTypeProbabilities).toString();
-    log.println("Graphics type is: ["  + graphicType+"]");
+    log.print("Graphics type is: ["  + graphicType+"]");
   }
 
   public void applyGraphicToPoster(PGraphics pg, Poster poster) {
@@ -559,7 +559,7 @@ class Inspector {
 
 
   public StageInfo inspect(Poster poster, int posterCount) {
-    log.println("insepcting the poster...");
+    log.print("insepcting the poster...");
     poster.content.beginDraw();
     poster.content.fill(poster.colorScheme.textColor);
     poster.content.textSize(posterHeight*0.006688f);
@@ -603,7 +603,7 @@ class Inspector {
 
     String details = "Inspected";
     StageInfo stageInfo = new StageInfo(details);
-    log.println("inspection finished");
+    log.print("inspection finished");
     return stageInfo;
   }
 
@@ -661,11 +661,11 @@ class OffsetGraphics extends Graphics {
 
   public void makeDecisions() {
     //Pick shape
-    log.println("Choosing Shape...");
+    log.print("Choosing Shape...");
     String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse", "box", "sphere"};
     int[] shapeProbabilities = new int[] {15, 15, 25, 30, 3, 3};//default
     shape = pickByProbability(shapes, shapeProbabilities).toString();
-    log.println("Shape type: [" + shape+"]");
+    log.print("Shape type: [" + shape+"]");
     addToDetails("Shape: " + shape);
 
     // rotate x
@@ -682,7 +682,7 @@ class OffsetGraphics extends Graphics {
       strokeStyleProbabilities = new int[] {0, 1};
     }
     strokeStyle = pickByProbability(strokeStyles, strokeStyleProbabilities).toString();
-    log.println("stroke: [" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"]") );
+    log.print("stroke: [" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"]") );
     addToDetails("\nShape Style: [" + strokeStyle+"]");
 
     //Pick number of object
@@ -695,7 +695,7 @@ class OffsetGraphics extends Graphics {
       numberProbability = new int[] {1, 0, 0, 0};
     }
     numberOfShape = (int)pickByProbability(number, numberProbability);
-    log.println("Shape number: ["+numberOfShape+"]");
+    log.print("Shape number: ["+numberOfShape+"]");
     addToDetails("\nNumber of Shapes: " + numberOfShape);
 
     //Pick scaler
@@ -705,7 +705,7 @@ class OffsetGraphics extends Graphics {
     //scalerProbabilites = new int[] {100, 0, 0};
     //}
     scaler = (Float)pickByProbability(scalers, scalerProbabilites);
-    log.println("The graphics scales by: [" + scaler+"]");
+    log.print("The graphics scales by: [" + scaler+"]");
     addToDetails("\nShape scales by: " + scaler);
 
     //pick offsetDistance
@@ -722,7 +722,7 @@ class OffsetGraphics extends Graphics {
     }
 
     offsetDist = (Float)pickByProbability(offsetDistances, offsetDistanceProbabilities);
-    log.println("Shape offset 1by1 by: ["+offsetDist + "] % of shape's size" );
+    log.print("Shape offset 1by1 by: ["+offsetDist + "] % of shape's size" );
     addToDetails("\nOffset by " + offsetDist + " of the shape's size");
 
     //pick offsetDirection
@@ -736,7 +736,7 @@ class OffsetGraphics extends Graphics {
     }
     offsetDirection = (PVector)pickByProbability(offsetDirections, offsetDirectionProbabilities);
     addToDetails("\nOffsetting direction: " + degrees(offsetDirection.heading()) + " degree" );
-    log.println("Shapes offset by: ["+degrees(offsetDirection.heading()) + "] degree");
+    log.print("Shapes offset by: ["+degrees(offsetDirection.heading()) + "] degree");
 
     //layer blending or not
     Boolean[] ifLayerBlend = new Boolean[] {true, false};
@@ -748,14 +748,14 @@ class OffsetGraphics extends Graphics {
       layerBlendProbability = new int[] {100, 0};
     }
     layerBlending = (boolean)pickByProbability(ifLayerBlend, layerBlendProbability);
-    log.println("Layer blending? [" + layerBlending+"]");
+    log.print("Layer blending? [" + layerBlending+"]");
 
     //layer blend mode
     //Integer[] blendmodes = new Integer[]{MULTIPLY, ADD, SUBTRACT, DARKEST, LIGHTEST, EXCLUSION, REPLACE};
     //int[] blendmodeProbabilities = new int[]{2, 1, 1, 1, 1, 1, 1};
     //blendmode = (int)pickByProbability(blendmodes, blendmodeProbabilities);
     blendmode = MULTIPLY;
-    log.println("Blend mode: ["+blendmode+"]");
+    log.print("Blend mode: ["+blendmode+"]");
     addToDetails("\nBlend Mode:   "+blendmode);
   }
 
@@ -768,7 +768,7 @@ class OffsetGraphics extends Graphics {
       shapeSize = floor(min(w, h) * 1);
       break;
     }
-    log.println("Drawing shapes according to all parameters generated above...");
+    log.print("Drawing shapes according to all parameters generated above...");
     /////////////////////Centering the graphics
     float hypotenuse = offsetDist * (numberOfShape - 1) * shapeSize;
     float theta = offsetDirection.heading();
@@ -870,7 +870,7 @@ class OffsetGraphics extends Graphics {
       poster.content.popMatrix();
     }
     poster.content.endDraw();
-    log.println("Finished drawing graphics.");
+    log.print("Finished drawing graphics.");
   }
 }
 class ProgressManagerStage {
@@ -1010,7 +1010,7 @@ class PatternGraphics extends Graphics {
     Integer[] numbers = new Integer[] {15, 40};
     int[] numberProbabilities = new int[] {1, 1};
     int number = (int)pickByProbability(numbers, numberProbabilities);
-    log.println("Number of shapes: ["+number+"]");
+    log.print("Number of shapes: ["+number+"]");
 
     //number of row && col
     float oneDirectionProbability = 0.5f;
@@ -1028,7 +1028,7 @@ class PatternGraphics extends Graphics {
     }
     rowNumber = constrain(rowNumber, 1, maxRowNumber);
     colNumber = constrain(colNumber, 1, maxColNumber);
-    log.println("Row/Column number: [" + rowNumber+"]["+colNumber +"]");
+    log.print("Row/Column number: [" + rowNumber+"]["+colNumber +"]");
     addToDetails("Row Number:   " + rowNumber + "\nColumn Number:   "+colNumber + "\n");
 
     //vector number;
@@ -1038,7 +1038,7 @@ class PatternGraphics extends Graphics {
     if (oneDirection) {
       vectorNumber = 4; //if One Direction, then it got to be rect.
     }
-    log.println("Each shape will have: ["+vectorNumber+"] vectices");
+    log.print("Each shape will have: ["+vectorNumber+"] vectices");
     addToDetails("Shape Vectices Number:   " + vectorNumber + "\n");
 
     //size
@@ -1047,7 +1047,7 @@ class PatternGraphics extends Graphics {
     availableWidth = posterWidth - poster.padding * 2;
     xSize = availableWidth / colNumber;
     ySize = availableHeight / rowNumber;
-    log.println("Width of single shape: ["+xSize+"] height: ["+ySize+"]");
+    log.print("Width of single shape: ["+xSize+"] height: ["+ySize+"]");
     addToDetails("Single Shape Width:  "+xSize+"\nSingle Shape Height:   " + ySize + "\n");
 
 
@@ -1058,7 +1058,7 @@ class PatternGraphics extends Graphics {
 
     if (colNumber==1)xgap=0;
     if (rowNumber==1)ygap=0;
-    log.println("Horizontal gap: ["+xgap+"]" + "vertical gap: ["+ygap+"]");
+    log.print("Horizontal gap: ["+xgap+"]" + "vertical gap: ["+ygap+"]");
     addToDetails("xgap:   " + xgap + "\nygap:   " + ygap + "\n");
 
 
@@ -1084,7 +1084,7 @@ class PatternGraphics extends Graphics {
       localRotationChange = 0;
     }
 
-    log.println("Shape rotates 1by1 by ["+degrees(localRotationChange)+"]");
+    log.print("Shape rotates 1by1 by ["+degrees(localRotationChange)+"]");
 
 
     //color
@@ -1108,7 +1108,7 @@ class PatternGraphics extends Graphics {
 
     int index = 0;
     float sum = colNumber * rowNumber;
-    log.println("Drawing the pattern on our poster...");
+    log.print("Drawing the pattern on our poster...");
     for (int xn = 0; xn < colNumber; xn++) {
       for (int yn = 0; yn < rowNumber; yn++) {
 
@@ -1197,11 +1197,11 @@ class Poster {
   Poster(int _posterW, int _posterH) {
     createdTime = hour() + ":" + minute() + "    " + month() + "/" + day();
     id = progressManager.posterCount;
-    log.println("A new poster is being created...");
+    log.print("A new poster is being created...");
     w = _posterW;
     h = _posterH;
-    log.println("....creating poster...");
-    log.println("poster width: " + w + ",height: " + h); 
+    log.print("....creating poster...");
+    log.print("poster width: " + w + ",height: " + h); 
     getPartition();
     getPadding();
     arrangePartitions();
@@ -1213,7 +1213,7 @@ class Poster {
     content.endDraw();
     details += id + "   " + createdTime + "\n";
     inspector.addToMeta(details);
-    log.println("New poster created! ID: " + id);
+    log.print("New poster created! ID: " + id);
   }
 
   public void getRotation() {
@@ -1225,7 +1225,7 @@ class Poster {
 
   // Get our partition of this poster!
   public void getPartition() {
-    log.println("Deciding layout...");
+    log.print("Deciding layout...");
     Float[] partitionValues = new Float[] {0.618f, 1-0.618f, 0.797f, 1-0.797f};
     int[] partitionProbabilities = new int[] {20, 20, 20, 20};
     partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
@@ -1235,7 +1235,7 @@ class Poster {
     } else {
       partitionName = "Silver Ratio";
     }
-    log.println("Layout: " +  partitionName );
+    log.print("Layout: " +  partitionName );
 
 
     int topGridHeight = floor(posterHeight * partitionValue);
@@ -1248,21 +1248,21 @@ class Poster {
     details += "Grid 1 Height:   " + grids.get(0).h + "\n";
     details += "Grid 2 Height:   " + grids.get(1).h + "\n";
 
-    log.println("Grid 1 Height: "+grids.get(0).h);
-    log.println("Grid 2 Height: "+grids.get(1).h);
+    log.print("Grid 1 Height: "+grids.get(0).h);
+    log.print("Grid 2 Height: "+grids.get(1).h);
   }
 
   public void getPadding() {
     padding = floor( 0.055f * posterWidth );
     details += "Padding:   " + padding + "\n";
-    log.println("Poster padding: " + padding);
+    log.print("Poster padding: " + padding);
   }
 
   public void arrangePartitions() {
 
     int partitionIndexForGraphics = 999;
 
-    log.println("Arranging graphics and typography to grids...");
+    log.print("Arranging graphics and typography to grids...");
     // always give graphics the bigger partition
     if (partitionValue < 0.5f && partitionValue > 0) {
       partitionIndexForGraphics = 1;
@@ -1291,7 +1291,7 @@ class Poster {
       grids.get( partitionArrangement.get("graphics") ).h = posterHeight;
       grids.get( partitionArrangement.get("graphics") ).fullHeight = true;
     }
-    log.println("Grid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
+    log.print("Grid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
     details += "Grid #1 Type:   " + grids.get(0).contentType + "\nGrid #2 Type   :" + grids.get(1).contentType + "\n";
   }
 }
@@ -1299,13 +1299,13 @@ class PrinterManager {
   boolean actuallyPrint = false;
   public StageInfo print(Poster poster, int poster_count) {
     String posterFileName = "poster_#" + poster_count+".png";
-    log.println("Saving file, file name: ["+posterFileName+"]");
+    log.print("Saving file, file name: ["+posterFileName+"]");
     poster.content.save("posters/"+posterFileName);
 
     String newPosterPath = sketchPath("")+"posters/"+posterFileName;
 
     if (actuallyPrint) {
-      log.println("Sending designed poster to printer...");
+      log.print("Sending designed poster to printer...");
       sendToPrinter(newPosterPath);
     }
 
@@ -1366,7 +1366,7 @@ class ProgressManager {
 
   /* for stage with thumbnail */
   public void update(Stage _STAGE, StageInfo stageInfo) {
-    log.println("Updating progress interface infoation...");
+    log.print("Updating progress interface infoation...");
     update(_STAGE);
     int currentStageIndex = STAGE.ordinal();
     if (stageInfo.thumbnail != null) {
@@ -1409,7 +1409,7 @@ class ProgressManager {
     textSize(titleSize);
     fill(0);
     text("Making Poster #" + posterCount + "...", 100, 100);
-    log.println("Display stage information");
+    log.print("Display stage information");
   }
 }
 ////////////////////////////////////////////////////
@@ -1530,12 +1530,12 @@ class TypeDesigner {
     PFont boldFont = boldFonts.get(randomFontIndex);
     String fontname = font.getName();
     details+="Font:   " + fontname + "\n";
-    log.println("Picked font: ["+fontname+"]");
+    log.print("Picked font: ["+fontname+"]");
 
 
     //text vertical alignment
     details+="Global X Alignment:   "+textAlignX + "\n";
-    log.println("Text vertical align: ["+textAlignX+"]");
+    log.print("Text vertical align: ["+textAlignX+"]");
 
 
     // headline width
@@ -1548,7 +1548,7 @@ class TypeDesigner {
     float maxColumnFontSize = 0.011f * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
     details += "Paragraph Font Size:   " + columnFontSize + "\n";
-    log.println("Column font size: ["+columnFontSize+"]");
+    log.print("Column font size: ["+columnFontSize+"]");
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -1573,7 +1573,7 @@ class TypeDesigner {
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";
-    log.println("Headline font size: ["+headlineFontSize+"]");
+    log.print("Headline font size: ["+headlineFontSize+"]");
 
     //column Count
     int columnCount;
@@ -1581,12 +1581,12 @@ class TypeDesigner {
     int[] columnCountsProbabilities = new int[] {1, 4, 5};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
     details += "Paragraph Count:   " + columnCount + "\n";
-    log.println("Column number: ["+columnCount+"]");
+    log.print("Column number: ["+columnCount+"]");
 
 
     //column width
     float columnWidth = ((posterWidth - poster.padding * 2) / columnCount) * 0.9f;
-    log.println("Column width: ["+columnWidth+"]");
+    log.print("Column width: ["+columnWidth+"]");
 
     //space between headline and columns
     int spaceingBetweenHeadlineAndColumns = floor( posterHeight * 0.024f );

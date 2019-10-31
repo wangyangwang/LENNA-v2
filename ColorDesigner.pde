@@ -6,7 +6,7 @@ class ColorDesigner {
   ColorDesigner(String colorSchemeFileName) {
     allColorSchemes = new ArrayList<ColorScheme>();
     loadColorSchemes(colorSchemeFileName);
-    log.println("Loading all color schemes into memoery...");
+    log.print("Loading all color schemes into memoery...");
   }
 
   StageInfo design(Poster poster) {
@@ -26,12 +26,12 @@ class ColorDesigner {
         poster.colorScheme.setBackgroundWhite();
       }
 
-      log.println("Color scheme selected: [" + poster.colorScheme.colors + "]");
-      log.println("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
-      log.println("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");
+      log.print("Color scheme selected: [" + poster.colorScheme.colors + "]");
+      log.print("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
+      log.print("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");
 
       poster.colorScheme.addDetailsToInspector();
-      log.println("Draw color to a thumbnail for the interface...");
+      log.print("Draw color to a thumbnail for the interface...");
       colorPalette.beginDraw();
       colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;

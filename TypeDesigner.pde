@@ -42,12 +42,12 @@ class TypeDesigner {
     PFont boldFont = boldFonts.get(randomFontIndex);
     String fontname = font.getName();
     details+="Font:   " + fontname + "\n";
-    log.println("Picked font: ["+fontname+"]");
+    log.print("Picked font: ["+fontname+"]");
 
 
     //text vertical alignment
     details+="Global X Alignment:   "+textAlignX + "\n";
-    log.println("Text vertical align: ["+textAlignX+"]");
+    log.print("Text vertical align: ["+textAlignX+"]");
 
 
     // headline width
@@ -60,7 +60,7 @@ class TypeDesigner {
     float maxColumnFontSize = 0.011 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
     details += "Paragraph Font Size:   " + columnFontSize + "\n";
-    log.println("Column font size: ["+columnFontSize+"]");
+    log.print("Column font size: ["+columnFontSize+"]");
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -85,7 +85,7 @@ class TypeDesigner {
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";
-    log.println("Headline font size: ["+headlineFontSize+"]");
+    log.print("Headline font size: ["+headlineFontSize+"]");
 
     //column Count
     int columnCount;
@@ -93,12 +93,12 @@ class TypeDesigner {
     int[] columnCountsProbabilities = new int[] {1, 4, 5};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
     details += "Paragraph Count:   " + columnCount + "\n";
-    log.println("Column number: ["+columnCount+"]");
+    log.print("Column number: ["+columnCount+"]");
 
 
     //column width
     float columnWidth = ((posterWidth - poster.padding * 2) / columnCount) * 0.9;
-    log.println("Column width: ["+columnWidth+"]");
+    log.print("Column width: ["+columnWidth+"]");
 
     //space between headline and columns
     int spaceingBetweenHeadlineAndColumns = floor( posterHeight * 0.024 );

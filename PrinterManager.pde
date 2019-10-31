@@ -7,13 +7,13 @@ class PrinterManager {
     
     String posterFileName = year()+"_"+month()+"_"+day()+"_"+hour()+"_"+minute()+"_"+second()+"_"+millis()+".png";
     
-    log.println("Saving file, file name: ["+posterFileName+"]");
+    log.print("Saving file, file name: ["+posterFileName+"]");
     poster.content.save("posters/"+posterFileName);
 
     String newPosterPath = sketchPath("")+"posters/"+posterFileName;
 
     if (actuallyPrint) {
-      log.println("Sending designed poster to printer...");
+      log.print("Sending designed poster to printer...");
       sendToPrinter(newPosterPath);
     }
 

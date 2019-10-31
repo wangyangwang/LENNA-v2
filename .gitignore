@@ -3,3 +3,5 @@ posters
 posters/*
 build/
 build/*
+out/*
+

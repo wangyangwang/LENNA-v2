@@ -22,11 +22,11 @@ final float graphicsGridFullHeightProbability = 0.15;
 Poster(int _posterW, int _posterH) {
 	createdTime = hour() + ":" + minute() + "    " + month() + "/" + day();
 	id = progressManager.posterCount;
-	log.println("A new poster is being created...");
+	log.print("A new poster is being created...");
 	w = _posterW;
 	h = _posterH;
-	log.println("....creating poster...");
-	log.println("poster width: " + w + ",height: " + h);
+	log.print("....creating poster...");
+	log.print("poster width: " + w + ",height: " + h);
 	getPartition();
 	getPadding();
 	arrangePartitions();
@@ -38,7 +38,7 @@ Poster(int _posterW, int _posterH) {
 	content.endDraw();
 	details += id + "   " + createdTime + "\n";
 	inspector.addToMeta(details);
-	log.println("New poster created! ID: " + id);
+	log.print("New poster created! ID: " + id);
 }
 
 void getRotation() {
@@ -50,7 +50,7 @@ void getRotation() {
 
 // Get our partition of this poster!
 void getPartition() {
-	log.println("Deciding layout...");
+	log.print("Deciding layout...");
 	Float[] partitionValues = new Float[] {0.618, 1-0.618, 0.797, 1-0.797};
 	int[] partitionProbabilities = new int[] {20, 20, 20, 20};
 	partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
@@ -60,7 +60,7 @@ void getPartition() {
 	} else {
 		partitionName = "Silver Ratio";
 	}
-	log.println("Layout: " +  partitionName );
+	log.print("Layout: " +  partitionName );
 
 
 	int topGridHeight = floor(posterHeight * partitionValue);
@@ -73,21 +73,21 @@ void getPartition() {
 	details += "Grid 1 Height:   " + grids.get(0).h + "\n";
 	details += "Grid 2 Height:   " + grids.get(1).h + "\n";
 
-	log.println("Grid 1 Height: "+grids.get(0).h);
-	log.println("Grid 2 Height: "+grids.get(1).h);
+	log.print("Grid 1 Height: "+grids.get(0).h);
+	log.print("Grid 2 Height: "+grids.get(1).h);
 }
 
 void getPadding() {
 	padding = floor( 0.055 * posterWidth );
 	details += "Padding:   " + padding + "\n";
-	log.println("Poster padding: " + padding);
+	log.print("Poster padding: " + padding);
 }
 
 void arrangePartitions() {
 
 	int partitionIndexForGraphics = 999;
 
-	log.println("Arranging graphics and typography to grids...");
+	log.print("Arranging graphics and typography to grids...");
 	// always give graphics the bigger partition
 	if (partitionValue < 0.5 && partitionValue > 0) {
 		partitionIndexForGraphics = 1;
@@ -116,7 +116,7 @@ void arrangePartitions() {
 		grids.get( partitionArrangement.get("graphics") ).h = posterHeight;
 		grids.get( partitionArrangement.get("graphics") ).fullHeight = true;
 	}
-	log.println("Grid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
+	log.print("Grid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
 	details += "Grid #1 Type:   " + grids.get(0).contentType + "\nGrid #2 Type   :" + grids.get(1).contentType + "\n";
 }
 }

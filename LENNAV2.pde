@@ -54,21 +54,21 @@ void setup () {
   pixelDensity(2);
   textMode(SHAPE);
   smooth(4);
-  log = createWriter("lenna.log");
-  log.println("initializing objects...");
+  log = createWriter("index.html");
+  log.print("initializing objects...");
 
   //Create our design crew
-  log.println("Intilazing color designer...");
+  log.print("Intilazing color designer...");
   colorDesigner = new ColorDesigner("colorSchemes.txt");
-  log.println("Intilazing type designer...");
+  log.print("Intilazing type designer...");
   typeDesigner = new TypeDesigner();
-  log.println("Intilazing graphic designer...");
+  log.print("Intilazing graphic designer...");
   graphicDesigner = new GraphicDesigner();
-  log.println("Intilazing progress interface manager...");
+  log.print("Intilazing progress interface manager...");
   progressManager = new ProgressManager();
-  log.println("Intilazing print manager...");
+  log.print("Intilazing print manager...");
   printerManager = new PrinterManager();
-  log.println("Intilazing inspector...");
+  log.print("Intilazing inspector...");
   inspector = new Inspector();
 
 
@@ -85,13 +85,13 @@ void draw() {
 
   switch (STAGE) {
   case CREATION:
-    log.println("====================NEW POSTER========================");
+    log.print("====================NEW POSTER========================");
     poster = new Poster(posterWidth, posterHeight);
     stageInfo = new StageInfo(poster.details);
     progressManager.update(STAGE, stageInfo);
     STAGE = STAGE.next();
     delay(progressManager.stageDelay);
-    log.println("-------------");
+    log.print("-------------");
     break;
 
   case COLOR_DESIGN:
@@ -99,7 +99,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    log.print("-------------");
     break;
 
   case GRAPHIC_DESIGN:
@@ -107,7 +107,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    log.print("-------------");
     break;
 
   case TYPE_DESIGN:
@@ -115,7 +115,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    //log.print("-------------");
     break;
 
   case INSPECTION:
@@ -123,7 +123,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    //log.print("-------------");
     break;
 
   case PRINT:
@@ -131,7 +131,7 @@ void draw() {
     progressManager.update(STAGE, stageInfo);
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    //log.print("-------------");
     break;
 
   case FINISH:
@@ -140,7 +140,7 @@ void draw() {
     inspector.reset();
     delay(progressManager.stageDelay);
     STAGE=STAGE.next();
-    log.println("-------------");
+    //log.print("-------------");
     break;
   }
 

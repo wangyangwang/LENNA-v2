@@ -41,7 +41,7 @@ class ColorScheme {
 
   void shuffle() {
     this.colors = shuffleColorArray(colors);
-    log.println("Shuffing colors...");
+    log.print("Shuffing colors...");
   }
 
   void setBackgroundWhite() {
