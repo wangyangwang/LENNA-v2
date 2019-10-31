@@ -26,12 +26,12 @@ class ColorDesigner {
         poster.colorScheme.setBackgroundWhite();
       }
 
-      log.print("Color scheme selected: [" + poster.colorScheme.colors + "]");
-      log.print("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]");
-      log.print("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]");
+      log.print("Color Palette selected: [" + poster.colorScheme.colors + "]<br>");
+      log.print("Background Color: ["+ hex( poster.colorScheme.backgroundColor ) + "]<br>");
+      log.print("Text Color: ["+ hex( poster.colorScheme.textColor ) + "]<br>");
 
       poster.colorScheme.addDetailsToInspector();
-      log.print("Draw color to a thumbnail for the interface...");
+      log.print("Draw color to a thumbnail for the interface...<br>");
       colorPalette.beginDraw();
       colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;
@@ -39,7 +39,7 @@ class ColorDesigner {
         colorPalette.fill(poster.colorScheme.colors[i]);
         colorPalette.noStroke();
         colorPalette.ellipse(colorNodeSize/2, (colorPalette.height/4) * i + colorPalette.width/5/2, colorNodeSize, colorNodeSize);
-        colorInfo += hex(poster.colorScheme.colors[i]).toString() + "\n";
+        colorInfo += hex(poster.colorScheme.colors[i]).toString() + "<br>";
       }
       colorPalette.endDraw();
     } else {

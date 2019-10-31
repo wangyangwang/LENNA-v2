@@ -1,7 +1,7 @@
 class TypeDesigner {
 
   //const
-  final String[] allFonts = new String[] {"Helvetica", "Futura", "Avenir-Medium",  "LexendDeca-Regular", "Montserrat-Medium"};
+  final String[] allFonts = new String[] {"Helvetica", "Futura", "Avenir-Medium", "LexendDeca-Regular", "Montserrat-Medium"};
   final String[] allFontsBold = new String[] {"Helvetica-Bold", "Futura-Medium", "Avenir-Heavy", "LexendDeca-Regular", "Montserrat-Bold"};
 
   final ArrayList<PFont> fonts = new ArrayList<PFont>();
@@ -41,13 +41,13 @@ class TypeDesigner {
     PFont font = fonts.get(randomFontIndex);
     PFont boldFont = boldFonts.get(randomFontIndex);
     String fontname = font.getName();
-    details+="Font:   " + fontname + "\n";
-    log.print("Picked font: ["+fontname+"]");
+    details+="Font:   " + fontname + "<br>";
+    log.print("Picked font: <i>["+fontname+"]</i><br>");
 
 
     //text vertical alignment
-    details+="Global X Alignment:   "+textAlignX + "\n";
-    log.print("Text vertical align: ["+textAlignX+"]");
+    details+="Global X Alignment:   "+textAlignX;
+    log.print("Text vertical align: ["+textAlignX+"]<br>");
 
 
     // headline width
@@ -59,8 +59,8 @@ class TypeDesigner {
     float minColumnFontSize = 0.009 * posterHeight;
     float maxColumnFontSize = 0.011 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
-    details += "Paragraph Font Size:   " + columnFontSize + "\n";
-    log.print("Column font size: ["+columnFontSize+"]");
+    details += "Paragraph Font Size:   " + columnFontSize + "<br>";
+    log.print("Column font size: ["+columnFontSize+"]<br>");
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -84,21 +84,21 @@ class TypeDesigner {
     float maxHeadlineSize = 0.10 * posterHeight;
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
-    details+="headlineFontSize:   " + headlineFontSize + "\n";
-    log.print("Headline font size: ["+headlineFontSize+"]");
+    details+="headlineFontSize:   " + headlineFontSize + "<br>";
+    log.print("Headline font size: <i>"+headlineFontSize+"</i><br>");
 
     //column Count
     int columnCount;
     Integer[] columnCounts = new Integer[] {1, 2, 4};
     int[] columnCountsProbabilities = new int[] {1, 4, 5};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
-    details += "Paragraph Count:   " + columnCount + "\n";
-    log.print("Column number: ["+columnCount+"]");
+    details += "Paragraph Count:   " + columnCount + "<br>";
+    log.print("Column number: ["+columnCount+"]<br>");
 
 
     //column width
     float columnWidth = ((posterWidth - poster.padding * 2) / columnCount) * 0.9;
-    log.print("Column width: ["+columnWidth+"]");
+    log.print("Column width: ["+columnWidth+"]<br>");
 
     //space between headline and columns
     int spaceingBetweenHeadlineAndColumns = floor( posterHeight * 0.024 );
@@ -121,7 +121,7 @@ class TypeDesigner {
     //column color
     color columnColor = poster.colorScheme.textColor;
 
-    details += "Text Color:   " + columnColor + "\n";
+    details += "Text Color:   " + columnColor + "<br>";
 
 
     float yoffset = myGrid.index * (posterHeight - myGrid.h);

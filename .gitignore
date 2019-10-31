@@ -4,4 +4,6 @@ posters/*
 build/
 build/*
 out/*
+out
+*.png
 
