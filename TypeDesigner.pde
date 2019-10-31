@@ -132,6 +132,7 @@ class TypeDesigner {
     if (headlineLocation==1) headlineRectHeight *= -1;
     headline.setBound(headlinePosition[0], headlinePosition[1] + (int)yoffset, headlineWidth, headlineRectHeight);
     headline.setContent(getRandomTOEFLword());
+    log.print("Title decided: <i>"+headline.content+"</i><br>");
     headline.setColor(headlineColor);
     headline.setFont(boldFont);
     headline.setAlign(headlineAlignX, headlineAlignY);
@@ -148,6 +149,7 @@ class TypeDesigner {
       int colY = floor((headlineFontSize + spaceingBetweenHeadlineAndColumns) * (1 - headlineLocation)  +  poster.padding);
       col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY+(int)yoffset, (int)columnWidth, columnMaxHeight);
       col.setContent(getContent(columnTextMinNumber, columnTextMaxNumber));
+      log.print("column " + i + "content: <i>"+col.content+"</i><br>");
       col.setColor(columnColor);
       col.setFont(font);
       col.setAlign(textAlignX, TOP);

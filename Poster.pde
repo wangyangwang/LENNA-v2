@@ -56,11 +56,11 @@ class Poster {
     partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
     String partitionName;
     if (partitionValue==partitionValues[0] || partitionValue==partitionValues[1]) {
-      partitionName = "&nbsp Golden Ratio";
+      partitionName = "&nbsp Golden Ratio<br>";
     } else {
-      partitionName = "&nbsp Silver Ratio";
+      partitionName = "&nbsp Silver Ratio<br>";
     }
-    log.print("Layout: " +  partitionName );
+    log.print("&nbsp Layout: " +  partitionName );
 
 
     int topGridHeight = floor(posterHeight * partitionValue);
