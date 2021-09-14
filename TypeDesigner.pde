@@ -1,8 +1,29 @@
 class TypeDesigner {
 
   //const
-  final String[] allFonts = new String[] {"Helvetica", "Futura", "Avenir-Medium", "LexendDeca-Regular", "Montserrat-Medium"};
-  final String[] allFontsBold = new String[] {"Helvetica-Bold", "Futura-Medium", "Avenir-Heavy", "LexendDeca-Regular", "Montserrat-Bold"};
+  final String[] allFonts = new String[] {
+    "Helvetica",
+    "Futura",
+    "Avenir-Medium",
+    "LexendDeca-Regular",
+    "Montserrat-Medium",
+    "Quicksand-Regular",
+    "Inconsolata-Regular",
+    "Urbanist-Medium",
+    "Arimo-Medium"
+  };
+
+  final String[] allFontsBold = new String[] {
+    "Helvetica-Bold",
+    "Futura-Medium",
+    "Avenir-Heavy",
+    "LexendDeca-Regular",
+    "Montserrat-Bold",
+    "Quicksand-Bold",
+    "Inconsolata-Bold",
+    "Urbanist-Black",
+    "Arimo-SemiBold"
+  };
 
   final ArrayList<PFont> fonts = new ArrayList<PFont>();
   final ArrayList<PFont> boldFonts = new ArrayList<PFont>();
@@ -148,7 +169,7 @@ class TypeDesigner {
       Text col = new Text("column", columnFontSize);
       int colY = floor((headlineFontSize + spaceingBetweenHeadlineAndColumns) * (1 - headlineLocation)  +  poster.padding);
       col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY+(int)yoffset, (int)columnWidth, columnMaxHeight);
-      col.setContent(getContent(columnTextMinNumber, columnTextMaxNumber));
+      col.setContent("Content Placeholder");
       log.print("column " + i + "content: <i>"+col.content+"</i><br>");
       col.setColor(columnColor);
       col.setFont(font);

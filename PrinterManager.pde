@@ -1,7 +1,7 @@
 
 //pass poster to printer
 class PrinterManager {
-  boolean actuallyPrint = false;
+  boolean actuallyPrint = true;
   
   StageInfo print(Poster poster) {
     
@@ -10,7 +10,8 @@ class PrinterManager {
     log.print("Saving file, file name: ["+posterFileName+"]");
     poster.content.save("server/posters/"+posterFileName);
 
-    String newPosterPath = /*sketchPath("")+*/"/posters/"+posterFileName;
+    String newPosterPath = sketchPath()  + "/server/posters/"+posterFileName;
+    
 
     log.print("<img src='"+newPosterPath+"'/>");
     // log.print()
@@ -20,7 +21,7 @@ class PrinterManager {
       sendToPrinter(newPosterPath);
     }
 
-    String details = "Sending to Printer HP T120.";
+    String details = "Sending to Printer";
     PGraphics completedPoster = poster.content;
     StageInfo stageInfo = new StageInfo(details, completedPoster);
     return stageInfo;
