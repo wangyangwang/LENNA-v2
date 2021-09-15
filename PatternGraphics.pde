@@ -31,7 +31,7 @@ class PatternGraphics extends Graphics {
     Integer[] numbers = new Integer[] {15, 40};
     int[] numberProbabilities = new int[] {1, 1};
     int number = (int)pickByProbability(numbers, numberProbabilities);
-    log.print("Number of shapes: ["+number+"]");
+    log.print("Number of shapes\033[1;34m"+number+"\033[0m");
 
     //number of row && col
     float oneDirectionProbability = 0.5;
@@ -49,7 +49,7 @@ class PatternGraphics extends Graphics {
     }
     rowNumber = constrain(rowNumber, 1, maxRowNumber);
     colNumber = constrain(colNumber, 1, maxColNumber);
-    log.print("Row/Column number: [" + rowNumber+"]["+colNumber +"]");
+    log.print("Row/Column number\033[1;34m" + rowNumber+"\033[0m["+colNumber +"\033[0m");
     addToDetails("Row Number:   " + rowNumber + "\nColumn Number:   "+colNumber + "\n");
 
     //vector number;
@@ -59,7 +59,7 @@ class PatternGraphics extends Graphics {
     if (oneDirection) {
       vectorNumber = 4; //if One Direction, then it got to be rect.
     }
-    log.print("Each shape will have: ["+vectorNumber+"] vectices");
+    log.print("Each shape will have\033[1;34m"+vectorNumber+"\033[0m vectices");
     addToDetails("Shape Vectices Number:   " + vectorNumber + "\n");
 
     //size
@@ -68,7 +68,7 @@ class PatternGraphics extends Graphics {
     availableWidth = posterWidth - poster.padding * 2;
     xSize = availableWidth / colNumber;
     ySize = availableHeight / rowNumber;
-    log.print("Width of single shape: ["+xSize+"] height: ["+ySize+"]");
+    log.print("Width of single shape\033[1;34m"+xSize+"\033[0m height\033[1;34m"+ySize+"\033[0m");
     addToDetails("Single Shape Width:  "+xSize+"\nSingle Shape Height:   " + ySize + "\n");
 
 
@@ -79,7 +79,7 @@ class PatternGraphics extends Graphics {
 
     if (colNumber==1)xgap=0;
     if (rowNumber==1)ygap=0;
-    log.print("Horizontal gap: ["+xgap+"]" + "vertical gap: ["+ygap+"]");
+    log.print("Horizontal gap\033[1;34m"+xgap+"\033[0m" + "vertical gap\033[1;34m"+ygap+"\033[0m");
     addToDetails("xgap:   " + xgap + "\nygap:   " + ygap + "\n");
 
 
@@ -105,7 +105,7 @@ class PatternGraphics extends Graphics {
       localRotationChange = 0;
     }
 
-    log.print("Shape rotates 1by1 by ["+degrees(localRotationChange)+"]");
+    log.print("Shape rotates 1by1 by ["+degrees(localRotationChange)+"\033[0m");
 
 
     //color

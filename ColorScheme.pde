@@ -14,17 +14,24 @@ class ColorScheme {
     graphicsColor[1] = colors[2];
     graphicsColor[2] = colors[3];
 
-    if (brightness(backgroundColor) > (255 * 0.85) && saturation(backgroundColor) < 255 * 0.1) {
-      //black-ish on light background
-      textColor = color(30);
-      for (color c : colors) {
-        if (brightness(c)<255*0.1) {
-          textColor = c;
-        }
-      }
-    } else {
-      //white-ish on dark background
-      textColor = color(250);
+    //if (brightness(backgroundColor) > (255 * 0.85) && saturation(backgroundColor) < 255 * 0.1) {
+    //  //black-ish on light background
+    //  //textColor = color(30);
+    //  //for (color c : colors) {
+    //  //  if (brightness(c)<255*0.1) {
+    //  //    textColor = c;
+    //  //  }
+    //  //}
+      
+    //   textColor =  colors[(int)random(0, colors.length)];
+    //} else {
+    //  //white-ish on dark background
+      
+    //}
+    
+    textColor =  colors[(int)random(0, colors.length)]; //color(250);
+    while(textColor==backgroundColor){
+      textColor =  colors[(int)random(0, colors.length)]; //color(250);
     }
 
     details = "Background Color:   " + hex(backgroundColor) + "\n";

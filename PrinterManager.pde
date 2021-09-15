@@ -7,13 +7,13 @@ class PrinterManager {
     
     String posterFileName = year()+"_"+month()+"_"+day()+"_"+hour()+"_"+minute()+"_"+second()+"_"+millis()+".png";
     
-    log.print("Saving file, file name: ["+posterFileName+"]");
+    log.print("Saving file, file name\033[1;34m"+posterFileName+"\033[0m");
     poster.content.save("server/posters/"+posterFileName);
 
     String newPosterPath = sketchPath()  + "/server/posters/"+posterFileName;
-    
+    String htmlIMGPath = "/posters/"+posterFileName;
 
-    log.print("<img src='"+newPosterPath+"'/>");
+    log.print("<img src='"+htmlIMGPath+"'/>");
     // log.print()
 
     if (actuallyPrint) {

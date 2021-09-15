@@ -22,7 +22,7 @@ class OffsetGraphics extends Graphics {
     String[] shapes = new String[] {"rectangle", "triangle", "letter", "ellipse", "box", "sphere"};
     int[] shapeProbabilities = new int[] {15, 15, 25, 30, 3, 3};//default
     shape = pickByProbability(shapes, shapeProbabilities).toString();
-    log.print("Shape type: [" + shape+"]");
+    log.print("Shape type\033[1;34m" + shape+"\033[0m");
     addToDetails("Shape: " + shape);
 
     // rotate x
@@ -39,8 +39,8 @@ class OffsetGraphics extends Graphics {
       strokeStyleProbabilities = new int[] {0, 1};
     }
     strokeStyle = pickByProbability(strokeStyles, strokeStyleProbabilities).toString();
-    log.print("stroke: [" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"]") );
-    addToDetails("\nShape Style: [" + strokeStyle+"]");
+    log.print("stroke\033[1;34m" + ((strokeStyle == "fill")?"No Stroke":"Only Stroke"+"\033[0m") );
+    addToDetails("\nShape Style\033[1;34m" + strokeStyle+"\033[0m");
 
     //Pick number of object
     Integer[] number = new Integer[] {1, 2, 3, 4};
@@ -52,7 +52,7 @@ class OffsetGraphics extends Graphics {
       numberProbability = new int[] {1, 0, 0, 0};
     }
     numberOfShape = (int)pickByProbability(number, numberProbability);
-    log.print("Shape number: ["+numberOfShape+"]");
+    log.print("Shape number\033[1;34m"+numberOfShape+"\033[0m");
     addToDetails("\nNumber of Shapes: " + numberOfShape);
 
     //Pick scaler
@@ -62,7 +62,7 @@ class OffsetGraphics extends Graphics {
     //scalerProbabilites = new int[] {100, 0, 0};
     //}
     scaler = (Float)pickByProbability(scalers, scalerProbabilites);
-    log.print("The graphics scales by: [" + scaler+"]");
+    log.print("The graphics scales by\033[1;34m" + scaler+"\033[0m");
     addToDetails("\nShape scales by: " + scaler);
 
     //pick offsetDistance
@@ -79,7 +79,7 @@ class OffsetGraphics extends Graphics {
     }
 
     offsetDist = (Float)pickByProbability(offsetDistances, offsetDistanceProbabilities);
-    log.print("Shape offset 1by1 by: ["+offsetDist + "] % of shape's size" );
+    log.print("Shape offset 1by1 by\033[1;34m"+offsetDist + "] % of shape's size" );
     addToDetails("\nOffset by " + offsetDist + " of the shape's size");
 
     //pick offsetDirection
@@ -93,7 +93,7 @@ class OffsetGraphics extends Graphics {
     }
     offsetDirection = (PVector)pickByProbability(offsetDirections, offsetDirectionProbabilities);
     addToDetails("\nOffsetting direction: " + degrees(offsetDirection.heading()) + " degree" );
-    log.print("Shapes offset by: ["+degrees(offsetDirection.heading()) + "] degree");
+    log.print("Shapes offset by\033[1;34m"+degrees(offsetDirection.heading()) + "] degree");
 
     //layer blending or not
     Boolean[] ifLayerBlend = new Boolean[] {true, false};
@@ -105,14 +105,14 @@ class OffsetGraphics extends Graphics {
       layerBlendProbability = new int[] {100, 0};
     }
     layerBlending = (boolean)pickByProbability(ifLayerBlend, layerBlendProbability);
-    log.print("Layer blending? [" + layerBlending+"]");
+    log.print("Layer blending? [" + layerBlending+"\033[0m");
 
     //layer blend mode
     //Integer[] blendmodes = new Integer[]{MULTIPLY, ADD, SUBTRACT, DARKEST, LIGHTEST, EXCLUSION, REPLACE};
     //int[] blendmodeProbabilities = new int[]{2, 1, 1, 1, 1, 1, 1};
     //blendmode = (int)pickByProbability(blendmodes, blendmodeProbabilities);
     blendmode = MULTIPLY;
-    log.print("Blend mode: ["+blendmode+"]");
+    log.print("Blend mode\033[1;34m"+blendmode+"\033[0m");
     addToDetails("\nBlend Mode:   "+blendmode);
   }
 

@@ -21,12 +21,12 @@ class Poster {
   //Constructor
   Poster(int _posterW, int _posterH) {
     createdTime = hour() + ":" + minute() + "    " + month() + "/" + day();
-    id = progressManager.posterCount;
-    log.print("<br>A new poster is being created");
+    id = posterCount;
+    log.print("\nA new poster is being created");
     w = _posterW;
     h = _posterH;
-    log.print("<br>....creating poster...");
-    log.print("<br>poster width: " + w + ", height: " + h + "<br>");
+    log.print("\n....creating poster...");
+    log.print("\nposter width: " + w + ", height: " + h + "\n");
     getPartition();
     getPadding();
     arrangePartitions();
@@ -36,7 +36,7 @@ class Poster {
     content.beginDraw();
     content.textMode(SHAPE);
     content.endDraw();
-    details += id + "   " + createdTime + "<br>";
+    details += id + "   " + createdTime + "\n";
     inspector.addToMeta(details);
     log.print("New poster created! ID: " + id);
   }
@@ -45,22 +45,22 @@ class Poster {
     Integer[] rotationValues = new Integer[] {45, -45, 0};
     int[] rotationProbabilities = new int[] {1, 1, 0};
     rotation = (int)pickByProbability(rotationValues, rotationProbabilities);
-    details += "Global Rotation:   " + rotation + " Degree" + "&nbsp";
+    details += "Global Rotation:   " + rotation + " Degree" + "\n";
   }
 
   // Get our partition of this poster!
   void getPartition() {
-    log.print("Deciding layout...&nbsp&nbsp");
+    log.print("Deciding layout...\n\n");
     Float[] partitionValues = new Float[] {0.618, 1-0.618, 0.797, 1-0.797};
     int[] partitionProbabilities = new int[] {20, 20, 20, 20};
     partitionValue = (float)pickByProbability(partitionValues, partitionProbabilities);
     String partitionName;
     if (partitionValue==partitionValues[0] || partitionValue==partitionValues[1]) {
-      partitionName = "&nbsp Golden Ratio<br>";
+      partitionName = "\n Golden Ratio\n";
     } else {
-      partitionName = "&nbsp Silver Ratio<br>";
+      partitionName = "\n Silver Ratio\n";
     }
-    log.print("&nbsp Layout: " +  partitionName );
+    log.print("\n Layout: " +  partitionName );
 
 
     int topGridHeight = floor(posterHeight * partitionValue);
@@ -69,18 +69,18 @@ class Poster {
     grids.add(new Grid(posterWidth, topGridHeight, 0));
     grids.add(new Grid(posterWidth, typographyGridHeight, 1));
 
-    details += "Poster divided from:   " + partitionValue + "<br>";
-    details += "Grid 1 Height:   " + grids.get(0).h + "<br>";
-    details += "Grid 2 Height:   " + grids.get(1).h + "<br>";
+    details += "Poster divided from:   " + partitionValue + "\n";
+    details += "Grid 1 Height:   " + grids.get(0).h + "\n";
+    details += "Grid 2 Height:   " + grids.get(1).h + "\n";
 
-    log.print("Grid 1 Height: "+grids.get(0).h + "<br>");
-    log.print("Grid 2 Height: "+grids.get(1).h + "<br>");
+    log.print("Grid 1 Height: "+grids.get(0).h + "\n");
+    log.print("Grid 2 Height: "+grids.get(1).h + "\n");
   }
 
   void getPadding() {
     padding = floor( 0.055 * posterWidth );
-    details += "Padding:   " + padding + "<br>";
-    log.print("Poster padding: " + padding + "<br>");
+    details += "Padding:   " + padding + "\n";
+    log.print("Poster padding: " + padding + "\n");
   }
 
   void arrangePartitions() {
@@ -116,7 +116,7 @@ class Poster {
       grids.get( partitionArrangement.get("graphics") ).h = posterHeight;
       grids.get( partitionArrangement.get("graphics") ).fullHeight = true;
     }
-    log.print("<br>Grid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
-    details += "Grid #1 Type:   " + grids.get(0).contentType + "<br>Grid #2 Type   :" + grids.get(1).contentType + "<br>";
+    log.print("\nGrid on top has: "+ grids.get(0).contentType + " grid on bottom has: " + grids.get(1).contentType);
+    details += "Grid #1 Type:   " + grids.get(0).contentType + "\nGrid #2 Type   :" + grids.get(1).contentType + "\n";
   }
 }

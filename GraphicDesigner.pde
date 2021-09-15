@@ -10,7 +10,7 @@ class GraphicDesigner {
     chooseGraphicType();
     String detailsFromGraphics = "";
 
-    log.print("Creating graphics...<br>");
+    log.print("Creating graphics...\n");
     switch (graphicType) {
     case "offset":
       OffsetGraphics offsetGraphics = new OffsetGraphics(poster, myGrid);
@@ -31,7 +31,7 @@ class GraphicDesigner {
     //applyGraphicToPoster(generatedPGraphics, poster);
 
 
-    String details = "Graphic Type:   " + graphicType + "<br>" + "Graphic Partition Location:   " + myGrid.index + "<br>" + detailsFromGraphics;
+    String details = "Graphic Type:   " + graphicType + "\n" + "Graphic Partition Location:   " + myGrid.index + "\n" + detailsFromGraphics;
     StageInfo stageInfo = new StageInfo(details);
     return stageInfo;
   }
@@ -44,7 +44,7 @@ class GraphicDesigner {
       graphicTypeProbabilities = new int[]{1, 0, 0};
     }
     graphicType = pickByProbability(graphicTypes, graphicTypeProbabilities).toString();
-    log.print("Graphics type is: ["  + graphicType+"]<br>");
+    log.print("Graphics type is\033[1;34m"  + graphicType+"\033[0m\n");
   }
 
   void applyGraphicToPoster(PGraphics pg, Poster poster) {
