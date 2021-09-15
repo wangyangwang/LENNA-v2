@@ -41,7 +41,9 @@ PrinterManager printerManager;
 TypeDesigner typeDesigner;
 GraphicDesigner graphicDesigner;
 Inspector inspector;
+PhdWriter phdWriter;
 color inspectorBackground = color(100);
+
 
 final int posterWidth = 2408;
 final int posterHeight = 3508;
@@ -50,10 +52,9 @@ final int posterHeight = 3508;
 Poster poster;
 
 void setup () {
-  size(540, 960, P3D);
-  pixelDensity(2);
+  size(1000, 700, P3D);
   textMode(SHAPE);
-  smooth(4);
+  smooth(0);
   log = createWriter("server/index.html");
 
   //add css
@@ -72,6 +73,7 @@ void setup () {
   printerManager = new PrinterManager();
   log.print("Intilazing inspector...");
   inspector = new Inspector();
+  phdWriter = new PhdWriter();
 
 
   //init, happen first
@@ -196,23 +198,8 @@ Object pickByProbability(Object[] objectList, int[] probabilityList) {
 
 //////////////////////////////
 
-String getContent(int minWords, int maxWords) {
-  JSONObject json;
-  GetRequest get = new GetRequest("http://www.randomtext.me/api/gibberish/ul-1/"+minWords+"-"+maxWords);
-  get.send();
-  String content = get.getContent();
-  try {
-    json = JSONObject.parse(content);
-    String text_out = json.getString("text_out");
-    Document doc = Jsoup.parse(text_out);
-    Elements li = doc.getElementsByTag("li");
-    return li.get(0).html();
-  }
-  catch(Exception e) {
-    System.err.println(e);
-    return "A software bug is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result";
-  }
-}
+
+
 
 // String getPomoHeadline() {
 

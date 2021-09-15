@@ -169,7 +169,7 @@ class TypeDesigner {
       Text col = new Text("column", columnFontSize);
       int colY = floor((headlineFontSize + spaceingBetweenHeadlineAndColumns) * (1 - headlineLocation)  +  poster.padding);
       col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY+(int)yoffset, (int)columnWidth, columnMaxHeight);
-      col.setContent("Content Placeholder");
+      col.setContent(phdWriter.getOneSentence());
       log.print("column " + i + "content: <i>"+col.content+"</i><br>");
       col.setColor(columnColor);
       col.setFont(font);

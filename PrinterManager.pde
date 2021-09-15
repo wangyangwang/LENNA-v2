@@ -1,7 +1,7 @@
 
 //pass poster to printer
 class PrinterManager {
-  boolean actuallyPrint = true;
+  boolean actuallyPrint = false;
   
   StageInfo print(Poster poster) {
     
