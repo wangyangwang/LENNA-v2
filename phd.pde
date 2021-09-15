@@ -25,7 +25,6 @@ class PhdWriter {
     int i = (int)random(0, sentences.size());
 
     String o = sentences.get(i);
-    println(o);
     return o;
   }
 }

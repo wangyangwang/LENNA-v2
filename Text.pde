@@ -69,7 +69,7 @@ class Text {
       pg.popMatrix();
       pg.endDraw();
     } else {
-      System.err.println("Text hasn't been set fully");
+      System.err.print("Text hasn't been set fully");
     }
   }
 }

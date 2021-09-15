@@ -3,21 +3,21 @@
 class PrinterManager {
   boolean actuallyPrint = false;
   
-  StageInfo print(Poster poster) {
+  StageInfo print2paper(Poster poster) {
     
     String posterFileName = year()+"_"+month()+"_"+day()+"_"+hour()+"_"+minute()+"_"+second()+"_"+millis()+".png";
     
-    log.print("Saving file, file name\033[1;34m"+posterFileName+"\033[0m");
+    print("Saving file, file name\033[1;34m"+posterFileName+"\033[0m");
     poster.content.save("server/posters/"+posterFileName);
 
     String newPosterPath = sketchPath()  + "/server/posters/"+posterFileName;
     String htmlIMGPath = "/posters/"+posterFileName;
 
-    log.print("<img src='"+htmlIMGPath+"'/>");
-    // log.print()
+    print("<img src='"+htmlIMGPath+"'/>");
+    // print()
 
     if (actuallyPrint) {
-      log.print("Sending designed poster to printer...");
+      print("Sending designed poster to printer...");
       sendToPrinter(newPosterPath);
     }
 
@@ -29,11 +29,11 @@ class PrinterManager {
 
   void sendToPrinter(String pathToFile) {
     try {
-      println(pathToFile);
+      print(pathToFile);
       Process p = Runtime.getRuntime().exec("lp "+pathToFile);
     }
     catch (Exception e) {
-      println(e);
+      print(e);
     }
   }
 }

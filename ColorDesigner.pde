@@ -6,7 +6,7 @@ class ColorDesigner {
   ColorDesigner(String colorSchemeFileName) {
     allColorSchemes = new ArrayList<ColorScheme>();
     loadColorSchemes(colorSchemeFileName);
-    log.print("Loading all color schemes into memoery...");
+    print("Loading all color schemes into memoery...");
   }
 
   StageInfo design(Poster poster) {
@@ -26,12 +26,12 @@ class ColorDesigner {
         poster.colorScheme.setBackgroundWhite();
       }
 
-      log.print("Color Palette selected\033[1;34m" + poster.colorScheme.colors + "]\n");
-      log.print("Background Color\033[1;34m"+ hex( poster.colorScheme.backgroundColor ) + "]\n");
-      log.print("Text Color\033[1;34m"+ hex( poster.colorScheme.textColor ) + "]\n");
+      print("Color Palette selected\033[1;34m" + poster.colorScheme.colors + "]\n");
+      print("Background Color\033[1;34m"+ hex( poster.colorScheme.backgroundColor ) + "]\n");
+      print("Text Color\033[1;34m"+ hex( poster.colorScheme.textColor ) + "]\n");
 
       poster.colorScheme.addDetailsToInspector();
-      log.print("Draw color to a thumbnail for the interface...\n");
+      print("Draw color to a thumbnail for the interface...\n");
       colorPalette.beginDraw();
       colorPalette.background(inspectorBackground);
       float colorNodeSize = colorPalette.width/5;
@@ -43,7 +43,7 @@ class ColorDesigner {
       }
       colorPalette.endDraw();
     } else {
-      println("Err: no color scheme saved in ColorDesigner");
+      print("Err: no color scheme saved in ColorDesigner");
     }
     thisStageInfo = new StageInfo(colorInfo, colorPalette);
     return thisStageInfo;
@@ -57,7 +57,7 @@ class ColorDesigner {
       color[] oneSet = new color[colors.length];
       for (int i=0; i<colors.length; i++) {  //convert each colro to color
         color realColor = unhex("FF"+colors[i].substring(1));
-        if (realColor==0)println("Err: color is 0, color import failed");
+        if (realColor==0)print("Err: color is 0, color import failed");
         oneSet[i] = realColor;
       }
       ColorScheme colorScheme = new ColorScheme(oneSet);

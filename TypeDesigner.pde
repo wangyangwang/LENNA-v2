@@ -61,12 +61,12 @@ class TypeDesigner {
     PFont boldFont = boldFonts.get(randomFontIndex);
     String fontname = font.getName();
     details+="Font:   " + fontname + "\n";
-    log.print("Picked font: \033[1;34m["+fontname+"\033[0m\033[0m\n");
+    print("Picked font: \033[1;34m["+fontname+"\033[0m\033[0m\n");
 
 
     //text vertical alignment
     details+="Global X Alignment:   "+textAlignX;
-    log.print("Text vertical align\033[1;34m"+textAlignX+"\033[0m\n");
+    print("Text vertical align\033[1;34m"+textAlignX+"\033[0m\n");
 
 
     // headline width
@@ -79,7 +79,7 @@ class TypeDesigner {
     float maxColumnFontSize = 0.014 * posterHeight;
     int columnFontSize = (int)random(minColumnFontSize, maxColumnFontSize);
     details += "Paragraph Font Size:   " + columnFontSize + "\n";
-    log.print("Column font size\033[1;34m"+columnFontSize+"\033[0m\n");
+    print("Column font size\033[1;34m"+columnFontSize+"\033[0m\n");
 
     // headline vs paragraph arrangement
     int[] headlinePosition = new int[]{poster.padding, 0};
@@ -104,7 +104,7 @@ class TypeDesigner {
     int headlineFontSize;
     headlineFontSize= (int)random(minHeadlineSize, maxHeadlineSize);
     details+="headlineFontSize:   " + headlineFontSize + "\n";
-    log.print("Headline font size: \033[1;34m "+headlineFontSize+"\033[0m\n");
+    print("Headline font size: \033[1;34m"+headlineFontSize+"\033[0m\n");
 
     //column Count
     int columnCount;
@@ -112,12 +112,12 @@ class TypeDesigner {
     int[] columnCountsProbabilities = new int[] {1, 4, 5};
     columnCount = (int)pickByProbability(columnCounts, columnCountsProbabilities);
     details += "Paragraph Count:   " + columnCount + "\n";
-    log.print("Column number\033[1;34m"+columnCount+"\033[0m\n");
+    print("Column number: \033[1;34m"+columnCount+"\033[0m\n");
 
 
     //column width
     float columnWidth = ((posterWidth - poster.padding * 2) / columnCount) * 0.9;
-    log.print("Column width\033[1;34m"+columnWidth+"\033[0m\n");
+    print("Column width: \033[1;34m"+columnWidth+"\033[0m\n");
 
     //space between headline and columns
     int spaceingBetweenHeadlineAndColumns = floor( posterHeight * 0.024 );
@@ -151,7 +151,7 @@ class TypeDesigner {
     if (headlineLocation==1) headlineRectHeight *= -1;
     headline.setBound(headlinePosition[0], headlinePosition[1] + (int)yoffset, headlineWidth, headlineRectHeight);
     headline.setContent(getRandomTOEFLword());
-    log.print("Title decided: \033[1;34m "+headline.content+"\033[0m\n");
+    print("Title decided: \033[1;34m "+headline.content+"\033[0m\n");
     headline.setColor(headlineColor);
     headline.setFont(boldFont);
     headline.setAlign(headlineAlignX, headlineAlignY);
@@ -168,7 +168,7 @@ class TypeDesigner {
       int colY = floor((headlineFontSize + spaceingBetweenHeadlineAndColumns) * (1 - headlineLocation)  +  poster.padding);
       col.setBound(floor(poster.padding + i * (columnWidth + spacingBetweenColumns)), colY+(int)yoffset, (int)columnWidth, columnMaxHeight);
       col.setContent(phdWriter.getOneSentence());
-      log.print("column " + i + "content: \033[1;34m "+col.content+"\033[0m\n");
+      print("column " + i + "content: \033[1;34m "+col.content+"\033[0m\n");
       col.setColor(columnColor);
       col.setFont(font);
       col.setAlign(textAlignX, TOP);
