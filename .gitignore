@@ -6,4 +6,5 @@ build/*
 out/*
 out
 *.png
-
+.DS_Store
+server/.DS_Store
